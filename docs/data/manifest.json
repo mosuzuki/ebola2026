@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-06-02T06:33:49.406377+00:00",
+  "generated_at_utc": "2026-06-02T06:50:42.151593+00:00",
   "data_status": "curated seed data; human review recommended before operational use",
   "files": ["situation_timeseries.csv", "geography.csv", "derived_line_list.csv", "response_tracker.csv", "science_tracker.csv"]
 }

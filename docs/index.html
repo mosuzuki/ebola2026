@@ -3,37 +3,63 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>DRC + Uganda Ebola Bundibugyo Outbreak Intelligence Dashboard</title>
+  <title>DRC + Uganda Ebola Bundibugyo Research & R&D Intelligence Dashboard</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 <header>
-  <h1>DRC + Uganda Ebola Bundibugyo Outbreak Intelligence Dashboard</h1>
-  <p>Static GitHub Pages dashboard for epidemiology, response activities, and scientific evidence tracking.</p>
-  <div class="bar">
-    <span class="pill">Pathogen: Bundibugyo virus disease</span>
-    <span class="pill">Scope: DRC + Uganda</span>
-    <span class="pill" id="lastUpdated">Last build: loading…</span>
-    <span class="pill">MVP seed data + update workflow</span>
+  <div class="header-inner">
+    <div>
+      <h1>DRC + Uganda Ebola Bundibugyo Intelligence Dashboard</h1>
+      <p>Outbreak epidemiology, institutional updates, epidemiological research, therapeutics and vaccine R&D tracker.</p>
+    </div>
+    <div class="header-note">GitHub Pages · curated seed data · human review recommended</div>
   </div>
 </header>
 <nav><div class="tabs">
-  <a href="#overview">Overview</a><a href="#epi">Epidemiology</a><a href="#response">Response</a><a href="#science">Science</a><a href="#downloads">Downloads</a><a href="#methods">Methods</a>
+  <a href="#overview">Overview</a><a href="#intel">Latest intelligence</a><a href="#epi">Epidemiology</a><a href="#rnd">R&D matrix</a><a href="#downloads">Downloads</a><a href="#methods">Methods</a>
 </div></nav>
 <main class="container">
-  <div class="notice"><strong>Data note.</strong> This MVP uses public aggregate reports as seed data. The downloadable "derived line list" is not an individual case line list; it is an aggregate-derived placeholder until official line-level data become available. Always verify operational decisions against national authorities and WHO/ECDC source documents.</div>
+  <div class="notice compact"><strong>Data note.</strong> This dashboard is designed for situational awareness and research/R&D tracking. Case counts and suspected-case categories change rapidly; verify all operational decisions against national authorities and WHO/ECDC source documents. The downloadable line list is aggregate-derived, not official individual-level data.</div>
 
-  <section id="overview">
-    <div class="grid cards">
-      <div class="card metric"><div class="label">DRC confirmed</div><div class="value" id="drcConfirmed">–</div><div class="sub">latest seed record</div></div>
-      <div class="card metric"><div class="label">DRC confirmed deaths</div><div class="value" id="drcDeaths">–</div><div class="sub">latest seed record</div></div>
-      <div class="card metric"><div class="label">Uganda confirmed</div><div class="value" id="ugaConfirmed">–</div><div class="sub">latest seed record</div></div>
-      <div class="card metric"><div class="label">Uganda confirmed deaths</div><div class="value" id="ugaDeaths">–</div><div class="sub">latest seed record</div></div>
+  <section id="overview" class="overview-compact">
+    <div class="mini-grid">
+      <div class="mini metric"><span>DRC confirmed</span><strong id="drcConfirmed">–</strong></div>
+      <div class="mini metric"><span>DRC deaths</span><strong id="drcDeaths">–</strong></div>
+      <div class="mini metric"><span>Uganda confirmed</span><strong id="ugaConfirmed">–</strong></div>
+      <div class="mini metric"><span>Uganda deaths</span><strong id="ugaDeaths">–</strong></div>
+      <div class="mini wide"><span>Last build</span><strong id="lastUpdated">loading…</strong></div>
+    </div>
+    <div class="compact-actions">
+      <a class="button smallbtn" href="data/situation_timeseries.csv" download>Situation CSV</a>
+      <a class="button smallbtn" href="data/response_tracker.csv" download>Institutional updates CSV</a>
+      <a class="button smallbtn" href="data/science_tracker.csv" download>Science/R&D CSV</a>
+    </div>
+  </section>
+
+  <section id="intel">
+    <div class="section-head">
+      <h2>Latest intelligence</h2>
+      <p>Left: public health and institutional updates. Right: epidemiological research, therapeutics and vaccine R&D evidence. Both lists are newest first; the first 10 are shown initially.</p>
+    </div>
+    <div class="grid intel-grid">
+      <div class="card panel">
+        <div class="panel-title"><h3>Institutional and public health updates</h3><span id="responseCount" class="count"></span></div>
+        <div class="filters" id="responseFilters"></div>
+        <div id="responseTimeline" class="timeline dense"></div>
+        <button id="toggleResponse" class="more">Show all older updates</button>
+      </div>
+      <div class="card panel emphasis">
+        <div class="panel-title"><h3>Research, therapeutics and vaccine R&D</h3><span id="scienceCount" class="count"></span></div>
+        <div class="filters" id="scienceFilters"></div>
+        <div id="scienceTimeline" class="timeline dense science"></div>
+        <button id="toggleScience" class="more">Show all older evidence</button>
+      </div>
     </div>
   </section>
 
   <section id="epi">
-    <h2>1. Epidemiological situation</h2>
+    <h2>Epidemiological situation</h2>
     <div class="grid two">
       <div class="card"><h3>Cumulative confirmed cases by report date</h3><svg id="curve"></svg><p class="small">Based on publicly reported aggregate data in <code>situation_timeseries.csv</code>.</p></div>
       <div class="card"><h3>Geographic distribution</h3><svg id="geoBars"></svg><p class="small">Province/district/health-zone counts are mixed administrative levels; see data notes.</p></div>
@@ -42,14 +68,9 @@
     <div class="table-wrap"><table id="situationTable"></table></div>
   </section>
 
-  <section id="response">
-    <h2>2. Response and operational activities</h2>
-    <p>Activities are grouped across surveillance, laboratory, IPC, case management, RCCE, cross-border coordination, logistics, financing, and R&D.</p>
-    <div id="responseTimeline" class="timeline"></div>
-  </section>
-
-  <section id="science">
-    <h2>3. Scientific evidence and knowledge tracker</h2>
+  <section id="rnd">
+    <h2>R&D matrix</h2>
+    <p class="lead">This view is intentionally biased toward actionable research: outbreak epidemiology, modelling, clinical characterization, vaccines, therapeutics, diagnostics, and trial readiness.</p>
     <div class="table-wrap"><table id="scienceTable"></table></div>
   </section>
 
@@ -58,27 +79,27 @@
     <a class="button" href="data/situation_timeseries.csv" download>Download situation timeseries CSV</a>
     <a class="button" href="data/geography.csv" download>Download geography CSV</a>
     <a class="button" href="data/derived_line_list.csv" download>Download derived line list CSV</a>
-    <a class="button" href="data/response_tracker.csv" download>Download response tracker CSV</a>
-    <a class="button" href="data/science_tracker.csv" download>Download science tracker CSV</a>
+    <a class="button" href="data/response_tracker.csv" download>Download institutional updates CSV</a>
+    <a class="button" href="data/science_tracker.csv" download>Download science/R&D tracker CSV</a>
   </section>
 
   <section id="methods">
     <h2>Methods and source priority</h2>
     <div class="grid two">
       <div class="card">
-        <h3>Source priority</h3>
+        <h3>Source priority for epidemiology</h3>
         <ol class="source-list">
           <li>National authorities: DRC Ministry of Health / INRB and Uganda Ministry of Health.</li>
-          <li>WHO Disease Outbreak News, WHO AFRO, and official WHO statements.</li>
-          <li>ECDC, Africa CDC, CDC, UKHSA, and other public health agencies.</li>
-          <li>Operational partners such as MSF, IFRC, OCHA, Gavi, CEPI, and ReliefWeb.</li>
-          <li>Peer-reviewed literature, preprints, and reputable science media.</li>
+          <li>WHO Disease Outbreak News, WHO AFRO, official WHO statements, and WHO R&D Blueprint publications.</li>
+          <li>ECDC, Africa CDC, CDC, UKHSA and other public health agencies.</li>
+          <li>Operational partners such as MSF, IFRC, OCHA, Gavi, CEPI, ReliefWeb and humanitarian actors.</li>
+          <li>Peer-reviewed papers, preprints, clinical-trial registries and reputable science media.</li>
         </ol>
       </div>
       <div class="card">
-        <h3>Automation</h3>
-        <p>The repository includes a GitHub Actions workflow and a Python update script. The workflow can be run daily and manually. The script preserves seed data and can be extended to parse official pages, RSS feeds, PDFs, or manually curated CSVs.</p>
-        <p class="small">Recommended: require human review before overwriting official case counts because suspected and confirmed totals are frequently reclassified.</p>
+        <h3>Research/R&D curation rules</h3>
+        <p>Evidence items are classified by topic and review status. Preprints, expert advisory reports and media summaries are retained because they may be critical for R&D situational awareness, but they are explicitly labelled.</p>
+        <p class="small">Recommended extension: add automated PubMed/Europe PMC/medRxiv queries and require manual approval before merge.</p>
       </div>
     </div>
   </section>
