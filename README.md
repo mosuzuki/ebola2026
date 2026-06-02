@@ -100,3 +100,8 @@ The downloadable line list is aggregate-derived and is not official individual-l
 - The right intelligence column is split into two stacked feeds: (1) `Epidemiological Research`, limited to items directly concerning the 2026 DRC/Uganda Bundibugyo outbreak and published/posted from 2026-04-01 onward, and (2) `R&D updates` for vaccines, therapeutics and diagnostics.
 - The former map-feature tracker table under the map was removed from the main page. Geographic records remain downloadable as `map_features.csv`.
 - Europe PMC candidate queries in `scripts/update_data.py` now include a date filter from 2026-04-01 and current-outbreak terms. Candidate files still require human review before promotion to the curated trackers.
+
+
+## v6 map update
+
+The situation map now uses a local static SVG regional basemap with proportional case bubbles. It does not depend on external map tiles, so it renders consistently on GitHub Pages and in restricted network environments. Bubble locations and counts are driven by `docs/data/map_features.csv`.

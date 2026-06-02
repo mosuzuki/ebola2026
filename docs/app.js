@@ -123,33 +123,79 @@ function bubbleRadius(cases){
 }
 function initMap(rows){
   const el=document.getElementById('epiMap'); if(!el) return;
-  if(typeof L === 'undefined'){
-    el.innerHTML='<div class="map-fallback">Leaflet could not be loaded. Use map_features.csv for geographic records.</div>'; return;
-  }
-  const map=L.map('epiMap', {scrollWheelZoom:false, zoomControl:true, attributionControl:true}).setView([0.3, 30.25], 6);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 11, attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
-  const group=L.featureGroup().addTo(map);
-  const sorted = rows.slice().sort((a,b)=>(num(a.confirmed_cases)||0)-(num(b.confirmed_cases)||0));
+  const W=1120, H=640;
+  const bounds={lonMin:27.7, lonMax:33.55, latMin:-4.25, latMax:4.15};
+  const x = lon => (lon-bounds.lonMin)/(bounds.lonMax-bounds.lonMin)*W;
+  const y = lat => (bounds.latMax-lat)/(bounds.latMax-bounds.latMin)*H;
+  const pts = arr => arr.map(([lon,lat])=>`${x(lon).toFixed(1)},${y(lat).toFixed(1)}`).join(' ');
+  const regionPath = (arr, cls, label) => `<polygon class="${cls}" points="${pts(arr)}"><title>${escapeHtml(label)}</title></polygon>`;
+  const lake = (lon,lat,rx,ry,name) => `<ellipse class="map-lake" cx="${x(lon)}" cy="${y(lat)}" rx="${rx}" ry="${ry}"><title>${escapeHtml(name)}</title></ellipse>`;
+  const city = (lon,lat,name,capital=false) => `<g class="map-city"><circle cx="${x(lon)}" cy="${y(lat)}" r="${capital?4.8:3.2}"/><text x="${x(lon)+7}" y="${y(lat)+4}">${escapeHtml(name)}</text></g>`;
+  const label = (lon,lat,name,cls='map-label') => `<text class="${cls}" x="${x(lon)}" y="${y(lat)}">${escapeHtml(name)}</text>`;
+  const grid=[];
+  for(let lon=28; lon<=33; lon+=1){ grid.push(`<line class="map-gridline" x1="${x(lon)}" y1="0" x2="${x(lon)}" y2="${H}"/>`); }
+  for(let lat=-4; lat<=4; lat+=1){ grid.push(`<line class="map-gridline" x1="0" y1="${y(lat)}" x2="${W}" y2="${y(lat)}"/>`); }
+  let html=`<svg class="static-map-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="Bubble map of reported Ebola Bundibugyo confirmed cases in eastern DRC and Uganda">
+    <rect class="map-bg" x="0" y="0" width="${W}" height="${H}"/>
+    ${grid.join('')}
+    ${regionPath([[27.72,4.1],[29.0,4.1],[29.35,3.35],[29.2,2.65],[29.55,1.75],[29.1,0.8],[28.65,-0.35],[28.8,-1.5],[28.55,-2.8],[28.2,-4.2],[27.72,-4.2]], 'country-drc', 'Democratic Republic of the Congo, eastern area')}
+    ${regionPath([[30.85,3.75],[32.0,3.65],[33.2,3.1],[33.5,2.2],[33.35,0.7],[32.9,-0.7],[32.3,-1.25],[31.6,-1.05],[31.05,-0.25],[30.8,0.9]], 'country-uga', 'Uganda')}
+    ${regionPath([[29.05,3.75],[30.65,3.75],[30.7,2.85],[30.45,2.05],[30.72,1.25],[30.15,0.72],[29.55,0.9],[29.2,1.95],[29.38,2.85]], 'affected-province ituri', 'Ituri affected province')}
+    ${regionPath([[28.55,0.8],[29.55,0.9],[30.15,0.72],[30.0,-0.55],[29.65,-1.45],[28.85,-1.75],[28.5,-0.5]], 'affected-province nkivu', 'North Kivu affected province')}
+    ${regionPath([[28.3,-1.7],[29.65,-1.45],[29.7,-2.8],[29.25,-4.1],[28.05,-4.15],[28.3,-2.6]], 'affected-province skivu', 'South Kivu affected province')}
+    ${regionPath([[29.0,-1.05],[29.85,-1.1],[30.05,-1.75],[29.3,-2.05],[28.82,-1.55]], 'neighbor', 'Rwanda')}
+    ${regionPath([[29.05,-2.05],[30.0,-2.05],[30.2,-2.9],[29.48,-3.35],[28.95,-2.8]], 'neighbor', 'Burundi')}
+    ${regionPath([[30.0,-2.9],[33.5,-2.0],[33.55,-4.25],[29.25,-4.25]], 'neighbor', 'Tanzania / western area')}
+    ${lake(31.15,1.55,18,84,'Lake Albert')}
+    ${lake(29.62,-0.34,16,37,'Lake Edward')}
+    ${lake(29.1,-1.95,12,43,'Lake Kivu')}
+    ${lake(29.65,-3.9,18,105,'Lake Tanganyika')}
+    ${lake(32.75,-1.55,112,70,'Lake Victoria')}
+    <path class="map-road" d="M ${x(30.25)} ${y(1.57)} C ${x(30.05)} ${y(1.0)}, ${x(29.75)} ${y(0.1)}, ${x(29.25)} ${y(-0.7)} S ${x(29.05)} ${y(-1.9)}, ${x(28.85)} ${y(-2.5)}"/>
+    <path class="map-road" d="M ${x(30.25)} ${y(1.57)} C ${x(31.2)} ${y(1.0)}, ${x(32.05)} ${y(0.6)}, ${x(32.58)} ${y(0.35)}"/>
+    ${label(28.15,0.2,'Democratic Republic of the Congo','map-country-label')}
+    ${label(31.55,1.0,'Uganda','map-country-label')}
+    ${label(30.0,2.65,'Ituri','province-label')}
+    ${label(29.2,-0.65,'North Kivu','province-label')}
+    ${label(28.75,-2.55,'South Kivu','province-label')}
+    ${label(29.45,-1.65,'Rwanda')}
+    ${label(29.55,-2.65,'Burundi')}
+    ${label(32.1,-3.55,'Tanzania')}
+    ${city(30.25,1.5667,'Bunia')}
+    ${city(29.27,0.49,'Beni')}
+    ${city(29.22,-1.68,'Goma')}
+    ${city(32.5825,0.3476,'Kampala',true)}
+    ${city(32.4594,0.4044,'Wakiso')}
+    <g id="map-bubbles"></g>
+    <g class="map-legend-svg" transform="translate(22,492)">
+      <rect width="360" height="126" rx="12"/>
+      <text x="14" y="24" class="legend-title">Reported confirmed cases</text>
+      <circle cx="26" cy="48" r="11" class="bubble province"></circle><text x="48" y="52">Province / district total</text>
+      <circle cx="26" cy="74" r="8" class="bubble healthzone"></circle><text x="48" y="78">Health-zone count</text>
+      <circle cx="26" cy="100" r="8" class="bubble imported"></circle><text x="48" y="104">Uganda imported-case area</text>
+      <circle cx="235" cy="74" r="8" class="bubble example"></circle><circle cx="270" cy="74" r="17" class="bubble example"></circle><circle cx="320" cy="74" r="30" class="bubble example"></circle>
+    </g>
+  </svg>`;
+  el.innerHTML = html;
+  const svg = el.querySelector('svg');
+  const g = svg.querySelector('#map-bubbles');
+  const priority = {affected_province:1, imported_case_city:2, affected_health_zone:3};
+  const sorted = rows.slice().sort((a,b)=>(priority[a.type]||9)-(priority[b.type]||9));
+  const items=[];
   sorted.forEach(r=>{
     const lat=num(r.lat), lon=num(r.lon); if(lat==null||lon==null) return;
     const cases=num(r.confirmed_cases)||0;
-    const isUganda=(r.country||'').toLowerCase()==='uganda';
-    const isHZ=(r.type||'').includes('health_zone');
-    const color=isUganda ? '#b54708' : (isHZ ? '#0d6b4c' : '#1769aa');
-    const radius=bubbleRadius(cases);
-    const marker=L.circleMarker([lat,lon], {radius, color, weight:2.5, fillColor:color, fillOpacity:0.55}).addTo(group);
-    marker.bindPopup(`<strong>${escapeHtml([r.country,r.admin1,r.admin2].filter(Boolean).join(' / '))}</strong><br>${escapeHtml(r.status)}<br>Confirmed: ${fmt(cases)}${r.confirmed_deaths ? '<br>Deaths: '+escapeHtml(r.confirmed_deaths) : ''}${r.suspected_cases ? '<br>Suspected: '+escapeHtml(r.suspected_cases) : ''}<br><span class="small">${link(r.source_url, r.source_name)}</span><br>${escapeHtml(r.popup||'')}`);
-    const label = L.divIcon({className:'bubble-label', html:`<span>${fmt(cases)}</span>`, iconSize:[44,18], iconAnchor:[22,9]});
-    L.marker([lat,lon], {icon: label, interactive:false}).addTo(group);
+    const type=r.type || '';
+    const cls = type.includes('health_zone') ? 'healthzone' : (type.includes('imported') ? 'imported' : 'province');
+    let radius = cls==='province' ? Math.max(20, Math.min(76, 14 + Math.sqrt(Math.max(cases,1))*3.0)) : Math.max(11, Math.min(34, 9 + Math.sqrt(Math.max(cases,1))*2.0));
+    const name=[r.country,r.admin1,r.admin2].filter(Boolean).join(' / ');
+    items.push(`<g class="map-bubble-group ${cls}">
+      <circle class="bubble ${cls}" cx="${x(lon)}" cy="${y(lat)}" r="${radius}"><title>${escapeHtml(name)}\nConfirmed: ${fmt(cases)}${r.confirmed_deaths ? '\nDeaths: '+r.confirmed_deaths : ''}${r.suspected_cases ? '\nSuspected: '+r.suspected_cases : ''}\nSource: ${r.source_name || ''}</title></circle>
+      <text class="bubble-count" x="${x(lon)}" y="${y(lat)+4}">${fmt(cases)}</text>
+      <text class="bubble-name" x="${x(lon)}" y="${y(lat)+radius+16}">${escapeHtml(r.admin2 || r.admin1 || r.country)}</text>
+    </g>`);
   });
-  if(group.getLayers().length) map.fitBounds(group.getBounds().pad(0.28));
-  const legend=L.control({position:'bottomleft'});
-  legend.onAdd=()=>{
-    const div=L.DomUtil.create('div','map-legend');
-    div.innerHTML='<strong>Confirmed cases</strong><br><span class="legend-dot drc"></span>DRC province/city or health zone<br><span class="legend-dot health"></span>DRC affected health zone<br><span class="legend-dot imported"></span>Uganda imported case area<br><div class="legend-scale"><span class="c smallc"></span><span class="c medc"></span><span class="c largec"></span> bubble size ∝ cases</div>';
-    return div;
-  };
-  legend.addTo(map);
+  g.innerHTML = items.join('');
 }
 (async function init(){
   const [sit, geo, mapRows, resp, epiResearch, rd, latest48] = await Promise.all([

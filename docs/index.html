@@ -4,7 +4,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DRC + Uganda Ebola Bundibugyo Epidemiology, Research & R&D Intelligence Dashboard</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIINfQWt6XJ2+vGq8q1j7v3EAEjfNf0vRks=" crossorigin="" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -80,9 +79,9 @@
   <section id="epi">
     <h2>Epidemiological situation</h2>
     <div class="card map-card full-map">
-      <div class="map-head"><h3>Situation map</h3><span class="small">Bubble size reflects reported confirmed cases in curated CSV; click a bubble for source details.</span></div>
+      <div class="map-head"><h3>Situation map</h3><span class="small">Fixed regional map with case bubbles. Bubble size reflects reported confirmed cases in curated CSV.</span></div>
       <div id="epiMap" class="epi-map"></div>
-      <p class="small">This is a bubble map for rapid situational awareness. It intentionally avoids schematic polygons. Administrative boundaries and exact health-zone limits should be verified with official national and ECDC maps.</p>
+      <p class="small">This fixed regional map is for rapid situational awareness. Circles are plotted from the curated CSV; administrative boundaries are approximate and should be verified against official national or agency maps.</p>
     </div>
     <div class="grid two epi-charts">
       <div class="card"><h3>Cumulative confirmed cases by report date</h3><svg id="curve"></svg><p class="small">Based on publicly reported aggregate data in <code>situation_timeseries.csv</code>.</p></div>
@@ -139,7 +138,6 @@
   </section>
 </main>
 <footer>Generated as a GitHub Pages MVP. Public information changes rapidly; cite original sources when using figures.</footer>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="app.js"></script>
 </body>
 </html>
