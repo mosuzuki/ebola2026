@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DRC + Uganda Ebola Bundibugyo Outbreak Intelligence Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <h1>DRC + Uganda Ebola Bundibugyo Outbreak Intelligence Dashboard</h1>
+  <p>Static GitHub Pages dashboard for epidemiology, response activities, and scientific evidence tracking.</p>
+  <div class="bar">
+    <span class="pill">Pathogen: Bundibugyo virus disease</span>
+    <span class="pill">Scope: DRC + Uganda</span>
+    <span class="pill" id="lastUpdated">Last build: loading…</span>
+    <span class="pill">MVP seed data + update workflow</span>
+  </div>
+</header>
+<nav><div class="tabs">
+  <a href="#overview">Overview</a><a href="#epi">Epidemiology</a><a href="#response">Response</a><a href="#science">Science</a><a href="#downloads">Downloads</a><a href="#methods">Methods</a>
+</div></nav>
+<main class="container">
+  <div class="notice"><strong>Data note.</strong> This MVP uses public aggregate reports as seed data. The downloadable "derived line list" is not an individual case line list; it is an aggregate-derived placeholder until official line-level data become available. Always verify operational decisions against national authorities and WHO/ECDC source documents.</div>
+
+  <section id="overview">
+    <div class="grid cards">
+      <div class="card metric"><div class="label">DRC confirmed</div><div class="value" id="drcConfirmed">–</div><div class="sub">latest seed record</div></div>
+      <div class="card metric"><div class="label">DRC confirmed deaths</div><div class="value" id="drcDeaths">–</div><div class="sub">latest seed record</div></div>
+      <div class="card metric"><div class="label">Uganda confirmed</div><div class="value" id="ugaConfirmed">–</div><div class="sub">latest seed record</div></div>
+      <div class="card metric"><div class="label">Uganda confirmed deaths</div><div class="value" id="ugaDeaths">–</div><div class="sub">latest seed record</div></div>
+    </div>
+  </section>
+
+  <section id="epi">
+    <h2>1. Epidemiological situation</h2>
+    <div class="grid two">
+      <div class="card"><h3>Cumulative confirmed cases by report date</h3><svg id="curve"></svg><p class="small">Based on publicly reported aggregate data in <code>situation_timeseries.csv</code>.</p></div>
+      <div class="card"><h3>Geographic distribution</h3><svg id="geoBars"></svg><p class="small">Province/district/health-zone counts are mixed administrative levels; see data notes.</p></div>
+    </div>
+    <h3>Latest situation records</h3>
+    <div class="table-wrap"><table id="situationTable"></table></div>
+  </section>
+
+  <section id="response">
+    <h2>2. Response and operational activities</h2>
+    <p>Activities are grouped across surveillance, laboratory, IPC, case management, RCCE, cross-border coordination, logistics, financing, and R&D.</p>
+    <div id="responseTimeline" class="timeline"></div>
+  </section>
+
+  <section id="science">
+    <h2>3. Scientific evidence and knowledge tracker</h2>
+    <div class="table-wrap"><table id="scienceTable"></table></div>
+  </section>
+
+  <section id="downloads">
+    <h2>Downloads</h2>
+    <a class="button" href="data/situation_timeseries.csv" download>Download situation timeseries CSV</a>
+    <a class="button" href="data/geography.csv" download>Download geography CSV</a>
+    <a class="button" href="data/derived_line_list.csv" download>Download derived line list CSV</a>
+    <a class="button" href="data/response_tracker.csv" download>Download response tracker CSV</a>
+    <a class="button" href="data/science_tracker.csv" download>Download science tracker CSV</a>
+  </section>
+
+  <section id="methods">
+    <h2>Methods and source priority</h2>
+    <div class="grid two">
+      <div class="card">
+        <h3>Source priority</h3>
+        <ol class="source-list">
+          <li>National authorities: DRC Ministry of Health / INRB and Uganda Ministry of Health.</li>
+          <li>WHO Disease Outbreak News, WHO AFRO, and official WHO statements.</li>
+          <li>ECDC, Africa CDC, CDC, UKHSA, and other public health agencies.</li>
+          <li>Operational partners such as MSF, IFRC, OCHA, Gavi, CEPI, and ReliefWeb.</li>
+          <li>Peer-reviewed literature, preprints, and reputable science media.</li>
+        </ol>
+      </div>
+      <div class="card">
+        <h3>Automation</h3>
+        <p>The repository includes a GitHub Actions workflow and a Python update script. The workflow can be run daily and manually. The script preserves seed data and can be extended to parse official pages, RSS feeds, PDFs, or manually curated CSVs.</p>
+        <p class="small">Recommended: require human review before overwriting official case counts because suspected and confirmed totals are frequently reclassified.</p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>Generated as a GitHub Pages MVP. Public information changes rapidly; cite original sources when using figures.</footer>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+date,country,confirmed_cases,confirmed_deaths,suspected_cases,suspected_deaths,source_name,source_url,source_date,notes
+2026-05-16,DRC,8,,246,80,WHO PHEIC statement,https://www.who.int/news/item/17-05-2026-epidemic-of-ebola-disease-in-the-democratic-republic-of-the-congo-and-uganda-determined-a-public-health-emergency-of-international-concern,2026-05-17,"Ituri Province; confirmed cases and suspected deaths reported by WHO"
+2026-05-19,DRC,30,,500,130,ECDC epidemiological update,https://www.ecdc.europa.eu/en/ebola-virus-disease-outbreak-democratic-republic-congo-and-uganda-19-may-2026,2026-05-19,"Over 500 suspected cases and 130 deaths; 30 lab-confirmed"
+2026-05-21,DRC,82,7,500,130,Lancet news item,https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01072-X/fulltext,2026-05-21,"DRC National Public Health Institute figures quoted by Lancet"
+2026-05-27,DRC,125,17,906,223,WHO Disease Outbreak News DON605,https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON605,2026-05-29,"DRC: 13 health zones across Ituri, North Kivu and South Kivu"
+2026-05-29,Uganda,9,1,,,WHO Disease Outbreak News DON605,https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON605,2026-05-29,"Kampala n=8; Wakiso n=1"
+2026-05-31,DRC,282,42,220,,ECDC situation page,https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda,2026-06-01,"DRC Ministry of Health figures as reported by ECDC; suspected cases under investigation"
+2026-06-01,Uganda,9,1,,,ECDC situation page,https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda,2026-06-01,"Uganda total confirmed cases and deaths"

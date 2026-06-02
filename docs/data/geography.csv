@@ -1,0 +1,10 @@
+date,country,admin1,admin2,confirmed_cases,confirmed_deaths,suspected_cases,source_name,source_url,notes
+2026-05-31,DRC,Ituri,,264,,220,ECDC situation page,https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda,"Most affected province; 14 health zones"
+2026-05-31,DRC,North Kivu,,15,,,ECDC situation page,https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda,"Confirmed cases reported"
+2026-05-31,DRC,South Kivu,,3,,,ECDC situation page,https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda,"Confirmed cases reported"
+2026-05-29,Uganda,Kampala,,8,1,,WHO Disease Outbreak News DON605,https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON605,"One death among Uganda confirmed cases; not disaggregated by district in this seed dataset"
+2026-05-29,Uganda,Wakiso,,1,,,WHO Disease Outbreak News DON605,https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON605,"Confirmed cases reported"
+2026-05-27,DRC,Ituri,Bunia,37,,,WHO Disease Outbreak News DON605,https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON605,"Health zone count"
+2026-05-27,DRC,Ituri,Rwampara,33,,,WHO Disease Outbreak News DON605,https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON605,"Health zone count"
+2026-05-27,DRC,Ituri,Mongbwalu,20,,,WHO Disease Outbreak News DON605,https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON605,"Health zone count"
+2026-05-27,DRC,Ituri,Nyankunde,10,,,WHO Disease Outbreak News DON605,https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON605,"Health zone count"
