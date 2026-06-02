@@ -1,5 +1,7 @@
 {
-  "generated_at_utc": "2026-06-02T06:50:42.151593+00:00",
+  "generated_at_utc": "2026-06-02T06:59:29.905791+00:00",
+  "update_frequency": "Every 6 hours via GitHub Actions cron: 0 */6 * * *",
+  "latest_digest_window": "Items dated within the previous 48 hours; date-only source rows are evaluated by calendar date",
   "data_status": "curated seed data; human review recommended before operational use",
-  "files": ["situation_timeseries.csv", "geography.csv", "derived_line_list.csv", "response_tracker.csv", "science_tracker.csv"]
+  "files": ["situation_timeseries.csv", "geography.csv", "derived_line_list.csv", "response_tracker.csv", "science_tracker.csv", "latest_48h_summary.csv"]
 }

@@ -1,6 +1,10 @@
 async function csv(path){
-  const text = await fetch(path).then(r => r.text());
-  const lines = text.trim().split(/\r?\n/);
+  const res = await fetch(path, {cache: 'no-store'});
+  if(!res.ok) return [];
+  const text = await res.text();
+  const trimmed = text.trim();
+  if(!trimmed) return [];
+  const lines = trimmed.split(/\r?\n/);
   const headers = parseLine(lines[0]);
   return lines.slice(1).filter(Boolean).map(line => Object.fromEntries(parseLine(line).map((v,i)=>[headers[i], v ?? ''])));
 }
@@ -57,6 +61,24 @@ function uniqueValues(rows, key, max=6){ return [...new Set(rows.map(r=>r[key]).
 function chips(containerId, rows, key){
   document.getElementById(containerId).innerHTML = uniqueValues(rows, key).map(v=>`<span class="filter-chip">${escapeHtml(v)}</span>`).join('');
 }
+
+function renderLatest48(rows){
+  const box = document.getElementById('latest48Summary');
+  const count = document.getElementById('latest48Count');
+  if(!box || !count) return;
+  const sorted = rows.slice().sort((a,b)=>b.date.localeCompare(a.date)).slice(0,8);
+  count.textContent = sorted.length ? `${sorted.length} items` : '0 items';
+  if(!sorted.length){
+    box.innerHTML = '<p class="small">過去48時間以内の日付を持つ新着情報は登録されていません。GitHub Actions更新時に <code>latest_48h_summary.csv</code> が再生成されます。</p>';
+    return;
+  }
+  box.innerHTML = sorted.map(r=>`<article class="digest-item">
+    <div class="digest-meta"><span>${escapeHtml(r.date)}</span><span>${escapeHtml(r.category)}</span><span>${escapeHtml(r.source)}</span></div>
+    <h3>${link(r.url, r.title || r.source)}</h3>
+    <p>${escapeHtml(r.summary_ja)}</p>
+  </article>`).join('');
+}
+
 function renderResponse(rows, showAll=false){
   const sorted = rows.slice().sort((a,b)=>b.date.localeCompare(a.date));
   responseCount.textContent = `${sorted.length} curated items`;
@@ -82,12 +104,13 @@ function renderScience(rows, showAll=false){
   toggleScience.textContent = showAll ? 'Show only latest 10' : `Show all older evidence (${sorted.length-10} more)`;
 }
 (async function init(){
-  const [sit, geo, resp, sci] = await Promise.all([csv('data/situation_timeseries.csv'),csv('data/geography.csv'),csv('data/response_tracker.csv'),csv('data/science_tracker.csv')]);
+  const [sit, geo, resp, sci, latest48] = await Promise.all([csv('data/situation_timeseries.csv'),csv('data/geography.csv'),csv('data/response_tracker.csv'),csv('data/science_tracker.csv'),csv('data/latest_48h_summary.csv')]);
   const latestDRC=[...sit].filter(r=>r.country==='DRC').sort((a,b)=>a.date.localeCompare(b.date)).pop();
   const latestUGA=[...sit].filter(r=>r.country==='Uganda').sort((a,b)=>a.date.localeCompare(b.date)).pop();
   drcConfirmed.textContent=fmt(num(latestDRC?.confirmed_cases)); drcDeaths.textContent=fmt(num(latestDRC?.confirmed_deaths));
   ugaConfirmed.textContent=fmt(num(latestUGA?.confirmed_cases)); ugaDeaths.textContent=fmt(num(latestUGA?.confirmed_deaths));
   lastUpdated.textContent=new Date().toISOString().slice(0,10);
+  renderLatest48(latest48);
   drawLine('curve', sit); drawBars('geoBars', geo);
   let showResp=false, showSci=false;
   chips('responseFilters', resp, 'organization', 8); chips('scienceFilters', sci, 'topic', 8);
