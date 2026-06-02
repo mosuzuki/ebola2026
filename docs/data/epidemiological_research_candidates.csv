@@ -1,0 +1,2 @@
+date,category,title,source,journal,authors,url,abstract_snippet,screening_query,review_status
+2026-06-02,epidemiological_research_screening,Europe PMC candidate fetch failed,Europe PMC,,,,<urlopen error [Errno -3] Temporary failure in name resolution>,"((Bundibugyo OR ""Bundibugyo virus"" OR ""Bundibugyo ebolavirus"" OR Ebola OR ebolavirus) AND (""transmission dynamics"" OR model* OR forecast* OR importation OR ""reproduction number"" OR ""serial interval"" OR ""case fatality"" OR severity OR ""contact tracing"" OR epidemiology))",fetch_error

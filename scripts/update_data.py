@@ -22,11 +22,19 @@ DOCS_DATA = ROOT / "docs" / "data"
 REQUIRED_FILES = [
     "situation_timeseries.csv",
     "geography.csv",
+    "map_features.csv",
     "derived_line_list.csv",
     "response_tracker.csv",
+    "epidemiological_research.csv",
+    "rd_tracker.csv",
+    # Retained for backward compatibility with earlier dashboard versions.
     "science_tracker.csv",
 ]
-GENERATED_FILES = ["latest_48h_summary.csv"]
+GENERATED_FILES = [
+    "latest_48h_summary.csv",
+    "epidemiological_research_candidates.csv",
+    "rd_candidates.csv",
+]
 
 
 def validate_csv(path: Path) -> None:
@@ -168,17 +176,21 @@ def generate_latest_digest() -> None:
                 "url": row.get("source_url", ""),
             })
 
-    for row in read_rows("science_tracker.csv"):
-        d = parse_date(row.get("date", ""))
-        if d and d >= cutoff_date:
-            rows.append({
-                "date": row.get("date", ""),
-                "category": "疫学研究・治療薬・ワクチンR&D",
-                "source": row.get("source", ""),
-                "title": row.get("title", ""),
-                "summary_ja": jp_summary_for_science(row),
-                "url": row.get("url", ""),
-            })
+    for fname, category in [
+        ("epidemiological_research.csv", "疫学研究"),
+        ("rd_tracker.csv", "治療薬・ワクチン・診断R&D"),
+    ]:
+        for row in read_rows(fname):
+            d = parse_date(row.get("date", ""))
+            if d and d >= cutoff_date:
+                rows.append({
+                    "date": row.get("date", ""),
+                    "category": category,
+                    "source": row.get("source", ""),
+                    "title": row.get("title", ""),
+                    "summary_ja": jp_summary_for_science(row),
+                    "url": row.get("url", ""),
+                })
 
     rows.sort(key=lambda r: (r["date"], r["category"], r["source"]), reverse=True)
     out = PROCESSED / "latest_48h_summary.csv"
@@ -190,6 +202,77 @@ def generate_latest_digest() -> None:
         writer.writeheader()
         writer.writerows(rows)
     shutil.copy2(out, DOCS_DATA / out.name)
+
+
+
+def fetch_europe_pmc_candidates(query: str, out_name: str, category: str, page_size: int = 25) -> None:
+    """Fetch literature candidates from Europe PMC and save them for manual review.
+
+    These candidate files are intentionally separate from the curated trackers.
+    GitHub Actions can refresh them every 6 hours, but promotion into
+    epidemiological_research.csv or rd_tracker.csv should be human-reviewed.
+    """
+    import urllib.parse
+    import urllib.request
+    import json
+
+    url = (
+        "https://www.ebi.ac.uk/europepmc/webservices/rest/search?"
+        + urllib.parse.urlencode({
+            "query": query,
+            "format": "json",
+            "pageSize": str(page_size),
+            "sort": "P_PDATE_D",
+        })
+    )
+    out = PROCESSED / out_name
+    fieldnames = ["date", "category", "title", "source", "journal", "authors", "url", "abstract_snippet", "screening_query", "review_status"]
+    try:
+        with urllib.request.urlopen(url, timeout=25) as resp:
+            payload = json.loads(resp.read().decode("utf-8"))
+        results = payload.get("resultList", {}).get("result", [])
+        rows = []
+        for item in results:
+            pmid = item.get("pmid")
+            doi = item.get("doi")
+            link = f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/" if pmid else (f"https://doi.org/{doi}" if doi else item.get("fullTextUrlList", {}).get("fullTextUrl", [{}])[0].get("url", ""))
+            rows.append({
+                "date": item.get("firstPublicationDate") or item.get("journalInfo", {}).get("printPublicationDate") or item.get("pubYear", ""),
+                "category": category,
+                "title": item.get("title", ""),
+                "source": "Europe PMC",
+                "journal": item.get("journalTitle", ""),
+                "authors": item.get("authorString", ""),
+                "url": link,
+                "abstract_snippet": (item.get("abstractText", "") or "")[:500],
+                "screening_query": query,
+                "review_status": "candidate_for_manual_review",
+            })
+    except Exception as e:
+        rows = [{
+            "date": dt.datetime.now(dt.timezone.utc).date().isoformat(),
+            "category": category,
+            "title": "Europe PMC candidate fetch failed",
+            "source": "Europe PMC",
+            "journal": "",
+            "authors": "",
+            "url": "",
+            "abstract_snippet": str(e),
+            "screening_query": query,
+            "review_status": "fetch_error",
+        }]
+    with out.open("w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(rows)
+    shutil.copy2(out, DOCS_DATA / out.name)
+
+
+def generate_candidate_literature_files() -> None:
+    epi_query = '((Bundibugyo OR "Bundibugyo virus" OR "Bundibugyo ebolavirus" OR Ebola OR ebolavirus) AND ("transmission dynamics" OR model* OR forecast* OR importation OR "reproduction number" OR "serial interval" OR "case fatality" OR severity OR "contact tracing" OR epidemiology))'
+    rd_query = '((Bundibugyo OR "Bundibugyo virus" OR "Bundibugyo ebolavirus" OR ebolavirus) AND (vaccine OR therapeutic* OR "monoclonal antibody" OR antiviral OR diagnostic OR assay OR "animal model" OR trial))'
+    fetch_europe_pmc_candidates(epi_query, "epidemiological_research_candidates.csv", "epidemiological_research_screening")
+    fetch_europe_pmc_candidates(rd_query, "rd_candidates.csv", "rd_screening")
 
 
 def write_manifest() -> None:
@@ -210,9 +293,10 @@ def write_manifest() -> None:
 
 def main() -> None:
     copy_for_pages()
+    generate_candidate_literature_files()
     generate_latest_digest()
     write_manifest()
-    print("Dashboard data copied to docs/data, latest digest generated, and manifest written.")
+    print("Dashboard data copied to docs/data, candidate literature files refreshed, latest digest generated, and manifest written.")
 
 
 if __name__ == "__main__":

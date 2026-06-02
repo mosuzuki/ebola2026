@@ -1,78 +1,94 @@
-# DRC + Uganda Ebola Bundibugyo Research & R&D Intelligence Dashboard
+# DRC + Uganda Ebola Bundibugyo Intelligence Dashboard
 
-A GitHub Pages-ready dashboard for the 2026 Ebola disease outbreak caused by **Bundibugyo virus** in the Democratic Republic of the Congo and Uganda.
+GitHub Pages dashboard for situational awareness, epidemiological research screening, and therapeutics/vaccine/diagnostic R&D tracking for the DRC + Uganda Ebola Bundibugyo outbreak.
 
-This version is biased toward **epidemiological research, therapeutics, diagnostics, and vaccine R&D**, while retaining core public-health situational awareness.
+## What is included
 
-## Main screen layout
+- Compact current situation cards
+- Japanese 48-hour digest generated at build time
+- Institutional update timeline, newest first, first 10 items shown by default
+- ECDC-style epidemiological situation map using Leaflet and `map_features.csv`
+- Epidemic curve and geographic distribution
+- Dedicated **Epidemiological Research** tracker separated from product R&D
+- Dedicated **Therapeutics, vaccines and diagnostics R&D** tracker
+- CSV downloads for all curated datasets
+- GitHub Actions workflow scheduled every 6 hours
+- Europe PMC candidate-fetch hooks for automated literature screening
 
-1. **Compact current situation header**
-   - Latest DRC and Uganda confirmed cases/deaths from curated seed data
-   - Download buttons for situation, institutional updates, and science/R&D CSVs
+## Deploy
 
-2. **Japanese 48-hour digest**
-   - Automatically generated at each GitHub Actions run from institutional and science/R&D trackers
-   - Displays Japanese summaries for items dated within the previous 48 hours
-   - Output file: `latest_48h_summary.csv`
-
-3. **Two-column intelligence board**
-   - Left: WHO, CDC, ECDC, Africa CDC, INRB/national authority-related, MSF, Gavi, CEPI and other institutional updates
-   - Right: epidemiology, modelling, clinical evidence, therapeutics, diagnostics, vaccine R&D and cross-protection evidence
-   - Both lists are sorted newest first
-   - Only the latest 10 items are shown initially; older items are revealed with a button
-
-4. **Epidemiology section**
-   - Cumulative confirmed-case curve
-   - Geographic distribution
-   - Latest situation records
-
-5. **R&D matrix**
-   - Detailed table of science/R&D items including evidence type, topic, review status and R&D relevance
-
-## How to publish on GitHub Pages
-
-1. Create a GitHub repository.
-2. Upload all files in this folder.
+1. Create a new GitHub repository.
+2. Upload the full contents of this folder.
 3. Go to **Settings → Pages**.
-4. Set **Source** to `Deploy from a branch`.
-5. Select branch `main` and folder `/docs`.
-6. Save.
+4. Select **Deploy from a branch**.
+5. Select `main` branch and `/docs` folder.
+6. Open the GitHub Pages URL after deployment.
 
-## Updating data
+## Update frequency
 
-Curated data live in:
-
-- `data/processed/situation_timeseries.csv`
-- `data/processed/geography.csv`
-- `data/processed/derived_line_list.csv`
-- `data/processed/response_tracker.csv`
-- `data/processed/science_tracker.csv`
-
-Run:
-
-```bash
-python scripts/update_data.py
-```
-
-This validates processed CSVs, generates `data/processed/latest_48h_summary.csv`, copies all public CSVs into `docs/data/`, and writes `docs/data/manifest.json`.
-
-GitHub Actions is configured to run every 6 hours:
+The workflow runs every 6 hours:
 
 ```yaml
 schedule:
   - cron: "0 */6 * * *"
 ```
 
-You can also run it manually from the GitHub Actions tab using `workflow_dispatch`.
+It can also be run manually from the GitHub Actions tab.
+
+## Data files
+
+Curated files:
+
+- `data/processed/situation_timeseries.csv`
+- `data/processed/geography.csv`
+- `data/processed/map_features.csv`
+- `data/processed/derived_line_list.csv`
+- `data/processed/response_tracker.csv`
+- `data/processed/epidemiological_research.csv`
+- `data/processed/rd_tracker.csv`
+
+Generated files:
+
+- `data/processed/latest_48h_summary.csv`
+- `data/processed/epidemiological_research_candidates.csv`
+- `data/processed/rd_candidates.csv`
+
+The candidate files are generated from Europe PMC searches and are **not automatically promoted** to the curated trackers. They should be reviewed before being copied into `epidemiological_research.csv` or `rd_tracker.csv`.
+
+## Epidemiological Research screening
+
+The epidemiological research tracker is intentionally separated from R&D. It focuses on:
+
+- transmission dynamics
+- Rt/R0 estimation
+- serial interval and incubation period
+- case fatality and severity
+- forecasting and nowcasting
+- importation risk
+- contact tracing and isolation strategies
+- healthcare-associated transmission
+- spatial spread and mobility
+- model-based evaluation of control measures
+
+Screening scope includes epidemiological and infectious-disease journals such as *Epidemiology*, *Emerging Infectious Diseases*, *Eurosurveillance*, *The Lancet Infectious Diseases*, *PLOS Neglected Tropical Diseases*, *PLOS Pathogens*, *eLife*, *Nature Medicine*, *The Journal of Infectious Diseases*, *Clinical Infectious Diseases*, *BMC Infectious Diseases*, and *International Journal of Infectious Diseases*, plus medRxiv/bioRxiv where relevant.
+
+## R&D tracker
+
+The R&D tracker focuses on:
+
+- vaccine candidates
+- therapeutics and monoclonal antibodies
+- antivirals
+- diagnostics and assays
+- animal models
+- clinical trial readiness
+- compassionate-use or emergency-use pathways
+- manufacturing, access and procurement issues
+
+## Map notes
+
+`map_features.csv` drives the Leaflet map. The current polygons are schematic and the point coordinates are approximate for situational awareness. Official ECDC/national authority maps should be used for precise administrative boundaries.
 
 ## Important caveat
 
-`derived_line_list.csv` is **not an official individual case line list**. It is an aggregate-derived placeholder that preserves the intended schema and download function until official line-level data become available.
-
-## Recommended next extensions
-
-- Add a source registry for WHO, CDC, ECDC, Africa CDC, MSF, Gavi, CEPI, PubMed, Europe PMC, medRxiv and clinicaltrials.gov.
-- Add automated but review-gated PubMed/Europe PMC/medRxiv ingestion.
-- Add product-level candidate matrix for vaccines, therapeutics and diagnostics.
-- Add data/raw snapshots of source pages/PDFs for auditability.
-- Add issue templates for external corrections and source suggestions.
+The downloadable line list is aggregate-derived and is not official individual-level case data. Use original national authority, WHO, ECDC, Africa CDC, CDC and other official sources for operational decision-making.

@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>DRC + Uganda Ebola Bundibugyo Research & R&D Intelligence Dashboard</title>
+  <title>DRC + Uganda Ebola Bundibugyo Epidemiology, Research & R&D Intelligence Dashboard</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIINfQWt6XJ2+vGq8q1j7v3EAEjfNf0vRks=" crossorigin="" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -13,14 +14,14 @@
       <h1>DRC + Uganda Ebola Bundibugyo Intelligence Dashboard</h1>
       <p>Outbreak epidemiology, institutional updates, epidemiological research, therapeutics and vaccine R&D tracker.</p>
     </div>
-    <div class="header-note">GitHub Pages · curated seed data · human review recommended</div>
+    <div class="header-note">GitHub Pages · 6-hourly build · human review recommended</div>
   </div>
 </header>
 <nav><div class="tabs">
-  <a href="#overview">Overview</a><a href="#intel">Latest intelligence</a><a href="#epi">Epidemiology</a><a href="#rnd">R&D matrix</a><a href="#downloads">Downloads</a><a href="#methods">Methods</a>
+  <a href="#overview">Overview</a><a href="#intel">Latest intelligence</a><a href="#epi">Epidemiology</a><a href="#research">Epi research</a><a href="#rnd">R&D</a><a href="#downloads">Downloads</a><a href="#methods">Methods</a>
 </div></nav>
 <main class="container">
-  <div class="notice compact"><strong>Data note.</strong> This dashboard is designed for situational awareness and research/R&D tracking. Case counts and suspected-case categories change rapidly; verify all operational decisions against national authorities and WHO/ECDC source documents. The downloadable line list is aggregate-derived, not official individual-level data.</div>
+  <div class="notice compact"><strong>Data note.</strong> Designed for situational awareness, epidemiological research scanning, and R&D tracking. Case counts and suspected-case categories change rapidly; verify operational decisions against national authorities and WHO/ECDC source documents. The downloadable line list is aggregate-derived, not official individual-level data.</div>
 
   <section id="overview" class="overview-compact">
     <div class="mini-grid">
@@ -32,8 +33,9 @@
     </div>
     <div class="compact-actions">
       <a class="button smallbtn" href="data/situation_timeseries.csv" download>Situation CSV</a>
-      <a class="button smallbtn" href="data/response_tracker.csv" download>Institutional updates CSV</a>
-      <a class="button smallbtn" href="data/science_tracker.csv" download>Science/R&D CSV</a>
+      <a class="button smallbtn" href="data/map_features.csv" download>Map CSV</a>
+      <a class="button smallbtn" href="data/epidemiological_research.csv" download>Epi research CSV</a>
+      <a class="button smallbtn" href="data/rd_tracker.csv" download>R&D CSV</a>
       <a class="button smallbtn" href="data/latest_48h_summary.csv" download>48h summary CSV</a>
     </div>
   </section>
@@ -49,7 +51,7 @@
   <section id="intel">
     <div class="section-head">
       <h2>Latest intelligence</h2>
-      <p>Left: public health and institutional updates. Right: epidemiological research, therapeutics and vaccine R&D evidence. Both lists are newest first; the first 10 are shown initially.</p>
+      <p>Left: public health and institutional updates from WHO, CDC, ECDC, Africa CDC, INRB/MoH and partners. Right: epidemiological research, including transmission dynamics, forecasting, severity, importation risk and modelling. Both lists are newest first; first 10 are shown initially.</p>
     </div>
     <div class="grid intel-grid">
       <div class="card panel">
@@ -58,38 +60,54 @@
         <div id="responseTimeline" class="timeline dense"></div>
         <button id="toggleResponse" class="more">Show all older updates</button>
       </div>
-      <div class="card panel emphasis">
-        <div class="panel-title"><h3>Research, therapeutics and vaccine R&D</h3><span id="scienceCount" class="count"></span></div>
-        <div class="filters" id="scienceFilters"></div>
-        <div id="scienceTimeline" class="timeline dense science"></div>
-        <button id="toggleScience" class="more">Show all older evidence</button>
+      <div class="card panel emphasis-epi">
+        <div class="panel-title"><h3>Epidemiological Research</h3><span id="epiResearchCount" class="count"></span></div>
+        <div class="filters" id="epiResearchFilters"></div>
+        <div id="epiResearchTimeline" class="timeline dense epi-research"></div>
+        <button id="toggleEpiResearch" class="more">Show all older epidemiology items</button>
       </div>
     </div>
   </section>
 
   <section id="epi">
     <h2>Epidemiological situation</h2>
+    <div class="grid map-grid">
+      <div class="card map-card">
+        <div class="map-head"><h3>ECDC-style situation map</h3><span class="small">Schematic points based on curated CSV; click features for source details.</span></div>
+        <div id="epiMap" class="epi-map"></div>
+        <p class="small">Affected provinces and health zones are shown as a situational-awareness map. Administrative boundaries are approximate; official maps from ECDC/national authorities remain the reference for precise geography.</p>
+      </div>
+      <div class="card"><h3>Geographic distribution</h3><svg id="geoBars"></svg><p class="small">Province/district/health-zone counts are mixed administrative levels; see data notes.</p></div>
+    </div>
     <div class="grid two">
       <div class="card"><h3>Cumulative confirmed cases by report date</h3><svg id="curve"></svg><p class="small">Based on publicly reported aggregate data in <code>situation_timeseries.csv</code>.</p></div>
-      <div class="card"><h3>Geographic distribution</h3><svg id="geoBars"></svg><p class="small">Province/district/health-zone counts are mixed administrative levels; see data notes.</p></div>
+      <div class="card"><h3>Map feature records</h3><div class="table-wrap compact-table"><table id="mapTable"></table></div></div>
     </div>
     <h3>Latest situation records</h3>
     <div class="table-wrap"><table id="situationTable"></table></div>
   </section>
 
+  <section id="research">
+    <h2>Epidemiological Research tracker</h2>
+    <p class="lead">Focused on epidemiological journals and preprint streams: transmission dynamics, Rt/R0, serial interval, incubation period, CFR/severity, spatial spread, forecasting, importation risk, contact tracing, healthcare-associated transmission and model-based evaluation of control measures.</p>
+    <div class="table-wrap"><table id="epiResearchTable"></table></div>
+  </section>
+
   <section id="rnd">
-    <h2>R&D matrix</h2>
-    <p class="lead">This view is intentionally biased toward actionable research: outbreak epidemiology, modelling, clinical characterization, vaccines, therapeutics, diagnostics, and trial readiness.</p>
-    <div class="table-wrap"><table id="scienceTable"></table></div>
+    <h2>Therapeutics, vaccines and diagnostics R&D tracker</h2>
+    <p class="lead">Separated from epidemiological research to keep product-development evidence visible: vaccine candidates, therapeutics, diagnostics, animal models, assays, clinical trial readiness, manufacturing and access.</p>
+    <div class="table-wrap"><table id="rdTable"></table></div>
   </section>
 
   <section id="downloads">
     <h2>Downloads</h2>
     <a class="button" href="data/situation_timeseries.csv" download>Download situation timeseries CSV</a>
     <a class="button" href="data/geography.csv" download>Download geography CSV</a>
+    <a class="button" href="data/map_features.csv" download>Download map features CSV</a>
     <a class="button" href="data/derived_line_list.csv" download>Download derived line list CSV</a>
     <a class="button" href="data/response_tracker.csv" download>Download institutional updates CSV</a>
-    <a class="button" href="data/science_tracker.csv" download>Download science/R&D tracker CSV</a>
+    <a class="button" href="data/epidemiological_research.csv" download>Download epidemiological research CSV</a>
+    <a class="button" href="data/rd_tracker.csv" download>Download R&D tracker CSV</a>
     <a class="button" href="data/latest_48h_summary.csv" download>Download Japanese 48-hour digest CSV</a>
   </section>
 
@@ -107,14 +125,16 @@
         </ol>
       </div>
       <div class="card">
-        <h3>Research/R&D curation rules</h3>
-        <p>Evidence items are classified by topic and review status. Preprints, expert advisory reports and media summaries are retained because they may be critical for R&D situational awareness, but they are explicitly labelled.</p>
-        <p class="small">Recommended extension: add automated PubMed/Europe PMC/medRxiv queries and require manual approval before merge.</p>
+        <h3>Automated screening scope</h3>
+        <p>The update script includes Europe PMC query hooks to screen epidemiological research separately from product R&D. Candidate records are saved for review before promotion to the curated trackers.</p>
+        <p class="small"><strong>Epi research query focus:</strong> Bundibugyo/Ebola/ebolavirus + transmission dynamics, modelling, forecasting, importation, reproduction number, serial interval, CFR, severity and contact tracing.</p>
+        <p class="small"><strong>R&D query focus:</strong> vaccines, therapeutics, monoclonal antibodies, antivirals, diagnostics, animal models, assays and clinical trials.</p>
       </div>
     </div>
   </section>
 </main>
 <footer>Generated as a GitHub Pages MVP. Public information changes rapidly; cite original sources when using figures.</footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="app.js"></script>
 </body>
 </html>

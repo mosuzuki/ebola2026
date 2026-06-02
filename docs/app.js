@@ -24,12 +24,13 @@ const fmt = v => v==null || isNaN(v) ? '–' : v.toLocaleString();
 function escapeHtml(s){return String(s ?? '').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));}
 function link(url, label){ return url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener">${escapeHtml(label || url)}</a>` : escapeHtml(label || ''); }
 function table(el, rows, cols){
+  const node = document.getElementById(el); if(!node) return;
   const h = '<thead><tr>'+cols.map(c=>`<th>${c.label}</th>`).join('')+'</tr></thead>';
   const b = '<tbody>'+rows.map(r=>'<tr>'+cols.map(c=>`<td>${c.render?c.render(r):escapeHtml(r[c.key]||'')}</td>`).join('')+'</tr>').join('')+'</tbody>';
-  document.getElementById(el).innerHTML = h+b;
+  node.innerHTML = h+b;
 }
 function drawLine(svgId, rows){
-  const svg=document.getElementById(svgId), w=900,h=300,p={l:55,r:20,t:22,b:42}; svg.setAttribute('viewBox',`0 0 ${w} ${h}`);
+  const svg=document.getElementById(svgId), w=900,h=300,p={l:55,r:20,t:22,b:42}; if(!svg) return; svg.setAttribute('viewBox',`0 0 ${w} ${h}`);
   const data = rows.filter(r=>r.confirmed_cases).map(r=>({date:new Date(r.date), country:r.country, y:num(r.confirmed_cases)}));
   if(!data.length){svg.innerHTML='';return;}
   const minD = Math.min(...data.map(d=>d.date)), maxD=Math.max(...data.map(d=>d.date)), maxY=Math.max(...data.map(d=>d.y));
@@ -50,18 +51,16 @@ function drawLine(svgId, rows){
   svg.innerHTML=html;
 }
 function drawBars(svgId, rows){
-  const svg=document.getElementById(svgId), w=700,h=300,p={l:150,r:20,t:20,b:30}; svg.setAttribute('viewBox',`0 0 ${w} ${h}`);
+  const svg=document.getElementById(svgId), w=700,h=300,p={l:150,r:20,t:20,b:30}; if(!svg) return; svg.setAttribute('viewBox',`0 0 ${w} ${h}`);
   const data=rows.filter(r=>r.confirmed_cases).slice(0,12).map(r=>({label:[r.country,r.admin1,r.admin2].filter(Boolean).join(' / '), y:num(r.confirmed_cases)})).sort((a,b)=>b.y-a.y);
+  if(!data.length){svg.innerHTML='';return;}
   const maxY=Math.max(...data.map(d=>d.y)); const bh=(h-p.t-p.b)/data.length-5;
   let html='';
   data.forEach((d,i)=>{ const yy=p.t+i*(bh+5), bw=d.y/(maxY||1)*(w-p.l-p.r); html+=`<text x="${p.l-8}" y="${yy+bh*.65}" text-anchor="end" font-size="12" fill="#17212b">${escapeHtml(d.label)}</text><rect x="${p.l}" y="${yy}" width="${bw}" height="${bh}" rx="4" fill="#1769aa"><title>${escapeHtml(d.label)}: ${d.y}</title></rect><text x="${p.l+bw+6}" y="${yy+bh*.65}" font-size="12" fill="#637282">${d.y}</text>`; });
   svg.innerHTML=html;
 }
-function uniqueValues(rows, key, max=6){ return [...new Set(rows.map(r=>r[key]).filter(Boolean))].slice(0,max); }
-function chips(containerId, rows, key){
-  document.getElementById(containerId).innerHTML = uniqueValues(rows, key).map(v=>`<span class="filter-chip">${escapeHtml(v)}</span>`).join('');
-}
-
+function uniqueValues(rows, key, max=8){ return [...new Set(rows.map(r=>r[key]).filter(Boolean))].slice(0,max); }
+function chips(containerId, rows, key){ const el=document.getElementById(containerId); if(el) el.innerHTML = uniqueValues(rows, key).map(v=>`<span class="filter-chip">${escapeHtml(v)}</span>`).join(''); }
 function renderLatest48(rows){
   const box = document.getElementById('latest48Summary');
   const count = document.getElementById('latest48Count');
@@ -78,7 +77,6 @@ function renderLatest48(rows){
     <p>${escapeHtml(r.summary_ja)}</p>
   </article>`).join('');
 }
-
 function renderResponse(rows, showAll=false){
   const sorted = rows.slice().sort((a,b)=>b.date.localeCompare(a.date));
   responseCount.textContent = `${sorted.length} curated items`;
@@ -91,34 +89,73 @@ function renderResponse(rows, showAll=false){
   toggleResponse.style.display = sorted.length > 10 ? 'block' : 'none';
   toggleResponse.textContent = showAll ? 'Show only latest 10' : `Show all older updates (${sorted.length-10} more)`;
 }
-function renderScience(rows, showAll=false){
+function renderEpiResearch(rows, showAll=false){
   const sorted = rows.slice().sort((a,b)=>b.date.localeCompare(a.date));
-  scienceCount.textContent = `${sorted.length} curated items`;
-  scienceTimeline.innerHTML = sorted.map((r,i)=>`<article class="event ${(!showAll && i>=10)?'hidden':''}">
-    <div class="event-head"><div><div class="title">${link(r.url, r.title)}</div><span class="tag rnd">${escapeHtml(r.topic)}</span><span class="tag">${escapeHtml(r.evidence_type)}</span><span class="tag">${escapeHtml(r.peer_review_status)}</span></div><div class="date">${escapeHtml(r.date)}</div></div>
+  epiResearchCount.textContent = `${sorted.length} curated/screened items`;
+  epiResearchTimeline.innerHTML = sorted.map((r,i)=>`<article class="event ${(!showAll && i>=10)?'hidden':''}">
+    <div class="event-head"><div><div class="title">${link(r.url, r.title)}</div><span class="tag epi">${escapeHtml(r.topic)}</span><span class="tag">${escapeHtml(r.evidence_type)}</span><span class="tag">${escapeHtml(r.peer_review_status)}</span></div><div class="date">${escapeHtml(r.date)}</div></div>
     <p>${escapeHtml(r.key_message)}</p>
     <p class="details">${escapeHtml(r.details || r.relevance || '')}</p>
-    <div class="small">${escapeHtml(r.source)}${r.r_and_d_stage ? ' · '+escapeHtml(r.r_and_d_stage) : ''}</div>
+    <div class="small">${escapeHtml(r.source)}${r.journal_scope ? ' · scope: '+escapeHtml(r.journal_scope) : ''}</div>
   </article>`).join('');
-  toggleScience.style.display = sorted.length > 10 ? 'block' : 'none';
-  toggleScience.textContent = showAll ? 'Show only latest 10' : `Show all older evidence (${sorted.length-10} more)`;
+  toggleEpiResearch.style.display = sorted.length > 10 ? 'block' : 'none';
+  toggleEpiResearch.textContent = showAll ? 'Show only latest 10' : `Show all older epidemiology items (${sorted.length-10} more)`;
+}
+function initMap(rows){
+  const el=document.getElementById('epiMap'); if(!el) return;
+  if(typeof L === 'undefined'){
+    el.innerHTML='<div class="map-fallback">Leaflet could not be loaded. Use map_features.csv for geographic records.</div>'; return;
+  }
+  const map=L.map('epiMap', {scrollWheelZoom:false}).setView([0.25, 30.15], 6);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 10, attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
+  const provinceStyle={color:'#d08a00',weight:1.5,fillColor:'#f4d35e',fillOpacity:0.42};
+  const provinceBoxes=[
+    {name:'Ituri affected province (schematic)', bounds:[[0.4,28.9],[3.4,31.2]]},
+    {name:'North Kivu affected province (schematic)', bounds:[[-1.9,28.1],[0.7,30.0]]},
+    {name:'South Kivu affected province (schematic)', bounds:[[-4.0,27.6],[-1.4,29.6]]}
+  ];
+  provinceBoxes.forEach(p=>L.rectangle(p.bounds, provinceStyle).addTo(map).bindPopup(p.name));
+  const group=L.featureGroup().addTo(map);
+  rows.forEach(r=>{
+    const lat=num(r.lat), lon=num(r.lon); if(lat==null||lon==null) return;
+    const cases=num(r.confirmed_cases)||0;
+    const isImport=(r.type||'').includes('imported');
+    const color=isImport ? '#bd4b18' : ((r.type||'').includes('health_zone') ? '#e67300' : '#1769aa');
+    const radius=Math.max(7, Math.min(24, 6 + Math.sqrt(cases||1)*1.8));
+    const marker=L.circleMarker([lat,lon], {radius, color, weight:2, fillColor:color, fillOpacity:0.72}).addTo(group);
+    marker.bindPopup(`<strong>${escapeHtml([r.country,r.admin1,r.admin2].filter(Boolean).join(' / '))}</strong><br>${escapeHtml(r.status)}<br>Confirmed: ${fmt(cases)}${r.confirmed_deaths ? '<br>Deaths: '+escapeHtml(r.confirmed_deaths) : ''}${r.suspected_cases ? '<br>Suspected: '+escapeHtml(r.suspected_cases) : ''}<br><span class="small">${link(r.source_url, r.source_name)}</span><br>${escapeHtml(r.popup||'')}`);
+  });
+  if(group.getLayers().length) map.fitBounds(group.getBounds().pad(0.35));
+  const legend=L.control({position:'bottomleft'});
+  legend.onAdd=()=>{
+    const div=L.DomUtil.create('div','map-legend');
+    div.innerHTML='<strong>Legend</strong><br><span class="legend-box affected"></span>Affected provinces<br><span class="legend-dot health"></span>Affected health zones<br><span class="legend-dot imported"></span>Cities with imported cases';
+    return div;
+  };
+  legend.addTo(map);
 }
 (async function init(){
-  const [sit, geo, resp, sci, latest48] = await Promise.all([csv('data/situation_timeseries.csv'),csv('data/geography.csv'),csv('data/response_tracker.csv'),csv('data/science_tracker.csv'),csv('data/latest_48h_summary.csv')]);
+  const [sit, geo, mapRows, resp, epiResearch, rd, latest48] = await Promise.all([
+    csv('data/situation_timeseries.csv'), csv('data/geography.csv'), csv('data/map_features.csv'), csv('data/response_tracker.csv'), csv('data/epidemiological_research.csv'), csv('data/rd_tracker.csv'), csv('data/latest_48h_summary.csv')
+  ]);
   const latestDRC=[...sit].filter(r=>r.country==='DRC').sort((a,b)=>a.date.localeCompare(b.date)).pop();
   const latestUGA=[...sit].filter(r=>r.country==='Uganda').sort((a,b)=>a.date.localeCompare(b.date)).pop();
   drcConfirmed.textContent=fmt(num(latestDRC?.confirmed_cases)); drcDeaths.textContent=fmt(num(latestDRC?.confirmed_deaths));
   ugaConfirmed.textContent=fmt(num(latestUGA?.confirmed_cases)); ugaDeaths.textContent=fmt(num(latestUGA?.confirmed_deaths));
-  lastUpdated.textContent=new Date().toISOString().slice(0,10);
+  try{ const m=await (await fetch('data/manifest.json', {cache:'no-store'})).json(); lastUpdated.textContent=(m.generated_at_utc||'').slice(0,16).replace('T',' ')+' UTC'; }catch(e){ lastUpdated.textContent=new Date().toISOString().slice(0,10); }
   renderLatest48(latest48);
-  drawLine('curve', sit); drawBars('geoBars', geo);
-  let showResp=false, showSci=false;
-  chips('responseFilters', resp, 'organization', 8); chips('scienceFilters', sci, 'topic', 8);
-  renderResponse(resp, showResp); renderScience(sci, showSci);
+  initMap(mapRows); drawLine('curve', sit); drawBars('geoBars', geo);
+  let showResp=false, showEpi=false;
+  chips('responseFilters', resp, 'organization', 8); chips('epiResearchFilters', epiResearch, 'topic', 8);
+  renderResponse(resp, showResp); renderEpiResearch(epiResearch, showEpi);
   toggleResponse.onclick=()=>{showResp=!showResp; renderResponse(resp, showResp)};
-  toggleScience.onclick=()=>{showSci=!showSci; renderScience(sci, showSci)};
+  toggleEpiResearch.onclick=()=>{showEpi=!showEpi; renderEpiResearch(epiResearch, showEpi)};
   table('situationTable', sit.slice().sort((a,b)=>b.date.localeCompare(a.date)), [
     {key:'date',label:'Date'}, {key:'country',label:'Country'}, {key:'confirmed_cases',label:'Confirmed',render:r=>fmt(num(r.confirmed_cases))}, {key:'confirmed_deaths',label:'Deaths',render:r=>fmt(num(r.confirmed_deaths))}, {key:'suspected_cases',label:'Suspected',render:r=>fmt(num(r.suspected_cases))}, {key:'source_name',label:'Source',render:r=>link(r.source_url,r.source_name)}, {key:'notes',label:'Notes'}]);
-  table('scienceTable', sci.slice().sort((a,b)=>b.date.localeCompare(a.date)), [
-    {key:'date',label:'Date'}, {key:'title',label:'Title',render:r=>link(r.url,r.title)}, {key:'source',label:'Source'}, {key:'evidence_type',label:'Type'}, {key:'topic',label:'Topic'}, {key:'key_message',label:'Key message'}, {key:'details',label:'Research/R&D relevance'}, {key:'peer_review_status',label:'Review status'}]);
+  table('mapTable', mapRows.slice().sort((a,b)=>b.confirmed_cases-a.confirmed_cases), [
+    {key:'country',label:'Country'}, {key:'admin1',label:'Admin1'}, {key:'admin2',label:'Admin2'}, {key:'status',label:'Status'}, {key:'confirmed_cases',label:'Confirmed',render:r=>fmt(num(r.confirmed_cases))}]);
+  table('epiResearchTable', epiResearch.slice().sort((a,b)=>b.date.localeCompare(a.date)), [
+    {key:'date',label:'Date'}, {key:'title',label:'Title',render:r=>link(r.url,r.title)}, {key:'source',label:'Source'}, {key:'topic',label:'Topic'}, {key:'key_message',label:'Key message'}, {key:'details',label:'Epidemiological relevance'}, {key:'screening_query',label:'Screening query'}, {key:'peer_review_status',label:'Review status'}]);
+  table('rdTable', rd.slice().sort((a,b)=>b.date.localeCompare(a.date)), [
+    {key:'date',label:'Date'}, {key:'title',label:'Title',render:r=>link(r.url,r.title)}, {key:'topic',label:'Topic'}, {key:'candidate_or_product',label:'Candidate/product'}, {key:'platform_or_modality',label:'Platform/modality'}, {key:'developer_or_sponsor',label:'Developer/sponsor'}, {key:'key_message',label:'Key message'}, {key:'r_and_d_stage',label:'Stage'}, {key:'peer_review_status',label:'Review status'}]);
 })();
