@@ -90,46 +90,63 @@ function renderResponse(rows, showAll=false){
   toggleResponse.textContent = showAll ? 'Show only latest 10' : `Show all older updates (${sorted.length-10} more)`;
 }
 function renderEpiResearch(rows, showAll=false){
-  const sorted = rows.slice().sort((a,b)=>b.date.localeCompare(a.date));
-  epiResearchCount.textContent = `${sorted.length} curated/screened items`;
-  epiResearchTimeline.innerHTML = sorted.map((r,i)=>`<article class="event ${(!showAll && i>=10)?'hidden':''}">
-    <div class="event-head"><div><div class="title">${link(r.url, r.title)}</div><span class="tag epi">${escapeHtml(r.topic)}</span><span class="tag">${escapeHtml(r.evidence_type)}</span><span class="tag">${escapeHtml(r.peer_review_status)}</span></div><div class="date">${escapeHtml(r.date)}</div></div>
-    <p>${escapeHtml(r.key_message)}</p>
-    <p class="details">${escapeHtml(r.details || r.relevance || '')}</p>
-    <div class="small">${escapeHtml(r.source)}${r.journal_scope ? ' · scope: '+escapeHtml(r.journal_scope) : ''}</div>
-  </article>`).join('');
+  const sorted = rows.slice().filter(r => (r.outbreak_scope || '').toLowerCase().includes('current') || (r.current_outbreak_only || '').toLowerCase()==='true' || (r.date || '') >= '2026-04-01').sort((a,b)=>b.date.localeCompare(a.date));
+  epiResearchCount.textContent = `${sorted.length} items`;
+  if(!sorted.length){
+    epiResearchTimeline.innerHTML = '<p class="small empty-note">No current-outbreak epidemiological research item has been promoted to the curated tracker yet. Review <code>epidemiological_research_candidates.csv</code> after each automated screening run.</p>';
+  } else {
+    epiResearchTimeline.innerHTML = sorted.map((r,i)=>`<article class="event ${(!showAll && i>=10)?'hidden':''}">
+      <div class="event-head"><div><div class="title">${link(r.url, r.title)}</div><span class="tag epi">${escapeHtml(r.topic)}</span><span class="tag">${escapeHtml(r.evidence_type)}</span><span class="tag">${escapeHtml(r.peer_review_status)}</span></div><div class="date">${escapeHtml(r.date)}</div></div>
+      <p>${escapeHtml(r.key_message)}</p>
+      <p class="details">${escapeHtml(r.details || r.relevance || '')}</p>
+      <div class="small">${escapeHtml(r.source)}${r.journal_scope ? ' · scope: '+escapeHtml(r.journal_scope) : ''}</div>
+    </article>`).join('');
+  }
   toggleEpiResearch.style.display = sorted.length > 10 ? 'block' : 'none';
   toggleEpiResearch.textContent = showAll ? 'Show only latest 10' : `Show all older epidemiology items (${sorted.length-10} more)`;
+}
+function renderRD(rows, showAll=false){
+  const sorted = rows.slice().sort((a,b)=>b.date.localeCompare(a.date));
+  rdCount.textContent = `${sorted.length} items`;
+  rdTimeline.innerHTML = sorted.map((r,i)=>`<article class="event ${(!showAll && i>=10)?'hidden':''}">
+    <div class="event-head"><div><div class="title">${link(r.url, r.title)}</div><span class="tag rnd">${escapeHtml(r.topic)}</span><span class="tag">${escapeHtml(r.r_and_d_stage || r.evidence_type)}</span></div><div class="date">${escapeHtml(r.date)}</div></div>
+    <p>${escapeHtml(r.key_message)}</p>
+    <p class="details">${escapeHtml(r.details || r.relevance || '')}</p>
+    <div class="small">${escapeHtml(r.source)}${r.candidate_or_product ? ' · '+escapeHtml(r.candidate_or_product) : ''}${r.developer_or_sponsor ? ' · '+escapeHtml(r.developer_or_sponsor) : ''}</div>
+  </article>`).join('');
+  toggleRD.style.display = sorted.length > 10 ? 'block' : 'none';
+  toggleRD.textContent = showAll ? 'Show only latest 10' : `Show all older R&D updates (${sorted.length-10} more)`;
+}
+function bubbleRadius(cases){
+  const v = Math.max(1, cases || 1);
+  return Math.max(9, Math.min(44, 7 + Math.sqrt(v) * 2.1));
 }
 function initMap(rows){
   const el=document.getElementById('epiMap'); if(!el) return;
   if(typeof L === 'undefined'){
     el.innerHTML='<div class="map-fallback">Leaflet could not be loaded. Use map_features.csv for geographic records.</div>'; return;
   }
-  const map=L.map('epiMap', {scrollWheelZoom:false}).setView([0.25, 30.15], 6);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 10, attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
-  const provinceStyle={color:'#d08a00',weight:1.5,fillColor:'#f4d35e',fillOpacity:0.42};
-  const provinceBoxes=[
-    {name:'Ituri affected province (schematic)', bounds:[[0.4,28.9],[3.4,31.2]]},
-    {name:'North Kivu affected province (schematic)', bounds:[[-1.9,28.1],[0.7,30.0]]},
-    {name:'South Kivu affected province (schematic)', bounds:[[-4.0,27.6],[-1.4,29.6]]}
-  ];
-  provinceBoxes.forEach(p=>L.rectangle(p.bounds, provinceStyle).addTo(map).bindPopup(p.name));
+  const map=L.map('epiMap', {scrollWheelZoom:false, zoomControl:true, attributionControl:true}).setView([0.3, 30.25], 6);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 11, attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
   const group=L.featureGroup().addTo(map);
-  rows.forEach(r=>{
+  const sorted = rows.slice().sort((a,b)=>(num(a.confirmed_cases)||0)-(num(b.confirmed_cases)||0));
+  sorted.forEach(r=>{
     const lat=num(r.lat), lon=num(r.lon); if(lat==null||lon==null) return;
     const cases=num(r.confirmed_cases)||0;
-    const isImport=(r.type||'').includes('imported');
-    const color=isImport ? '#bd4b18' : ((r.type||'').includes('health_zone') ? '#e67300' : '#1769aa');
-    const radius=Math.max(7, Math.min(24, 6 + Math.sqrt(cases||1)*1.8));
-    const marker=L.circleMarker([lat,lon], {radius, color, weight:2, fillColor:color, fillOpacity:0.72}).addTo(group);
+    const isUganda=(r.country||'').toLowerCase()==='uganda';
+    const isHZ=(r.type||'').includes('health_zone');
+    const color=isUganda ? '#b54708' : (isHZ ? '#0d6b4c' : '#1769aa');
+    const radius=bubbleRadius(cases);
+    const marker=L.circleMarker([lat,lon], {radius, color, weight:2.5, fillColor:color, fillOpacity:0.55}).addTo(group);
     marker.bindPopup(`<strong>${escapeHtml([r.country,r.admin1,r.admin2].filter(Boolean).join(' / '))}</strong><br>${escapeHtml(r.status)}<br>Confirmed: ${fmt(cases)}${r.confirmed_deaths ? '<br>Deaths: '+escapeHtml(r.confirmed_deaths) : ''}${r.suspected_cases ? '<br>Suspected: '+escapeHtml(r.suspected_cases) : ''}<br><span class="small">${link(r.source_url, r.source_name)}</span><br>${escapeHtml(r.popup||'')}`);
+    const label = L.divIcon({className:'bubble-label', html:`<span>${fmt(cases)}</span>`, iconSize:[44,18], iconAnchor:[22,9]});
+    L.marker([lat,lon], {icon: label, interactive:false}).addTo(group);
   });
-  if(group.getLayers().length) map.fitBounds(group.getBounds().pad(0.35));
+  if(group.getLayers().length) map.fitBounds(group.getBounds().pad(0.28));
   const legend=L.control({position:'bottomleft'});
   legend.onAdd=()=>{
     const div=L.DomUtil.create('div','map-legend');
-    div.innerHTML='<strong>Legend</strong><br><span class="legend-box affected"></span>Affected provinces<br><span class="legend-dot health"></span>Affected health zones<br><span class="legend-dot imported"></span>Cities with imported cases';
+    div.innerHTML='<strong>Confirmed cases</strong><br><span class="legend-dot drc"></span>DRC province/city or health zone<br><span class="legend-dot health"></span>DRC affected health zone<br><span class="legend-dot imported"></span>Uganda imported case area<br><div class="legend-scale"><span class="c smallc"></span><span class="c medc"></span><span class="c largec"></span> bubble size ∝ cases</div>';
     return div;
   };
   legend.addTo(map);
@@ -145,16 +162,15 @@ function initMap(rows){
   try{ const m=await (await fetch('data/manifest.json', {cache:'no-store'})).json(); lastUpdated.textContent=(m.generated_at_utc||'').slice(0,16).replace('T',' ')+' UTC'; }catch(e){ lastUpdated.textContent=new Date().toISOString().slice(0,10); }
   renderLatest48(latest48);
   initMap(mapRows); drawLine('curve', sit); drawBars('geoBars', geo);
-  let showResp=false, showEpi=false;
-  chips('responseFilters', resp, 'organization', 8); chips('epiResearchFilters', epiResearch, 'topic', 8);
-  renderResponse(resp, showResp); renderEpiResearch(epiResearch, showEpi);
+  let showResp=false, showEpi=false, showRD=false;
+  chips('responseFilters', resp, 'organization', 8); chips('epiResearchFilters', epiResearch, 'topic', 8); chips('rdFilters', rd, 'topic', 8);
+  renderResponse(resp, showResp); renderEpiResearch(epiResearch, showEpi); renderRD(rd, showRD);
   toggleResponse.onclick=()=>{showResp=!showResp; renderResponse(resp, showResp)};
   toggleEpiResearch.onclick=()=>{showEpi=!showEpi; renderEpiResearch(epiResearch, showEpi)};
+  toggleRD.onclick=()=>{showRD=!showRD; renderRD(rd, showRD)};
   table('situationTable', sit.slice().sort((a,b)=>b.date.localeCompare(a.date)), [
     {key:'date',label:'Date'}, {key:'country',label:'Country'}, {key:'confirmed_cases',label:'Confirmed',render:r=>fmt(num(r.confirmed_cases))}, {key:'confirmed_deaths',label:'Deaths',render:r=>fmt(num(r.confirmed_deaths))}, {key:'suspected_cases',label:'Suspected',render:r=>fmt(num(r.suspected_cases))}, {key:'source_name',label:'Source',render:r=>link(r.source_url,r.source_name)}, {key:'notes',label:'Notes'}]);
-  table('mapTable', mapRows.slice().sort((a,b)=>b.confirmed_cases-a.confirmed_cases), [
-    {key:'country',label:'Country'}, {key:'admin1',label:'Admin1'}, {key:'admin2',label:'Admin2'}, {key:'status',label:'Status'}, {key:'confirmed_cases',label:'Confirmed',render:r=>fmt(num(r.confirmed_cases))}]);
-  table('epiResearchTable', epiResearch.slice().sort((a,b)=>b.date.localeCompare(a.date)), [
+  table('epiResearchTable', epiResearch.slice().filter(r => (r.date || '') >= '2026-04-01').sort((a,b)=>b.date.localeCompare(a.date)), [
     {key:'date',label:'Date'}, {key:'title',label:'Title',render:r=>link(r.url,r.title)}, {key:'source',label:'Source'}, {key:'topic',label:'Topic'}, {key:'key_message',label:'Key message'}, {key:'details',label:'Epidemiological relevance'}, {key:'screening_query',label:'Screening query'}, {key:'peer_review_status',label:'Review status'}]);
   table('rdTable', rd.slice().sort((a,b)=>b.date.localeCompare(a.date)), [
     {key:'date',label:'Date'}, {key:'title',label:'Title',render:r=>link(r.url,r.title)}, {key:'topic',label:'Topic'}, {key:'candidate_or_product',label:'Candidate/product'}, {key:'platform_or_modality',label:'Platform/modality'}, {key:'developer_or_sponsor',label:'Developer/sponsor'}, {key:'key_message',label:'Key message'}, {key:'r_and_d_stage',label:'Stage'}, {key:'peer_review_status',label:'Review status'}]);

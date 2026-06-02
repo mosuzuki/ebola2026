@@ -12,7 +12,7 @@
   <div class="header-inner">
     <div>
       <h1>DRC + Uganda Ebola Bundibugyo Intelligence Dashboard</h1>
-      <p>Outbreak epidemiology, institutional updates, epidemiological research, therapeutics and vaccine R&D tracker.</p>
+      <p>Outbreak epidemiology, institutional updates, current-outbreak epidemiological research, therapeutics and vaccine R&D tracker.</p>
     </div>
     <div class="header-note">GitHub Pages · 6-hourly build · human review recommended</div>
   </div>
@@ -51,7 +51,7 @@
   <section id="intel">
     <div class="section-head">
       <h2>Latest intelligence</h2>
-      <p>Left: public health and institutional updates from WHO, CDC, ECDC, Africa CDC, INRB/MoH and partners. Right: epidemiological research, including transmission dynamics, forecasting, severity, importation risk and modelling. Both lists are newest first; first 10 are shown initially.</p>
+      <p>Left: public health and institutional updates from WHO, CDC, ECDC, Africa CDC, INRB/MoH and partners. Right: current-outbreak epidemiological research published from April 2026 onward, followed by therapeutics, vaccines and diagnostics R&D updates. All lists are newest first; first 10 are shown initially.</p>
     </div>
     <div class="grid intel-grid">
       <div class="card panel">
@@ -60,28 +60,33 @@
         <div id="responseTimeline" class="timeline dense"></div>
         <button id="toggleResponse" class="more">Show all older updates</button>
       </div>
-      <div class="card panel emphasis-epi">
-        <div class="panel-title"><h3>Epidemiological Research</h3><span id="epiResearchCount" class="count"></span></div>
-        <div class="filters" id="epiResearchFilters"></div>
-        <div id="epiResearchTimeline" class="timeline dense epi-research"></div>
-        <button id="toggleEpiResearch" class="more">Show all older epidemiology items</button>
+      <div class="right-stack">
+        <div class="card panel emphasis-epi">
+          <div class="panel-title"><h3>Epidemiological Research<br><small>Current outbreak only · since April 2026</small></h3><span id="epiResearchCount" class="count"></span></div>
+          <div class="filters" id="epiResearchFilters"></div>
+          <div id="epiResearchTimeline" class="timeline dense epi-research"></div>
+          <button id="toggleEpiResearch" class="more">Show all older epidemiology items</button>
+        </div>
+        <div class="card panel emphasis-rd">
+          <div class="panel-title"><h3>R&D updates<br><small>Vaccines · therapeutics · diagnostics</small></h3><span id="rdCount" class="count"></span></div>
+          <div class="filters" id="rdFilters"></div>
+          <div id="rdTimeline" class="timeline dense rd-timeline"></div>
+          <button id="toggleRD" class="more">Show all older R&D updates</button>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="epi">
     <h2>Epidemiological situation</h2>
-    <div class="grid map-grid">
-      <div class="card map-card">
-        <div class="map-head"><h3>ECDC-style situation map</h3><span class="small">Schematic points based on curated CSV; click features for source details.</span></div>
-        <div id="epiMap" class="epi-map"></div>
-        <p class="small">Affected provinces and health zones are shown as a situational-awareness map. Administrative boundaries are approximate; official maps from ECDC/national authorities remain the reference for precise geography.</p>
-      </div>
-      <div class="card"><h3>Geographic distribution</h3><svg id="geoBars"></svg><p class="small">Province/district/health-zone counts are mixed administrative levels; see data notes.</p></div>
+    <div class="card map-card full-map">
+      <div class="map-head"><h3>Situation map</h3><span class="small">Bubble size reflects reported confirmed cases in curated CSV; click a bubble for source details.</span></div>
+      <div id="epiMap" class="epi-map"></div>
+      <p class="small">This is a bubble map for rapid situational awareness. It intentionally avoids schematic polygons. Administrative boundaries and exact health-zone limits should be verified with official national and ECDC maps.</p>
     </div>
-    <div class="grid two">
+    <div class="grid two epi-charts">
       <div class="card"><h3>Cumulative confirmed cases by report date</h3><svg id="curve"></svg><p class="small">Based on publicly reported aggregate data in <code>situation_timeseries.csv</code>.</p></div>
-      <div class="card"><h3>Map feature records</h3><div class="table-wrap compact-table"><table id="mapTable"></table></div></div>
+      <div class="card"><h3>Geographic distribution</h3><svg id="geoBars"></svg><p class="small">Province/district/health-zone counts are mixed administrative levels; see data notes.</p></div>
     </div>
     <h3>Latest situation records</h3>
     <div class="table-wrap"><table id="situationTable"></table></div>
@@ -89,13 +94,13 @@
 
   <section id="research">
     <h2>Epidemiological Research tracker</h2>
-    <p class="lead">Focused on epidemiological journals and preprint streams: transmission dynamics, Rt/R0, serial interval, incubation period, CFR/severity, spatial spread, forecasting, importation risk, contact tracing, healthcare-associated transmission and model-based evaluation of control measures.</p>
+    <p class="lead">Only items directly about the 2026 DRC/Uganda Bundibugyo outbreak and published or posted from April 2026 onward are included here. Screening targets epidemiology journals and preprints covering transmission dynamics, Rt/R0, serial interval, incubation period, CFR/severity, spatial spread, forecasting, importation risk, contact tracing, healthcare-associated transmission and model-based evaluation of control measures.</p>
     <div class="table-wrap"><table id="epiResearchTable"></table></div>
   </section>
 
   <section id="rnd">
     <h2>Therapeutics, vaccines and diagnostics R&D tracker</h2>
-    <p class="lead">Separated from epidemiological research to keep product-development evidence visible: vaccine candidates, therapeutics, diagnostics, animal models, assays, clinical trial readiness, manufacturing and access.</p>
+    <p class="lead">Product-development evidence is kept separate from epidemiological research: vaccine candidates, therapeutics, diagnostics, animal models, assays, clinical trial readiness, manufacturing and access.</p>
     <div class="table-wrap"><table id="rdTable"></table></div>
   </section>
 
@@ -126,8 +131,8 @@
       </div>
       <div class="card">
         <h3>Automated screening scope</h3>
-        <p>The update script includes Europe PMC query hooks to screen epidemiological research separately from product R&D. Candidate records are saved for review before promotion to the curated trackers.</p>
-        <p class="small"><strong>Epi research query focus:</strong> Bundibugyo/Ebola/ebolavirus + transmission dynamics, modelling, forecasting, importation, reproduction number, serial interval, CFR, severity and contact tracing.</p>
+        <p>The update script includes Europe PMC query hooks to screen current-outbreak epidemiological research separately from product R&D. Candidate records are saved for review before promotion to the curated trackers.</p>
+        <p class="small"><strong>Epi research inclusion:</strong> publication/post date from 2026-04-01 onward and directly about the 2026 DRC/Uganda Bundibugyo outbreak.</p>
         <p class="small"><strong>R&D query focus:</strong> vaccines, therapeutics, monoclonal antibodies, antivirals, diagnostics, animal models, assays and clinical trials.</p>
       </div>
     </div>

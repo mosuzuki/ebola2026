@@ -92,3 +92,11 @@ The R&D tracker focuses on:
 ## Important caveat
 
 The downloadable line list is aggregate-derived and is not official individual-level case data. Use original national authority, WHO, ECDC, Africa CDC, CDC and other official sources for operational decision-making.
+
+
+## v5 layout notes
+
+- The epidemiological situation map is now a plain Leaflet bubble map. Bubble size is proportional to confirmed cases in `data/processed/map_features.csv`; no schematic polygons are drawn.
+- The right intelligence column is split into two stacked feeds: (1) `Epidemiological Research`, limited to items directly concerning the 2026 DRC/Uganda Bundibugyo outbreak and published/posted from 2026-04-01 onward, and (2) `R&D updates` for vaccines, therapeutics and diagnostics.
+- The former map-feature tracker table under the map was removed from the main page. Geographic records remain downloadable as `map_features.csv`.
+- Europe PMC candidate queries in `scripts/update_data.py` now include a date filter from 2026-04-01 and current-outbreak terms. Candidate files still require human review before promotion to the curated trackers.

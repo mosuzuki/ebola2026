@@ -269,8 +269,8 @@ def fetch_europe_pmc_candidates(query: str, out_name: str, category: str, page_s
 
 
 def generate_candidate_literature_files() -> None:
-    epi_query = '((Bundibugyo OR "Bundibugyo virus" OR "Bundibugyo ebolavirus" OR Ebola OR ebolavirus) AND ("transmission dynamics" OR model* OR forecast* OR importation OR "reproduction number" OR "serial interval" OR "case fatality" OR severity OR "contact tracing" OR epidemiology))'
-    rd_query = '((Bundibugyo OR "Bundibugyo virus" OR "Bundibugyo ebolavirus" OR ebolavirus) AND (vaccine OR therapeutic* OR "monoclonal antibody" OR antiviral OR diagnostic OR assay OR "animal model" OR trial))'
+    epi_query = '((Bundibugyo OR "Bundibugyo virus" OR "Bundibugyo ebolavirus") AND (2026 OR DRC OR Uganda OR Congo) AND ("transmission dynamics" OR model* OR forecast* OR importation OR "cross-border" OR "reproduction number" OR "serial interval" OR "case fatality" OR severity OR "contact tracing" OR epidemiology) AND FIRST_PDATE:[2026-04-01 TO 3000-12-31])'
+    rd_query = '((Bundibugyo OR "Bundibugyo virus" OR "Bundibugyo ebolavirus") AND (vaccine OR therapeutic* OR "monoclonal antibody" OR antiviral OR diagnostic OR assay OR "animal model" OR trial) AND FIRST_PDATE:[2026-04-01 TO 3000-12-31])'
     fetch_europe_pmc_candidates(epi_query, "epidemiological_research_candidates.csv", "epidemiological_research_screening")
     fetch_europe_pmc_candidates(rd_query, "rd_candidates.csv", "rd_screening")
 
