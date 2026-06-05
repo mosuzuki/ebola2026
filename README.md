@@ -105,3 +105,23 @@ The downloadable line list is aggregate-derived and is not official individual-l
 ## v6 map update
 
 The situation map now uses a local static SVG regional basemap with proportional case bubbles. It does not depend on external map tiles, so it renders consistently on GitHub Pages and in restricted network environments. Bubble locations and counts are driven by `docs/data/map_features.csv`.
+
+
+## Automatic updating in v7
+
+This version is designed to make the public GitHub Pages site visibly refresh every 6 hours. The workflow is `.github/workflows/update-dashboard.yml` and runs at `17 */6 * * *` plus manual `workflow_dispatch`. Each run writes a new `docs/data/manifest.json`, so the **Last build** field should change even if curated case counts do not.
+
+The updater now does three things:
+
+1. Copies curated epidemiology CSVs into `docs/data/`.
+2. Monitors official/institutional sources listed in `scripts/update_data.py`. When page content changes, it creates an auto-generated update for review and display.
+3. Searches Europe PMC for 2026-04-01 onward Bundibugyo outbreak epidemiological research and R&D candidates and displays them as `auto_candidate` records.
+
+Important GitHub settings to check after uploading:
+
+- **Settings → Pages**: Source should be `Deploy from a branch`, branch `main`, folder `/docs`.
+- **Settings → Actions → General → Workflow permissions**: choose `Read and write permissions`.
+- **Actions tab**: open `Update dashboard data` and run it once manually with **Run workflow**. After it succeeds, the public page should show a new Last build time.
+- Scheduled workflows run from the latest commit on the default branch. If the workflow file is only on another branch, the schedule will not run.
+
+Case counts remain curated because official machine-readable case-count feeds are not yet consistently available. When a stable CSV/API is identified, add its parser to `scripts/update_data.py` and update `situation_timeseries.csv` automatically.

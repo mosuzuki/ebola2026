@@ -1,0 +1,9 @@
+checked_at_utc,organization,kind,status,change_status,title,source_url,content_hash,error
+2026-06-05T07:46:46.953471+00:00,WHO,response,fetch_error,error,,https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026,,"URLError(gaierror(-3, 'Temporary failure in name resolution'))"
+2026-06-05T07:46:51.955745+00:00,WHO,response,fetch_error,error,,https://www.who.int/emergencies/disease-outbreak-news,,"URLError(gaierror(-3, 'Temporary failure in name resolution'))"
+2026-06-05T07:46:51.957261+00:00,ECDC,response,fetch_error,error,,https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda,,"URLError(gaierror(-3, 'Temporary failure in name resolution'))"
+2026-06-05T07:46:56.959089+00:00,CDC,response,fetch_error,error,,https://www.cdc.gov/ebola/situation-summary/index.html,,"URLError(gaierror(-3, 'Temporary failure in name resolution'))"
+2026-06-05T07:46:56.962041+00:00,Africa CDC,response,fetch_error,error,,https://africacdc.org/news/,,"URLError(gaierror(-3, 'Temporary failure in name resolution'))"
+2026-06-05T07:47:01.964227+00:00,MSF,response,fetch_error,error,,https://www.msf.org/latest,,"URLError(gaierror(-3, 'Temporary failure in name resolution'))"
+2026-06-05T07:47:01.966339+00:00,CEPI,rd,fetch_error,error,,https://cepi.net/news,,"URLError(gaierror(-3, 'Temporary failure in name resolution'))"
+2026-06-05T07:47:06.968112+00:00,Gavi,rd,fetch_error,error,,https://www.gavi.org/news/media-room,,"URLError(gaierror(-3, 'Temporary failure in name resolution'))"
