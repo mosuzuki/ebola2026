@@ -1,6 +1,6 @@
 {
   "https://africacdc.org/news/": {
-    "checked_at_utc": "2026-06-05T15:28:03.208765+00:00",
+    "checked_at_utc": "2026-06-05T20:12:37.720179+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "Press releases and media from Africa CDC",
     "sha256": "a21fd56f37cf33661076d7f695fba0b157f3c52557c2f715f3f500d7b31a020e",
@@ -10,17 +10,17 @@
     "url": "https://africacdc.org/news/"
   },
   "https://cepi.net/news": {
-    "checked_at_utc": "2026-06-05T15:28:04.255848+00:00",
+    "checked_at_utc": "2026-06-05T20:12:38.555419+00:00",
     "content_type": "text/html",
     "description": "Keep up-to-date on the latest announcements and updates from CEPI and our global partners.",
-    "sha256": "40215cf4b0f9930fe327ace2d0aa43071ae233b8f1a8bd65ca52bcf5a375a32d",
-    "snippet": "News Desktop Navigation Loading... Mobile Navigation Loading... Mobile Search Loading... Desktop Search Loading... Discover the latest CEPI news Keep up-to-date on the latest announcements and updates from CEPI and our global partners. Search Latest News Filters Search Blog Three vaccine designs in the race to contain Bundibugyo Ebola CEPI’s portfolio approach is designed to spread the risk and to maximise both speed and the chance that one or more of the candidates will prove effective in human trials. 5 Jun 2026 Read more Arrow 5 Jun 2026 News From market failure to epidemic preparedness: the race for a Bundibugyo Ebola vaccine Read more 5 Jun 2026 News CEPI funds next phase of nanoparticl",
+    "sha256": "7fe8906fb2a47536589086757a272b46c8ebe0fc09aa00345638545c6c210202",
+    "snippet": "News Desktop Navigation Loading... Mobile Navigation Loading... Mobile Search Loading... Desktop Search Loading... Discover the latest CEPI news Keep up-to-date on the latest announcements and updates from CEPI and our global partners. Search Latest News Filters Search Blog Three vaccine designs in the race to contain Bundibugyo Ebola CEPI’s portfolio approach is designed to spread the risk and to maximise both speed and the chance that one or more of the candidates will prove effective in human trials. 5 Jun 2026 Read more Arrow 5 Jun 2026 Blog From market failure to epidemic preparedness: the race for a Bundibugyo Ebola vaccine Read more 5 Jun 2026 News CEPI funds next phase of nanoparticl",
     "status": "200",
     "title": "News",
     "url": "https://cepi.net/news"
   },
   "https://www.cdc.gov/ebola/situation-summary/index.html": {
-    "checked_at_utc": "2026-06-05T15:28:01.394844+00:00",
+    "checked_at_utc": "2026-06-05T20:12:35.898335+00:00",
     "content_type": "text/html",
     "description": "Learn about the current Ebola outbreak in DRC and Uganda.",
     "sha256": "44040690ded953d4f3227db1f3597d8a8a229b47b118c8eafc49f9ca12cfe251",
@@ -30,7 +30,7 @@
     "url": "https://www.cdc.gov/ebola/situation-summary/index.html"
   },
   "https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda": {
-    "checked_at_utc": "2026-06-05T15:28:01.227348+00:00",
+    "checked_at_utc": "2026-06-05T20:12:35.801125+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "On 17 May 2026, the World Health Organization (WHO) declared the Ebola virus disease outbreak caused by Bundibugyo virus in the Democratic Republic of the Congo (DRC) and Uganda a Public Health Emergency of International Concern.",
     "sha256": "56e2760bb6b46b1e0face86f0a3bac19e252c95a0e78f8716c0be6269fbcd1b1",
@@ -42,7 +42,7 @@
   "https://www.gavi.org/news/media-room": {},
   "https://www.msf.org/latest": {},
   "https://www.who.int/emergencies/disease-outbreak-news": {
-    "checked_at_utc": "2026-06-05T15:28:00.722733+00:00",
+    "checked_at_utc": "2026-06-05T20:12:35.216356+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "WHO provides the latest disease outbreak news, offering information on confirmed public health emergencies or events of potential concern.",
     "sha256": "c7f7547f005a04fbb32f1d1884c43b3eb31be2af7928a3555339f47f5e2b653b",
@@ -52,7 +52,7 @@
     "url": "https://www.who.int/emergencies/disease-outbreak-news"
   },
   "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026": {
-    "checked_at_utc": "2026-06-05T15:28:00.126379+00:00",
+    "checked_at_utc": "2026-06-05T20:12:34.856987+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "",
     "sha256": "8ec2ef9d8d8f4867036d988f0f4d78f9d5e60ce497502ea44db27f4e9633f91a",
