@@ -1,0 +1,40 @@
+name: Update dashboard data
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Every 6 hours. GitHub evaluates cron on the default branch.
+    - cron: "17 */6 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ebola-dashboard-update
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Refresh dashboard data
+        run: python scripts/update_data.py
+      - name: Show changed files
+        run: git status --short
+      - name: Commit updated dashboard data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-update Ebola dashboard data"
+          file_pattern: "docs/data/* data/processed/* data/cache/*"
