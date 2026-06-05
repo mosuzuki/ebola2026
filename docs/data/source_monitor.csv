@@ -1,9 +1,9 @@
 checked_at_utc,organization,kind,status,change_status,title,source_url,content_hash,error
-2026-06-05T08:05:54.904199+00:00,WHO,response,200,first_seen,Ebola outbreak - DRC 2026,https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026,cd52295939da90734b1a914a4e4549938df2818fd1f3369c739b273f702bd4a8,
-2026-06-05T08:05:55.197436+00:00,WHO,response,200,first_seen,Disease Outbreak News,https://www.who.int/emergencies/disease-outbreak-news,c7f7547f005a04fbb32f1d1884c43b3eb31be2af7928a3555339f47f5e2b653b,
-2026-06-05T08:05:56.697636+00:00,ECDC,response,200,first_seen,Ebola disease outbreak in the Democratic Republic of the Congo and Uganda,https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda,2880803bcfeb0cfdc6e22d4d7046aeb024b69c063fc6c3fd953eeccd69fc77fb,
-2026-06-05T08:05:56.856340+00:00,CDC,response,200,first_seen,Ebola Outbreak: Current Situation | Ebola | CDC,https://www.cdc.gov/ebola/situation-summary/index.html,0d9ed7263c54b2f38bb22c76d3bab7c3ef54877bcfd98309460abb3ec2a02161,
-2026-06-05T08:05:58.942032+00:00,Africa CDC,response,200,first_seen,News – Africa CDC,https://africacdc.org/news/,a21fd56f37cf33661076d7f695fba0b157f3c52557c2f715f3f500d7b31a020e,
-2026-06-05T08:05:59.154095+00:00,MSF,response,fetch_error,error,,https://www.msf.org/latest,,<HTTPError 403: 'Forbidden'>
-2026-06-05T08:06:00.584741+00:00,CEPI,rd,200,first_seen,News,https://cepi.net/news,17adf8103da8d92facd5ace804388caff004101efe79996700ecb0aac83a4b2b,
-2026-06-05T08:06:03.384780+00:00,Gavi,rd,fetch_error,error,,https://www.gavi.org/news/media-room,,<HTTPError 404: 'Not Found'>
+2026-06-05T15:28:00.126379+00:00,WHO,response,200,changed,Ebola outbreak - DRC 2026,https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026,8ec2ef9d8d8f4867036d988f0f4d78f9d5e60ce497502ea44db27f4e9633f91a,
+2026-06-05T15:28:00.722733+00:00,WHO,response,200,unchanged,Disease Outbreak News,https://www.who.int/emergencies/disease-outbreak-news,c7f7547f005a04fbb32f1d1884c43b3eb31be2af7928a3555339f47f5e2b653b,
+2026-06-05T15:28:01.227348+00:00,ECDC,response,200,changed,Ebola disease outbreak in the Democratic Republic of the Congo and Uganda,https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda,56e2760bb6b46b1e0face86f0a3bac19e252c95a0e78f8716c0be6269fbcd1b1,
+2026-06-05T15:28:01.394844+00:00,CDC,response,200,changed,Ebola Outbreak: Current Situation | Ebola | CDC,https://www.cdc.gov/ebola/situation-summary/index.html,44040690ded953d4f3227db1f3597d8a8a229b47b118c8eafc49f9ca12cfe251,
+2026-06-05T15:28:03.208765+00:00,Africa CDC,response,200,unchanged,News – Africa CDC,https://africacdc.org/news/,a21fd56f37cf33661076d7f695fba0b157f3c52557c2f715f3f500d7b31a020e,
+2026-06-05T15:28:03.485054+00:00,MSF,response,fetch_error,error,,https://www.msf.org/latest,,<HTTPError 403: 'Forbidden'>
+2026-06-05T15:28:04.255848+00:00,CEPI,rd,200,changed,News,https://cepi.net/news,40215cf4b0f9930fe327ace2d0aa43071ae233b8f1a8bd65ca52bcf5a375a32d,
+2026-06-05T15:28:06.467525+00:00,Gavi,rd,fetch_error,error,,https://www.gavi.org/news/media-room,,<HTTPError 404: 'Not Found'>

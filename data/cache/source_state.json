@@ -1,6 +1,6 @@
 {
   "https://africacdc.org/news/": {
-    "checked_at_utc": "2026-06-05T08:05:58.942032+00:00",
+    "checked_at_utc": "2026-06-05T15:28:03.208765+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "Press releases and media from Africa CDC",
     "sha256": "a21fd56f37cf33661076d7f695fba0b157f3c52557c2f715f3f500d7b31a020e",
@@ -10,30 +10,30 @@
     "url": "https://africacdc.org/news/"
   },
   "https://cepi.net/news": {
-    "checked_at_utc": "2026-06-05T08:06:00.584741+00:00",
+    "checked_at_utc": "2026-06-05T15:28:04.255848+00:00",
     "content_type": "text/html",
     "description": "Keep up-to-date on the latest announcements and updates from CEPI and our global partners.",
-    "sha256": "17adf8103da8d92facd5ace804388caff004101efe79996700ecb0aac83a4b2b",
-    "snippet": "News Desktop Navigation Loading... Mobile Navigation Loading... Mobile Search Loading... Desktop Search Loading... Discover the latest CEPI news Keep up-to-date on the latest announcements and updates from CEPI and our global partners. Search Latest News Filters Search News CEPI funds next phase of nanoparticle vaccine platform to support rapid outbreak response New funding will support the continued development of a pioneering vaccine platform. 3 Jun 2026 Read more Arrow 3 Jun 2026 News CEPI fast-tracks three Bundibugyo ebolavirus vaccine candidates Read more 1 Jun 2026 News CEPI Statement: CEPI’s response to epidemic of Ebola Disease caused by Bundibugyo virus Read more 21 May 2026 News Eu",
+    "sha256": "40215cf4b0f9930fe327ace2d0aa43071ae233b8f1a8bd65ca52bcf5a375a32d",
+    "snippet": "News Desktop Navigation Loading... Mobile Navigation Loading... Mobile Search Loading... Desktop Search Loading... Discover the latest CEPI news Keep up-to-date on the latest announcements and updates from CEPI and our global partners. Search Latest News Filters Search Blog Three vaccine designs in the race to contain Bundibugyo Ebola CEPI’s portfolio approach is designed to spread the risk and to maximise both speed and the chance that one or more of the candidates will prove effective in human trials. 5 Jun 2026 Read more Arrow 5 Jun 2026 News From market failure to epidemic preparedness: the race for a Bundibugyo Ebola vaccine Read more 5 Jun 2026 News CEPI funds next phase of nanoparticl",
     "status": "200",
     "title": "News",
     "url": "https://cepi.net/news"
   },
   "https://www.cdc.gov/ebola/situation-summary/index.html": {
-    "checked_at_utc": "2026-06-05T08:05:56.856340+00:00",
+    "checked_at_utc": "2026-06-05T15:28:01.394844+00:00",
     "content_type": "text/html",
     "description": "Learn about the current Ebola outbreak in DRC and Uganda.",
-    "sha256": "0d9ed7263c54b2f38bb22c76d3bab7c3ef54877bcfd98309460abb3ec2a02161",
+    "sha256": "44040690ded953d4f3227db1f3597d8a8a229b47b118c8eafc49f9ca12cfe251",
     "snippet": "Ebola Outbreak: Current Situation | Ebola | CDC Skip directly to site content Skip directly to search An official website of the United States government Here's how you know Official websites use .gov A .gov website belongs to an official government organization in the United States. Secure .gov websites use HTTPS A lock ( ) or https:// means you've safely connected to the .gov website. Share sensitive information only on official, secure websites. Ebola Explore This Topic Search Search Clear Search For Everyone Current Situation About Signs and Symptoms Outbreak History How It Spreads Planning for Travel FAQs View all Health Care Providers Clinical Guidance Clinical Features Vaccine Product",
     "status": "200",
     "title": "Ebola Outbreak: Current Situation | Ebola | CDC",
     "url": "https://www.cdc.gov/ebola/situation-summary/index.html"
   },
   "https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda": {
-    "checked_at_utc": "2026-06-05T08:05:56.697636+00:00",
+    "checked_at_utc": "2026-06-05T15:28:01.227348+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "On 17 May 2026, the World Health Organization (WHO) declared the Ebola virus disease outbreak caused by Bundibugyo virus in the Democratic Republic of the Congo (DRC) and Uganda a Public Health Emergency of International Concern.",
-    "sha256": "2880803bcfeb0cfdc6e22d4d7046aeb024b69c063fc6c3fd953eeccd69fc77fb",
+    "sha256": "56e2760bb6b46b1e0face86f0a3bac19e252c95a0e78f8716c0be6269fbcd1b1",
     "snippet": "Ebola disease outbreak in the Democratic Republic of the Congo and Uganda Skip to main content Global Navigation Other sites ECDC European Antibiotic Awareness Day (opens in a new window) ESCAIDE - Scientific conference (opens in a new window) Eurosurveillance journal (opens in a new window) EVIP - Vaccination portal (opens in a new window) European Centre for Disease Prevention and Control An agency of the European Union Translate this page Search Main Navigation (desktop) Topics A-Z Infectious disease topics A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Public health topics Spotlight Antimicrobial resistance (AMR) Dengue Ebola disease Hantavirus infection Mpox West Nile virus infecti",
     "status": "200",
     "title": "Ebola disease outbreak in the Democratic Republic of the Congo and Uganda",
@@ -42,7 +42,7 @@
   "https://www.gavi.org/news/media-room": {},
   "https://www.msf.org/latest": {},
   "https://www.who.int/emergencies/disease-outbreak-news": {
-    "checked_at_utc": "2026-06-05T08:05:55.197436+00:00",
+    "checked_at_utc": "2026-06-05T15:28:00.722733+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "WHO provides the latest disease outbreak news, offering information on confirmed public health emergencies or events of potential concern.",
     "sha256": "c7f7547f005a04fbb32f1d1884c43b3eb31be2af7928a3555339f47f5e2b653b",
@@ -52,10 +52,10 @@
     "url": "https://www.who.int/emergencies/disease-outbreak-news"
   },
   "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026": {
-    "checked_at_utc": "2026-06-05T08:05:54.904199+00:00",
+    "checked_at_utc": "2026-06-05T15:28:00.126379+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "",
-    "sha256": "cd52295939da90734b1a914a4e4549938df2818fd1f3369c739b273f702bd4a8",
+    "sha256": "8ec2ef9d8d8f4867036d988f0f4d78f9d5e60ce497502ea44db27f4e9633f91a",
     "snippet": "Ebola outbreak - DRC 2026 Skip to main content Global Regions WHO Regional websites Africa Americas South-East Asia Europe Eastern Mediterranean Western Pacific When autocomplete results are available use up and down arrows to review and enter to select. Select language Select language English Home Health Topics All topics A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Resources Fact sheets Facts in pictures Multimedia Podcasts Publications Questions and answers Tools and toolkits Popular Dengue Endometriosis Excessive heat Herpes Mental disorders Mpox Countries All countries A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Regions Africa Americas Europe Eastern Mediterranean South-E",
     "status": "200",
     "title": "Ebola outbreak - DRC 2026",
