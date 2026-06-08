@@ -1,6 +1,6 @@
 {
   "https://africacdc.org/news/": {
-    "checked_at_utc": "2026-06-07T19:46:05.564324+00:00",
+    "checked_at_utc": "2026-06-08T05:01:24.736316+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "Press releases and media from Africa CDC",
     "sha256": "a21fd56f37cf33661076d7f695fba0b157f3c52557c2f715f3f500d7b31a020e",
@@ -10,7 +10,7 @@
     "url": "https://africacdc.org/news/"
   },
   "https://cepi.net/news": {
-    "checked_at_utc": "2026-06-07T19:46:06.807168+00:00",
+    "checked_at_utc": "2026-06-08T05:01:26.029956+00:00",
     "content_type": "text/html",
     "description": "Keep up-to-date on the latest announcements and updates from CEPI and our global partners.",
     "sha256": "7fe8906fb2a47536589086757a272b46c8ebe0fc09aa00345638545c6c210202",
@@ -20,17 +20,17 @@
     "url": "https://cepi.net/news"
   },
   "https://www.cdc.gov/ebola/situation-summary/index.html": {
-    "checked_at_utc": "2026-06-07T19:46:03.710804+00:00",
+    "checked_at_utc": "2026-06-08T05:01:22.739235+00:00",
     "content_type": "text/html",
     "description": "Learn about the current Ebola outbreak in DRC and Uganda.",
-    "sha256": "c9a3780d2a27c3e06e64dfbd09b6bc9f0027941354a232e56dc6dd4585389205",
+    "sha256": "956222f832b9223e05fe2ec6ac1bf4ebf8543277207bf1861f2d1095618beedc",
     "snippet": "Ebola Outbreak: Current Situation | Ebola | CDC Skip directly to site content Skip directly to search An official website of the United States government Here's how you know Official websites use .gov A .gov website belongs to an official government organization in the United States. Secure .gov websites use HTTPS A lock ( ) or https:// means you've safely connected to the .gov website. Share sensitive information only on official, secure websites. Ebola Explore This Topic Search Search Clear Search For Everyone Current Situation About Signs and Symptoms Outbreak History How It Spreads Planning for Travel FAQs View all Health Care Providers Clinical Guidance Clinical Features Vaccine Product",
     "status": "200",
     "title": "Ebola Outbreak: Current Situation | Ebola | CDC",
     "url": "https://www.cdc.gov/ebola/situation-summary/index.html"
   },
   "https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda": {
-    "checked_at_utc": "2026-06-07T19:46:03.626785+00:00",
+    "checked_at_utc": "2026-06-08T05:01:22.605220+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "On 17 May 2026, the World Health Organization (WHO) declared the Ebola virus disease outbreak caused by Bundibugyo virus in the Democratic Republic of the Congo (DRC) and Uganda a Public Health Emergency of International Concern.",
     "sha256": "56e2760bb6b46b1e0face86f0a3bac19e252c95a0e78f8716c0be6269fbcd1b1",
@@ -42,7 +42,7 @@
   "https://www.gavi.org/news/media-room": {},
   "https://www.msf.org/latest": {},
   "https://www.who.int/emergencies/disease-outbreak-news": {
-    "checked_at_utc": "2026-06-07T19:46:02.869636+00:00",
+    "checked_at_utc": "2026-06-08T05:01:21.380065+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "WHO provides the latest disease outbreak news, offering information on confirmed public health emergencies or events of potential concern.",
     "sha256": "c7f7547f005a04fbb32f1d1884c43b3eb31be2af7928a3555339f47f5e2b653b",
@@ -52,7 +52,7 @@
     "url": "https://www.who.int/emergencies/disease-outbreak-news"
   },
   "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026": {
-    "checked_at_utc": "2026-06-07T19:46:02.628224+00:00",
+    "checked_at_utc": "2026-06-08T05:01:20.917767+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "",
     "sha256": "8ec2ef9d8d8f4867036d988f0f4d78f9d5e60ce497502ea44db27f4e9633f91a",
