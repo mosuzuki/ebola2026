@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DRC Ebola Mobility Dashboard</title>
+  <link rel="preconnect" href="https://unpkg.com" />
+  <link rel="preconnect" href="https://cdn.plot.ly" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <div class="eyebrow">DRC Ebola outbreak mobility assessment</div>
+      <h1>Outbreak-area movement toward Uganda border zones and Kinshasa</h1>
+      <p class="subtitle">Interactive prototype using health-zone mobility estimates, scenario assumptions, and GIS-friendly outputs.</p>
+    </div>
+    <div class="status-card">
+      <span class="label">Data status</span>
+      <strong id="dataStatus">Sample data</strong>
+      <span id="lastUpdated">Replace with Flowminder / HDX extracts</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="controls panel">
+      <div class="control">
+        <label for="originSelect">Outbreak health zone</label>
+        <select id="originSelect"></select>
+      </div>
+      <div class="control">
+        <label for="monthSelect">Month</label>
+        <select id="monthSelect"></select>
+      </div>
+      <div class="control">
+        <label for="scenarioSelect">Uganda cross-border scenario</label>
+        <select id="scenarioSelect"></select>
+      </div>
+      <div class="control grow">
+        <label for="topN">Top destinations shown</label>
+        <input id="topN" type="range" min="5" max="20" step="1" value="12" />
+        <span id="topNValue">12</span>
+      </div>
+    </section>
+
+    <section class="kpi-grid">
+      <article class="kpi-card"><span>Total outbound movement</span><strong id="kpiTotal">—</strong><small>from selected outbreak zones</small></article>
+      <article class="kpi-card"><span>To Kinshasa</span><strong id="kpiKinshasa">—</strong><small id="kpiKinshasaShare">—</small></article>
+      <article class="kpi-card"><span>To Uganda-border zones</span><strong id="kpiBorder">—</strong><small id="kpiBorderShare">—</small></article>
+      <article class="kpi-card"><span>Scenario-estimated Uganda crossing</span><strong id="kpiUganda">—</strong><small id="kpiScenario">—</small></article>
+    </section>
+
+    <section class="grid-two">
+      <article class="panel map-panel">
+        <div class="panel-head">
+          <div>
+            <h2 id="mapTitle">Flow map</h2>
+            <p id="mapDescription">Directed lines show monthly movement from outbreak health zones. Outbreak origins are highlighted in red, Kinshasa destinations in blue, and Uganda-border proxy zones in orange.</p>
+          </div>
+          <button id="fitMap" class="ghost">Fit map</button>
+        </div>
+        <div class="map-layer-toolbar" aria-label="Map layer controls">
+          <div>
+            <span class="toolbar-label">Map layer</span>
+            <strong id="activeLayerLabel">Movement</strong>
+          </div>
+          <div class="toggle-group map-toggle-group" role="group" aria-label="Map layer">
+            <button id="modeCases" type="button" class="toggle layer-toggle">Cases</button>
+            <button id="modeRisk" type="button" class="toggle layer-toggle">Spread risk</button>
+            <button id="modeWeighted" type="button" class="toggle layer-toggle">Weighted risk</button>
+            <button id="modeForecast" type="button" class="toggle layer-toggle">Forecast</button>
+            <button id="modeAir" type="button" class="toggle layer-toggle">Air-adjusted risk</button>
+            <button id="modeUganda" type="button" class="toggle layer-toggle">Uganda projection</button>
+            <button id="modePopulation" type="button" class="toggle layer-toggle">Population</button>
+            <button id="modeDensity" type="button" class="toggle layer-toggle">Density</button>
+            <button id="modeMovement" type="button" class="toggle layer-toggle active">Movement</button>
+          </div>
+        </div>
+        <div id="map"></div>
+        <div id="populationNotice" class="population-notice" style="display:none"></div>
+        <div class="map-legend" aria-label="Map legend">
+          <span><i class="legend-dot outbreak"></i>Current outbreak health zone</span>
+          <span><i class="legend-dot cases"></i>Confirmed cases</span>
+          <span><i class="legend-dot risk"></i>Spread / weighted risk</span>
+          <span><i class="legend-dot kinshasa"></i>Kinshasa destination</span>
+          <span><i class="legend-dot border"></i>Uganda-border proxy zone</span>
+          <span><i class="legend-dot air"></i>Air-adjusted risk</span>
+          <span><i class="legend-dot uganda"></i>Projected Uganda destination</span>
+          <span><i class="legend-dot population"></i>Population / density</span>
+          <span><i class="legend-line"></i>Movement direction</span>
+        </div>
+        <div class="map-month-slider">
+          <div class="slider-head">
+            <label for="monthSlider">Month shown on map</label>
+            <strong id="monthSliderLabel">—</strong>
+          </div>
+          <input id="monthSlider" type="range" min="0" max="0" step="1" value="0" list="monthTicks" />
+          <datalist id="monthTicks"></datalist>
+          <div class="slider-months"><span id="monthStartLabel">—</span><span id="monthEndLabel">—</span></div>
+        </div>
+      </article>
+
+      <article class="panel">
+        <h2 id="rankingTitle">Destination ranking</h2>
+        <p id="rankingDescription">Top destination health zones by estimated monthly movement.</p>
+        <div id="barChart" class="chart"></div>
+      </article>
+    </section>
+
+    <section class="grid-two">
+      <article class="panel">
+        <h2>Monthly trend</h2>
+        <p>Movement from outbreak zones to Kinshasa and Uganda-border health zones.</p>
+        <div id="trendChart" class="chart"></div>
+      </article>
+      <article class="panel">
+        <h2>Scenario interpretation</h2>
+        <div id="scenarioText" class="note"></div>
+      </article>
+    </section>
+
+    <section class="panel sources">
+      <h2>Data sources to connect</h2>
+      <div class="source-grid">
+        <a href="https://data.humdata.org/dataset/democratic-republic-of-congo-population-and-relocation-estimates" target="_blank" rel="noreferrer">Flowminder / HDX population and mobility estimates</a>
+        <a href="https://data.humdata.org/dataset/drc-health-data" target="_blank" rel="noreferrer">HDX DRC health-zone boundaries</a>
+        <a href="https://grid3.org/geospatial-data-drc" target="_blank" rel="noreferrer">GRID3 DRC geospatial data</a>
+        <a href="https://dtm.iom.int/democratic-republic-congo" target="_blank" rel="noreferrer">IOM DTM DRC</a>
+        <a href="https://data.unhcr.org/en/country/uga" target="_blank" rel="noreferrer">UNHCR Uganda Operational Data Portal</a>
+        <a href="https://data.unhcr.org/en/situations/drc" target="_blank" rel="noreferrer">UNHCR DRC situation</a>
+      </div>
+      <p class="limitation"><strong>Important:</strong> Uganda estimates in this prototype are explicitly scenario-based projections. The Uganda projection layer combines DRC-side Flowminder mobility toward border proxy zones with historical IOM DTM Uganda–DRC border FMP destination profiles from Jan–Mar 2020. They are not observed 2026 cross-border movements or Ebola transmission probabilities.</p>
+    </section>
+  </main>
+
+  <footer>
+    Prototype dashboard using Flowminder / HDX-derived DRC health-zone mobility estimates. Uganda values remain proxy estimates unless calibrated with cross-border data.
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

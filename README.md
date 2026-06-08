@@ -1,127 +1,149 @@
-# DRC + Uganda Ebola Bundibugyo Intelligence Dashboard
+# DRC Ebola Mobility Dashboard
 
-GitHub Pages dashboard for situational awareness, epidemiological research screening, and therapeutics/vaccine/diagnostic R&D tracking for the DRC + Uganda Ebola Bundibugyo outbreak.
+Static GitHub Pages dashboard for visualising estimated movement from Ebola outbreak health zones in eastern DRC toward:
 
-## What is included
+1. Kinshasa health zones; and
+2. Uganda-border proxy health zones.
 
-- Compact current situation cards
-- Japanese 48-hour digest generated at build time
-- Institutional update timeline, newest first, first 10 items shown by default
-- ECDC-style epidemiological situation map using Leaflet and `map_features.csv`
-- Epidemic curve and geographic distribution
-- Dedicated **Epidemiological Research** tracker separated from product R&D
-- Dedicated **Therapeutics, vaccines and diagnostics R&D** tracker
-- CSV downloads for all curated datasets
-- GitHub Actions workflow scheduled every 6 hours
-- Europe PMC candidate-fetch hooks for automated literature screening
+The included CSV files are **illustrative sample data**. Replace them with Flowminder / HDX, HDX/GRID3, IOM DTM, UNHCR, and outbreak line-list derived extracts before analytical use.
 
-## Deploy
+## Live dashboard structure
 
-1. Create a new GitHub repository.
-2. Upload the full contents of this folder.
-3. Go to **Settings → Pages**.
-4. Select **Deploy from a branch**.
-5. Select `main` branch and `/docs` folder.
-6. Open the GitHub Pages URL after deployment.
+- `index.html` — static page
+- `assets/app.js` — dashboard logic, Leaflet map, Plotly charts
+- `assets/style.css` — styling
+- `data/outbreak_zones.csv` — outbreak-origin health zones
+- `data/destinations.csv` — destination health zones and categories
+- `data/monthly_flows.csv` — origin-destination movement matrix by month
+- `data/scenarios.csv` — onward-crossing assumptions for Uganda
+- `scripts/prepare_data.py` — template converter for real data
+- `.github/workflows/pages.yml` — GitHub Pages deployment workflow
 
-## Update frequency
+## Expected data schemas
 
-The workflow runs every 6 hours:
+### data/outbreak_zones.csv
 
-```yaml
-schedule:
-  - cron: "0 */6 * * *"
+```csv
+zone_id,zone_name,province,lat,lon,is_outbreak,is_uganda_border,is_kinshasa
 ```
 
-It can also be run manually from the GitHub Actions tab.
+### data/destinations.csv
 
-## Data files
+```csv
+zone_id,zone_name,province,lat,lon,category,is_uganda_border,is_kinshasa
+```
 
-Curated files:
+Use `is_kinshasa=1` for Kinshasa health zones. Use `is_uganda_border=1` for DRC health zones representing Uganda-border proxy destinations.
 
-- `data/processed/situation_timeseries.csv`
-- `data/processed/geography.csv`
-- `data/processed/map_features.csv`
-- `data/processed/derived_line_list.csv`
-- `data/processed/response_tracker.csv`
-- `data/processed/epidemiological_research.csv`
-- `data/processed/rd_tracker.csv`
+### data/monthly_flows.csv
 
-Generated files:
+```csv
+month,origin_id,destination_id,movement
+```
 
-- `data/processed/latest_48h_summary.csv`
-- `data/processed/epidemiological_research_candidates.csv`
-- `data/processed/rd_candidates.csv`
+`movement` should be the monthly estimated movement from the origin health zone to the destination health zone.
 
-The candidate files are generated from Europe PMC searches and are **not automatically promoted** to the curated trackers. They should be reviewed before being copied into `epidemiological_research.csv` or `rd_tracker.csv`.
+### data/scenarios.csv
 
-## Epidemiological Research screening
+```csv
+scenario_id,scenario_name,cross_border_fraction,description
+```
 
-The epidemiological research tracker is intentionally separated from R&D. It focuses on:
+`cross_border_fraction` is the assumed fraction of movement toward Uganda-border proxy zones that continues onward into Uganda.
 
-- transmission dynamics
-- Rt/R0 estimation
-- serial interval and incubation period
-- case fatality and severity
-- forecasting and nowcasting
-- importation risk
-- contact tracing and isolation strategies
-- healthcare-associated transmission
-- spatial spread and mobility
-- model-based evaluation of control measures
+## Data sources to connect
 
-Screening scope includes epidemiological and infectious-disease journals such as *Epidemiology*, *Emerging Infectious Diseases*, *Eurosurveillance*, *The Lancet Infectious Diseases*, *PLOS Neglected Tropical Diseases*, *PLOS Pathogens*, *eLife*, *Nature Medicine*, *The Journal of Infectious Diseases*, *Clinical Infectious Diseases*, *BMC Infectious Diseases*, and *International Journal of Infectious Diseases*, plus medRxiv/bioRxiv where relevant.
+- Flowminder / HDX DRC population and mobility estimates: https://data.humdata.org/dataset/democratic-republic-of-congo-population-and-relocation-estimates
+- HDX DRC health-zone boundaries: https://data.humdata.org/dataset/drc-health-data
+- GRID3 DRC geospatial data: https://grid3.org/geospatial-data-drc
+- IOM DTM DRC: https://dtm.iom.int/democratic-republic-congo
+- UNHCR Uganda Operational Data Portal: https://data.unhcr.org/en/country/uga
+- UNHCR DRC situation: https://data.unhcr.org/en/situations/drc
 
-## R&D tracker
+## How to publish on GitHub Pages
 
-The R&D tracker focuses on:
+1. Create a new GitHub repository, for example `drc-ebola-mobility-dashboard`.
+2. Upload all files in this folder.
+3. Go to **Settings → Pages**.
+4. Set **Source** to **GitHub Actions**.
+5. Push to the `main` branch. The included workflow will deploy the site.
 
-- vaccine candidates
-- therapeutics and monoclonal antibodies
-- antivirals
-- diagnostics and assays
-- animal models
-- clinical trial readiness
-- compassionate-use or emergency-use pathways
-- manufacturing, access and procurement issues
+## Local preview
 
-## Map notes
+Because the dashboard uses `fetch()` to read local CSV files, preview it through a local web server:
 
-`map_features.csv` drives the Leaflet map. The current polygons are schematic and the point coordinates are approximate for situational awareness. Official ECDC/national authority maps should be used for precise administrative boundaries.
+```bash
+python -m http.server 8000
+```
 
-## Important caveat
+Then open:
 
-The downloadable line list is aggregate-derived and is not official individual-level case data. Use original national authority, WHO, ECDC, Africa CDC, CDC and other official sources for operational decision-making.
+```text
+http://localhost:8000
+```
+
+## Analytical interpretation
+
+The Uganda value is not directly observed cross-border movement in the sample implementation. It is computed as:
+
+```text
+movement from outbreak health zones to Uganda-border proxy health zones
+× assumed onward-crossing fraction
+```
+
+This should be calibrated with UNHCR Uganda, IOM DTM, or border-monitoring data when available.
+
+## Recommended next steps
+
+1. Replace `monthly_flows.csv` with Flowminder / HDX health-zone OD estimates.
+2. Replace point coordinates with health-zone polygons from HDX or GRID3.
+3. Add observed DRC-to-Uganda refugee or border-flow data from UNHCR/IOM for calibration.
+4. Add outbreak intensity by origin health zone and compute an export pressure index:
+
+```text
+Export pressure_j,t = sum_i outbreak_intensity_i,t × movement_i,j,t
+```
+
+5. Add GitHub Actions scheduled data refresh if public downloadable data endpoints are stable.
+
+## Limitations
+
+- Included data are synthetic and for demonstration only.
+- CDR-derived movement is affected by phone ownership, operator share, and representativeness.
+- Uganda-border proxy movement should not be described as confirmed cross-border movement.
+- Age- and socioeconomic-stratified movement requires additional reweighting using DHS/MICS/MAFE/UNHCR/IOM data.
 
 
-## v5 layout notes
+## Actual Flowminder data loaded
 
-- The epidemiological situation map is now a plain Leaflet bubble map. Bubble size is proportional to confirmed cases in `data/processed/map_features.csv`; no schematic polygons are drawn.
-- The right intelligence column is split into two stacked feeds: (1) `Epidemiological Research`, limited to items directly concerning the 2026 DRC/Uganda Bundibugyo outbreak and published/posted from 2026-04-01 onward, and (2) `R&D updates` for vaccines, therapeutics and diagnostics.
-- The former map-feature tracker table under the map was removed from the main page. Geographic records remain downloadable as `map_features.csv`.
-- Europe PMC candidate queries in `scripts/update_data.py` now include a date filter from 2026-04-01 and current-outbreak terms. Candidate files still require human review before promotion to the curated trackers.
+The `data/` folder in this package has been replaced with reshaped Flowminder DRC estimated relocation data from 2020-04 to 2026-04, restricted to outbreak proxy origins: Bunia, Mongbwalu, Nyankunde, and Rwampara.
+See `DATA_NOTES.md` for processing assumptions.
 
+### Spread risk layer
 
-## v6 map update
-
-The situation map now uses a local static SVG regional basemap with proportional case bubbles. It does not depend on external map tiles, so it renders consistently on GitHub Pages and in restricted network environments. Bubble locations and counts are driven by `docs/data/map_features.csv`.
+The `Spread risk` button colors health zones by mobility-based Ebola spread pressure from the selected outbreak health zone(s). The current index is the estimated number of arrivals from outbreak zones to each destination health zone in the selected month. It is not divided by destination population. It is intended for relative prioritization of surveillance and preparedness; it should not be interpreted as the probability of local Ebola transmission.
 
 
-## Automatic updating in v7
+## Uganda projection layer
 
-This version is designed to make the public GitHub Pages site visibly refresh every 6 hours. The workflow is `.github/workflows/update-dashboard.yml` and runs at `17 */6 * * *` plus manual `workflow_dispatch`. Each run writes a new `docs/data/manifest.json`, so the **Last build** field should change even if curated case counts do not.
+The Uganda projection layer is intentionally labelled as a scenario-based estimate. It combines DRC-side Flowminder health-zone movement toward Uganda-border proxy zones with a historical IOM DTM Uganda-DRC border Flow Monitoring Point destination profile from January-March 2020. It is not observed 2026 cross-border movement and is not a prediction of Ebola transmission.
 
-The updater now does three things:
+Required file: `data/uganda_projection_profile.csv` with columns `uganda_id, uganda_name, type, district, lat, lon, weight, source_basis`. The current profile allocates projected Uganda-side movement to Bufumbira, Bukonzo, Bwamba, Padyere, Kisoro, Kampala, and other Uganda destinations using approximate weights derived from the uploaded IOM DTM dashboard summaries. Replace this file when current FMP, UNHCR, or Uganda-side settlement data become available.
 
-1. Copies curated epidemiology CSVs into `docs/data/`.
-2. Monitors official/institutional sources listed in `scripts/update_data.py`. When page content changes, it creates an auto-generated update for review and display.
-3. Searches Europe PMC for 2026-04-01 onward Bundibugyo outbreak epidemiological research and R&D candidates and displays them as `auto_candidate` records.
 
-Important GitHub settings to check after uploading:
+## Case-count, weighted-risk and forecast layers
 
-- **Settings → Pages**: Source should be `Deploy from a branch`, branch `main`, folder `/docs`.
-- **Settings → Actions → General → Workflow permissions**: choose `Read and write permissions`.
-- **Actions tab**: open `Update dashboard data` and run it once manually with **Run workflow**. After it succeeds, the public page should show a new Last build time.
-- Scheduled workflows run from the latest commit on the default branch. If the workflow file is only on another branch, the schedule will not run.
+This version adds `data/cases_by_hz.csv`, derived from SitRep N22/MVB_05/06/2026, reporting date 05 June 2026. The file contains cumulative confirmed Ebola cases and confirmed deaths by affected health zone where ventilated in the SitRep. Ituri also includes an unventilated category, which is included in totals but cannot be mapped to a specific polygon.
 
-Case counts remain curated because official machine-readable case-count feeds are not yet consistently available. When a stable CSV/API is identified, add its parser to `scripts/update_data.py` and update `situation_timeseries.csv` automatically.
+New layers:
+
+- `Cases`: colors health zones by cumulative confirmed cases.
+- `Weighted risk`: colors destination health zones by case-weighted movement pressure, defined as Σ confirmed_cases(origin) × estimated movement(origin→destination) for the selected month.
+- `Forecast`: uses the same case-weighted score but applies the next available mobility month; when the selected month is the latest available mobility month, it uses the average of the latest three mobility months. This is a scenario-style forward-looking prioritization indicator, not a transmission probability.
+
+
+## Air-adjusted risk layer
+
+This version adds an Air-adjusted risk layer. It applies route-specific suppression factors in `data/air_adjustment.csv` to case-weighted movement scores for long-distance, air-plausible destinations such as Kinshasa. This is a scenario-based prioritization indicator and does not represent observed passenger OD data.
+
+Case counts are updated from SitRep N23/MVB_06/06/2026. The Ituri unventilated category (94 cases, 10 deaths) is not mapped as a case bubble because it cannot be assigned to a specific health zone.
