@@ -1,6 +1,6 @@
 {
   "https://africacdc.org/news/": {
-    "checked_at_utc": "2026-06-10T10:32:14.317848+00:00",
+    "checked_at_utc": "2026-06-10T16:08:20.115913+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "Press releases and media from Africa CDC",
     "sha256": "a21fd56f37cf33661076d7f695fba0b157f3c52557c2f715f3f500d7b31a020e",
@@ -10,30 +10,30 @@
     "url": "https://africacdc.org/news/"
   },
   "https://cepi.net/news": {
-    "checked_at_utc": "2026-06-10T10:32:15.472650+00:00",
+    "checked_at_utc": "2026-06-10T16:08:21.407084+00:00",
     "content_type": "text/html",
     "description": "Keep up-to-date on the latest announcements and updates from CEPI and our global partners.",
-    "sha256": "c2a17432a21c008718a2baa575955807e91e74787b24c8f0cf472397da1a3c36",
-    "snippet": "News Desktop Navigation Loading... Mobile Navigation Loading... Mobile Search Loading... Desktop Search Loading... Discover the latest CEPI news Keep up-to-date on the latest announcements and updates from CEPI and our global partners. Search Latest News Filters Search News CEPI awards Public Health Vaccines US$1.9m to accelerate Bundibugyo ebolavirus vaccine New partnership to advance early-stage development of a vaccine candidate against the Bundibugyo ebolavirus 9 Jun 2026 Read more Arrow 9 Jun 2026 Blog Three vaccine designs in the race to contain Bundibugyo Ebola Read more 5 Jun 2026 Blog From market failure to epidemic preparedness: the race for a Bundibugyo Ebola vaccine Read more 5 J",
+    "sha256": "f372331660082870b1426c024cb3a097a17355dd2babbbaf8b0753d9a23af7e2",
+    "snippet": "News Desktop Navigation Loading... Mobile Navigation Loading... Mobile Search Loading... Desktop Search Loading... Discover the latest CEPI news Keep up-to-date on the latest announcements and updates from CEPI and our global partners. Search Latest News Filters Search Impact story Outbreak ready, research ready: strengthening West Africa’s research ecosystem CEPI’s Research Preparedness Programme is strengthening clinical trial infrastructure, systems and skills at frontline sites across West Africa. 10 Jun 2026 Read more Arrow 10 Jun 2026 Speech The 100-Day Imperative: pandemic preparedness, AI-driven threats, and the case for a new global architecture Read more 10 Jun 2026 News CEPI award",
     "status": "200",
     "title": "News",
     "url": "https://cepi.net/news"
   },
   "https://www.cdc.gov/ebola/situation-summary/index.html": {
-    "checked_at_utc": "2026-06-10T10:32:12.486785+00:00",
+    "checked_at_utc": "2026-06-10T16:08:18.295017+00:00",
     "content_type": "text/html",
     "description": "Learn about the current outbreak of Ebola disease affecting DRC and Uganda.",
-    "sha256": "a283d375e1dc7403742172358adb77e95ac795dbf2c888adc9bc8977a53da72b",
+    "sha256": "177542b9ea673ed258b33eb092c37d34f769010b41fbd2ea901243d9938f4df0",
     "snippet": "Ebola Outbreak: Current Situation | Ebola | CDC Skip directly to site content Skip directly to search An official website of the United States government Here's how you know Official websites use .gov A .gov website belongs to an official government organization in the United States. Secure .gov websites use HTTPS A lock ( ) or https:// means you've safely connected to the .gov website. Share sensitive information only on official, secure websites. Ebola Explore This Topic Search Search Clear Search For Everyone Current Situation About Signs and Symptoms Outbreak History How It Spreads Planning for Travel FAQs Ebola Communication Resources View all Health Care Providers Clinical Guidance Cli",
     "status": "200",
     "title": "Ebola Outbreak: Current Situation | Ebola | CDC",
     "url": "https://www.cdc.gov/ebola/situation-summary/index.html"
   },
   "https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda": {
-    "checked_at_utc": "2026-06-10T10:32:12.396783+00:00",
+    "checked_at_utc": "2026-06-10T16:08:18.178500+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "On 17 May 2026, the World Health Organization (WHO) declared the Ebola virus disease outbreak caused by Bundibugyo virus in the Democratic Republic of the Congo (DRC) and Uganda a Public Health Emergency of International Concern.",
-    "sha256": "60a388633819964be54e2054185b1da91fcb05bb8c51828d2801980a3952b751",
+    "sha256": "f7af85a5a9130ef67122ea04d31d7dbfba8ced1ac5f17b0e0abbb26564441bc4",
     "snippet": "Ebola disease outbreak in the Democratic Republic of the Congo and Uganda Skip to main content Global Navigation Other sites ECDC European Antibiotic Awareness Day (opens in a new window) ESCAIDE - Scientific conference (opens in a new window) Eurosurveillance journal (opens in a new window) EVIP - Vaccination portal (opens in a new window) European Centre for Disease Prevention and Control An agency of the European Union Translate this page Search Main Navigation (desktop) Topics A-Z Infectious disease topics A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Public health topics Spotlight Antimicrobial resistance (AMR) Dengue Ebola disease Hantavirus infection Mpox West Nile virus infecti",
     "status": "200",
     "title": "Ebola disease outbreak in the Democratic Republic of the Congo and Uganda",
@@ -42,7 +42,7 @@
   "https://www.gavi.org/news/media-room": {},
   "https://www.msf.org/latest": {},
   "https://www.who.int/emergencies/disease-outbreak-news": {
-    "checked_at_utc": "2026-06-10T10:32:12.116088+00:00",
+    "checked_at_utc": "2026-06-10T16:08:17.611378+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "WHO provides the latest disease outbreak news, offering information on confirmed public health emergencies or events of potential concern.",
     "sha256": "c7f7547f005a04fbb32f1d1884c43b3eb31be2af7928a3555339f47f5e2b653b",
@@ -52,7 +52,7 @@
     "url": "https://www.who.int/emergencies/disease-outbreak-news"
   },
   "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026": {
-    "checked_at_utc": "2026-06-10T10:32:11.874446+00:00",
+    "checked_at_utc": "2026-06-10T16:08:17.369221+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "",
     "sha256": "c7d27fa1aa04f4ae4090474333b3bc8f6266f882dd3fa6698239dd4c98b70ca8",
