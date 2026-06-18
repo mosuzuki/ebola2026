@@ -1,6 +1,6 @@
 {
   "https://africacdc.org/news/": {
-    "checked_at_utc": "2026-06-18T05:01:15.162602+00:00",
+    "checked_at_utc": "2026-06-18T10:46:55.511706+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "Press releases and media from Africa CDC",
     "sha256": "5ae0bbfca0892b193969da4d0051d30c1b70cf048ea48d4b5ad5ecfb6769bb15",
@@ -10,17 +10,17 @@
     "url": "https://africacdc.org/news/"
   },
   "https://cepi.net/news": {
-    "checked_at_utc": "2026-06-18T05:01:16.315434+00:00",
+    "checked_at_utc": "2026-06-18T10:46:56.833597+00:00",
     "content_type": "text/html",
     "description": "Keep up-to-date on the latest announcements and updates from CEPI and our global partners.",
-    "sha256": "bfb67c8f4aa6f47be7bb9287312fc8b9ad075b113cfc8fdc8c4c43d9022c1bf2",
-    "snippet": "News Desktop Navigation Loading... Mobile Navigation Loading... Mobile Search Loading... Desktop Search Loading... Discover the latest CEPI news Keep up-to-date on the latest announcements and updates from CEPI and our global partners. Search Latest News Filters Search Statement CEPI statement in response to G7 Leaders' call for a coordinated response to the Bundibugyo ebola outbreak Only a month since the epidemic was first declared, this is already the third worst Ebola outbreak in history. 17 Jun 2026 Read more Arrow 17 Jun 2026 News U.S. Department of State commits $50 million to CEPI to fast-track Bundibugyo virus medical countermeasures Read more 12 Jun 2026 Blog Biosecurity-by-design ",
+    "sha256": "10bc58e675bb62e705d79fff722d487aa792a3561adf20dc08ddc55d592963f0",
+    "snippet": "News Desktop Navigation Loading... Mobile Navigation Loading... Mobile Search Loading... Desktop Search Loading... Discover the latest CEPI news Keep up-to-date on the latest announcements and updates from CEPI and our global partners. Search Latest News Filters Search Statement CEPI statement: G7 Leaders' call for a coordinated response to the Bundibugyo ebola outbreak Only a month since the epidemic was first declared, this is already the third worst Ebola outbreak in history. 17 Jun 2026 Read more Arrow 17 Jun 2026 News U.S. Department of State commits $50 million to CEPI to fast-track Bundibugyo virus medical countermeasures Read more 12 Jun 2026 Blog Biosecurity-by-design for CEPI’s Pan",
     "status": "200",
     "title": "News",
     "url": "https://cepi.net/news"
   },
   "https://www.cdc.gov/ebola/situation-summary/index.html": {
-    "checked_at_utc": "2026-06-18T05:01:13.165173+00:00",
+    "checked_at_utc": "2026-06-18T10:46:53.509777+00:00",
     "content_type": "text/html",
     "description": "Learn about the current outbreak of Ebola disease affecting DRC and Uganda.",
     "sha256": "4038d152bb5be2a8cf3e8dd39d74ebfeebe9a96048958f226c280b986b83e379",
@@ -30,7 +30,7 @@
     "url": "https://www.cdc.gov/ebola/situation-summary/index.html"
   },
   "https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda": {
-    "checked_at_utc": "2026-06-18T05:01:13.071374+00:00",
+    "checked_at_utc": "2026-06-18T10:46:53.353316+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "On 17 May 2026, the World Health Organization (WHO) declared the Ebola virus disease outbreak caused by Bundibugyo virus in the Democratic Republic of the Congo (DRC) and Uganda a Public Health Emergency of International Concern.",
     "sha256": "8d6d65cf9b878ae188f1e73b05c6623f53a53c2f51888cdfad1d0487f4ca5f6f",
@@ -42,7 +42,7 @@
   "https://www.gavi.org/news/media-room": {},
   "https://www.msf.org/latest": {},
   "https://www.who.int/emergencies/disease-outbreak-news": {
-    "checked_at_utc": "2026-06-18T05:01:12.675179+00:00",
+    "checked_at_utc": "2026-06-18T10:46:52.288486+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "WHO provides the latest disease outbreak news, offering information on confirmed public health emergencies or events of potential concern.",
     "sha256": "c7f7547f005a04fbb32f1d1884c43b3eb31be2af7928a3555339f47f5e2b653b",
@@ -52,11 +52,11 @@
     "url": "https://www.who.int/emergencies/disease-outbreak-news"
   },
   "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026": {
-    "checked_at_utc": "2026-06-18T05:01:12.479205+00:00",
+    "checked_at_utc": "2026-06-18T10:46:52.057139+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "",
-    "sha256": "5e79cfa782f7c1254c9a3dee88553ca3eba27dbf62d5ef7b821ae427d180c91a",
-    "snippet": "Ebola outbreak - DRC 2026 Skip to main content Global Regions WHO Regional websites Africa Americas South-East Asia Europe Eastern Mediterranean Western Pacific When autocomplete results are available use up and down arrows to review and enter to select. Select language Select language English Home Health Topics All topics A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Resources Fact sheets Facts in pictures Multimedia Podcasts Publications Questions and answers Tools and toolkits Popular Dengue Endometriosis Excessive heat Herpes Mental disorders Mpox Countries All countries A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Regions Africa Americas Europe Eastern Mediterranean South-E",
+    "sha256": "64298b6524fcbcc821b42775ae655f09f56f6e6362c5a3fe6d962a4ec3b2ffea",
+    "snippet": "Ebola outbreak - DRC 2026 Skip to main content World Health Organization Global Regions World Health Organization WHO Regional websites When autocomplete results are available use up and down arrows to review and enter to select. Select language Select language English Home Health Topics All topics A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Resources Fact sheets Facts in pictures Multimedia Podcasts Publications Questions and answers Tools and toolkits Popular Dengue Endometriosis Excessive heat Herpes Mental disorders Mpox Countries All countries A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Regions Africa Americas Europe Eastern Mediterranean South-East Asia Western Pacific ",
     "status": "200",
     "title": "Ebola outbreak - DRC 2026",
     "url": "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026"
