@@ -1,6 +1,6 @@
 {
   "https://africacdc.org/news/": {
-    "checked_at_utc": "2026-06-20T04:40:31.340157+00:00",
+    "checked_at_utc": "2026-06-20T09:38:29.371677+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "Press releases and media from Africa CDC",
     "sha256": "5ae0bbfca0892b193969da4d0051d30c1b70cf048ea48d4b5ad5ecfb6769bb15",
@@ -10,7 +10,7 @@
     "url": "https://africacdc.org/news/"
   },
   "https://cepi.net/news": {
-    "checked_at_utc": "2026-06-20T04:40:32.604480+00:00",
+    "checked_at_utc": "2026-06-20T09:38:30.811873+00:00",
     "content_type": "text/html",
     "description": "Keep up-to-date on the latest announcements and updates from CEPI and our global partners.",
     "sha256": "10bc58e675bb62e705d79fff722d487aa792a3561adf20dc08ddc55d592963f0",
@@ -20,7 +20,7 @@
     "url": "https://cepi.net/news"
   },
   "https://www.cdc.gov/ebola/situation-summary/index.html": {
-    "checked_at_utc": "2026-06-20T04:40:29.588270+00:00",
+    "checked_at_utc": "2026-06-20T09:38:27.492036+00:00",
     "content_type": "text/html",
     "description": "Learn about the current outbreak of Ebola disease affecting DRC and Uganda.",
     "sha256": "8ad20047e772cfcde907cf1579b8068263fd23d6c75b9830d70c23e8c77973df",
@@ -30,7 +30,7 @@
     "url": "https://www.cdc.gov/ebola/situation-summary/index.html"
   },
   "https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda": {
-    "checked_at_utc": "2026-06-20T04:40:29.469180+00:00",
+    "checked_at_utc": "2026-06-20T09:38:27.307713+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "On 17 May 2026, the World Health Organization (WHO) declared the Ebola virus disease outbreak caused by Bundibugyo virus in the Democratic Republic of the Congo (DRC) and Uganda a Public Health Emergency of International Concern.",
     "sha256": "8d6d65cf9b878ae188f1e73b05c6623f53a53c2f51888cdfad1d0487f4ca5f6f",
@@ -42,7 +42,7 @@
   "https://www.gavi.org/news/media-room": {},
   "https://www.msf.org/latest": {},
   "https://www.who.int/emergencies/disease-outbreak-news": {
-    "checked_at_utc": "2026-06-20T04:40:29.060427+00:00",
+    "checked_at_utc": "2026-06-20T09:38:26.541595+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "WHO provides the latest disease outbreak news, offering information on confirmed public health emergencies or events of potential concern.",
     "sha256": "c7f7547f005a04fbb32f1d1884c43b3eb31be2af7928a3555339f47f5e2b653b",
@@ -52,7 +52,7 @@
     "url": "https://www.who.int/emergencies/disease-outbreak-news"
   },
   "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026": {
-    "checked_at_utc": "2026-06-20T04:40:28.654174+00:00",
+    "checked_at_utc": "2026-06-20T09:38:25.737972+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "",
     "sha256": "25fee880abcb531d053420cc701fec4a6766127c4a2ca6f815f9cd10a6f653d8",
