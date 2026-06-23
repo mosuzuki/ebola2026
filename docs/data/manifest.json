@@ -1,15 +1,14 @@
 {
-  "generated_at_utc": "2026-06-23T15:24:22.719644+00:00",
+  "generated_at_utc": "2026-06-23T20:21:58.369949+00:00",
   "update_frequency": "Every 6 hours via GitHub Actions cron: 17 */6 * * *",
   "latest_digest_window": "Items dated within the previous 48 hours; date-only source rows are evaluated by calendar date",
   "data_status": "curated case counts; monitored-source and literature candidates refreshed automatically; human review recommended before operational use",
   "source_monitor": {
-    "unchanged": 5,
-    "changed": 1,
+    "unchanged": 6,
     "error": 2
   },
   "auto_items_this_run": {
-    "institutional_updates": 1,
+    "institutional_updates": 0,
     "epidemiological_research_candidates_promoted_to_display": 0,
     "rd_items_promoted_to_display": 0
   },
