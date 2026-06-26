@@ -1,26 +1,26 @@
 {
   "https://africacdc.org/news/": {
-    "checked_at_utc": "2026-06-26T09:51:23.011201+00:00",
+    "checked_at_utc": "2026-06-26T14:47:07.696426+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "Press releases and media from Africa CDC",
-    "sha256": "5ae0bbfca0892b193969da4d0051d30c1b70cf048ea48d4b5ad5ecfb6769bb15",
-    "snippet": "News – Africa CDC Skip to content Email: communications@africacdc.org About About Us Staff Directory Our Partners Brand Guidelines Institutes Institute of Pathogen Genomics (IPG) Africa CDC Institute for Workforce Development Media Stories of Impact News Africa CDC Monthly Newsletter Speeches Africa Public Health Podcast Video Audio Opportunities Careers Africa CDC – Supply Chain Division African Pooled Procurement Mechanism (APPM) Kofi Annan Fellowship in Global Health Leadership Africa community media information hub on COVID-19 & health Contact About About Us Staff Directory Our Partners Brand Guidelines Institutes Institute of Pathogen Genomics (IPG) Africa CDC Institute for Workforce De",
+    "sha256": "721b3fa16a7bb68389334d17215463dec5913c5a133497481424a221d965a1a0",
+    "snippet": "News – Africa CDC Skip to content Email: communications@africacdc.org About About Us Staff Directory Our Partners Brand Guidelines Institutes Institute of Pathogen Genomics (IPG) Africa CDC Institute for Workforce Development Media Stories of Impact News Africa CDC Monthly Newsletter Speeches Africa Public Health Podcast Video Audio Opportunities Careers Africa CDC – Supply Chain Division African Pooled Procurement Mechanism (APPM) Africa community media information hub on COVID-19 & health Contact About About Us Staff Directory Our Partners Brand Guidelines Institutes Institute of Pathogen Genomics (IPG) Africa CDC Institute for Workforce Development Media Stories of Impact News Africa CDC ",
     "status": "200",
     "title": "News – Africa CDC",
     "url": "https://africacdc.org/news/"
   },
   "https://cepi.net/news": {
-    "checked_at_utc": "2026-06-26T09:51:24.559761+00:00",
+    "checked_at_utc": "2026-06-26T14:47:08.887185+00:00",
     "content_type": "text/html",
     "description": "Keep up-to-date on the latest announcements and updates from CEPI and our global partners.",
-    "sha256": "10bc58e675bb62e705d79fff722d487aa792a3561adf20dc08ddc55d592963f0",
-    "snippet": "News Desktop Navigation Loading... Mobile Navigation Loading... Mobile Search Loading... Desktop Search Loading... Discover the latest CEPI news Keep up-to-date on the latest announcements and updates from CEPI and our global partners. Search Latest News Filters Search Statement CEPI statement: G7 Leaders' call for a coordinated response to the Bundibugyo ebola outbreak Only a month since the epidemic was first declared, this is already the third worst Ebola outbreak in history. 17 Jun 2026 Read more Arrow 17 Jun 2026 News U.S. Department of State commits $50 million to CEPI to fast-track Bundibugyo virus medical countermeasures Read more 12 Jun 2026 Blog Biosecurity-by-design for CEPI’s Pan",
+    "sha256": "1367660119aa84355fd49c2cbc75a1f2496ba416792a415c4563c4e050ec86d5",
+    "snippet": "News Desktop Navigation Loading... Mobile Navigation Loading... Mobile Search Loading... Desktop Search Loading... Discover the latest CEPI news Keep up-to-date on the latest announcements and updates from CEPI and our global partners. Search Latest News Filters Search Explainer CEPI 3.0 explained: Platform technologies We spoke with CEPI’s Bruno Tricoire, Director of Chemistry, Manufacturing and Control, to unpack how this adaptable technology will help us to deliver CEPI 3.0 and the 100 Days Mission. 26 Jun 2026 Read more Arrow 26 Jun 2026 Statement CEPI statement: G7 Leaders' call for a coordinated response to the Bundibugyo ebola outbreak Read more 17 Jun 2026 News U.S. Department of Sta",
     "status": "200",
     "title": "News",
     "url": "https://cepi.net/news"
   },
   "https://www.cdc.gov/ebola/situation-summary/index.html": {
-    "checked_at_utc": "2026-06-26T09:51:21.225074+00:00",
+    "checked_at_utc": "2026-06-26T14:47:05.560702+00:00",
     "content_type": "text/html",
     "description": "Learn about the current outbreak of Ebola disease affecting DRC and Uganda.",
     "sha256": "e83db45ef11d43e01ae4ad8d0bd8a3ff05814f5670ba214555763d40df44d509",
@@ -30,10 +30,10 @@
     "url": "https://www.cdc.gov/ebola/situation-summary/index.html"
   },
   "https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda": {
-    "checked_at_utc": "2026-06-26T09:51:21.143530+00:00",
+    "checked_at_utc": "2026-06-26T14:47:05.431910+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "On 17 May 2026, the World Health Organization (WHO) declared the Ebola virus disease outbreak caused by Bundibugyo virus in the Democratic Republic of the Congo (DRC) and Uganda a Public Health Emergency of International Concern.",
-    "sha256": "ad8278c49559839f7425bfc4ee23e8ac6905369c60ceb18f2fdcbfd834063a40",
+    "sha256": "52a5c9bdd2675fb467775035d2a90855b4226d2055156e549b1176baf5d827ba",
     "snippet": "Ebola disease outbreak in the Democratic Republic of the Congo and Uganda Skip to main content Global Navigation Other sites ECDC European Antibiotic Awareness Day (opens in a new window) ESCAIDE - Scientific conference (opens in a new window) Eurosurveillance journal (opens in a new window) EVIP - Vaccination portal (opens in a new window) European Centre for Disease Prevention and Control An agency of the European Union Translate this page Search Main Navigation (desktop) Topics A-Z Infectious disease topics A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Public health topics Spotlight Antimicrobial resistance (AMR) Dengue Ebola disease Hantavirus infection Mpox West Nile virus infecti",
     "status": "200",
     "title": "Ebola disease outbreak in the Democratic Republic of the Congo and Uganda",
@@ -42,7 +42,7 @@
   "https://www.gavi.org/news/media-room": {},
   "https://www.msf.org/latest": {},
   "https://www.who.int/emergencies/disease-outbreak-news": {
-    "checked_at_utc": "2026-06-26T09:51:20.642377+00:00",
+    "checked_at_utc": "2026-06-26T14:47:05.020235+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "WHO provides the latest disease outbreak news, offering information on confirmed public health emergencies or events of potential concern.",
     "sha256": "c7f7547f005a04fbb32f1d1884c43b3eb31be2af7928a3555339f47f5e2b653b",
@@ -52,11 +52,11 @@
     "url": "https://www.who.int/emergencies/disease-outbreak-news"
   },
   "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026": {
-    "checked_at_utc": "2026-06-26T09:51:20.461250+00:00",
+    "checked_at_utc": "2026-06-26T14:47:04.771911+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "",
-    "sha256": "329ad611689cc1c8c6ab2c08d2395243e1f2fc7d9bc1a2d5cb967021e5abcc45",
-    "snippet": "Ebola outbreak - DRC 2026 Skip to main content World Health Organization Global Regions World Health Organization WHO Regional websites Africa Americas South-East Asia Europe Eastern Mediterranean Western Pacific When autocomplete results are available use up and down arrows to review and enter to select. Select language Select language English Home Health Topics All topics A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Resources Fact sheets Facts in pictures Multimedia Podcasts Publications Questions and answers Tools and toolkits Popular Dengue Endometriosis Excessive heat Herpes Mental disorders Mpox Countries All countries A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Regions ",
+    "sha256": "a289c1ee363e2087580bf1e966724c815ca10bac99a842d5e6e7ee37b190eb5d",
+    "snippet": "Ebola outbreak - DRC 2026 Skip to main content Global Regions WHO Regional websites Africa Americas South-East Asia Europe Eastern Mediterranean Western Pacific When autocomplete results are available use up and down arrows to review and enter to select. Select language Select language English Home Health Topics All topics A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Resources Fact sheets Facts in pictures Multimedia Podcasts Publications Questions and answers Tools and toolkits Popular Dengue Endometriosis Excessive heat Herpes Mental disorders Mpox Countries All countries A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Regions Africa Americas Europe Eastern Mediterranean South-E",
     "status": "200",
     "title": "Ebola outbreak - DRC 2026",
     "url": "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026"
