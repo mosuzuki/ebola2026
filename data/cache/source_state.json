@@ -1,6 +1,6 @@
 {
   "https://africacdc.org/news/": {
-    "checked_at_utc": "2026-07-01T10:13:14.031499+00:00",
+    "checked_at_utc": "2026-07-01T15:11:14.993716+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "Press releases and media from Africa CDC",
     "sha256": "721b3fa16a7bb68389334d17215463dec5913c5a133497481424a221d965a1a0",
@@ -10,27 +10,27 @@
     "url": "https://africacdc.org/news/"
   },
   "https://cepi.net/news": {
-    "checked_at_utc": "2026-07-01T10:13:15.667443+00:00",
+    "checked_at_utc": "2026-07-01T15:11:16.185327+00:00",
     "content_type": "text/html",
     "description": "Keep up-to-date on the latest announcements and updates from CEPI and our global partners.",
-    "sha256": "7676159c8a6c505496d3e6fb6526ec9c6f4116e1cd753839aa6329c057d8598d",
-    "snippet": "News Desktop Navigation Loading... Mobile Navigation Loading... Mobile Search Loading... Desktop Search Loading... Discover the latest CEPI news Keep up-to-date on the latest announcements and updates from CEPI and our global partners. Search Latest News Filters Search Blog The lab scientists banding together to test new outbreak-busting vaccines We're using knowledge built from the COVID-19 pandemic to strengthen the networks evaluating vaccine candidates that could fight the next big outbreak. 29 Jun 2026 Read more Arrow 29 Jun 2026 Explainer CEPI 3.0 explained: Platform technologies Read more 26 Jun 2026 Statement CEPI statement: G7 Leaders' call for a coordinated response to the Bundibug",
+    "sha256": "1150b14dff538132c6eb8cf725705d0220e0b9c8d6f1079b5b7dc0ae97162a61",
+    "snippet": "News Desktop Navigation Loading... Mobile Navigation Loading... Mobile Search Loading... Desktop Search Loading... Discover the latest CEPI news Keep up-to-date on the latest announcements and updates from CEPI and our global partners. Search Latest News Filters Search News New experts appointed to CEPI’s Scientific Advisory Committee CEPI has announced updates to its Scientific Advisory Committee (SAC), an external expert group providing independent scientific guidance across R&D programmes and outbreak preparedness activities. 1 Jul 2026 Read more Arrow 1 Jul 2026 Blog The lab scientists banding together to test new outbreak-busting vaccines Read more 29 Jun 2026 Explainer CEPI 3.0 explain",
     "status": "200",
     "title": "News",
     "url": "https://cepi.net/news"
   },
   "https://www.cdc.gov/ebola/situation-summary/index.html": {
-    "checked_at_utc": "2026-07-01T10:13:12.031672+00:00",
+    "checked_at_utc": "2026-07-01T15:11:13.214850+00:00",
     "content_type": "text/html",
     "description": "Learn about the current outbreak of Ebola disease affecting DRC and Uganda.",
-    "sha256": "9399aa6950915f33c29fd3f546d4fcd79883069c80d6292f2971a7cd43395e85",
-    "snippet": "Ebola Outbreak: Current Situation | Ebola | CDC Skip directly to site content Skip directly to search An official website of the United States government Here's how you know Official websites use .gov A .gov website belongs to an official government organization in the United States. Secure .gov websites use HTTPS A lock ( ) or https:// means you've safely connected to the .gov website. Share sensitive information only on official, secure websites. Ebola Explore This Topic Search Search Clear Search For Everyone Current Situation About Signs and Symptoms Outbreak History How It Spreads FAQs Ebola Communication Resources View all Health Care Providers Interim Guidance Clinical Features Vaccin",
+    "sha256": "e6299aecb45f6c85c5b21f7e8c85416bd4f8aa31d175fea7a3024e5dc0c9dabb",
+    "snippet": "Ebola Outbreak: Current Situation | Ebola | CDC Skip directly to site content Skip directly to search An official website of the United States government Here's how you know Official websites use .gov A .gov website belongs to an official government organization in the United States. Secure .gov websites use HTTPS A lock ( ) or https:// means you've safely connected to the .gov website. Share sensitive information only on official, secure websites. Ebola Explore This Topic Search Search Clear Search For Everyone Current Situation About Signs and Symptoms Outbreak History How It Spreads FAQs Ebola Communication Resources View all Health Care Providers Clinical Guidance Clinical Features Vacci",
     "status": "200",
     "title": "Ebola Outbreak: Current Situation | Ebola | CDC",
     "url": "https://www.cdc.gov/ebola/situation-summary/index.html"
   },
   "https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda": {
-    "checked_at_utc": "2026-07-01T10:13:11.845107+00:00",
+    "checked_at_utc": "2026-07-01T15:11:13.122330+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "On 17 May 2026, the World Health Organization (WHO) declared the Ebola virus disease outbreak caused by Bundibugyo virus in the Democratic Republic of the Congo (DRC) and Uganda a Public Health Emergency of International Concern.",
     "sha256": "19a48112eec79c4e08a3afd46040ddc8c5f3c0b6f7961a152ae3c8b89e26e166",
@@ -42,7 +42,7 @@
   "https://www.gavi.org/news/media-room": {},
   "https://www.msf.org/latest": {},
   "https://www.who.int/emergencies/disease-outbreak-news": {
-    "checked_at_utc": "2026-07-01T10:13:11.185674+00:00",
+    "checked_at_utc": "2026-07-01T15:11:12.606498+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "WHO provides the latest disease outbreak news, offering information on confirmed public health emergencies or events of potential concern.",
     "sha256": "c7f7547f005a04fbb32f1d1884c43b3eb31be2af7928a3555339f47f5e2b653b",
@@ -52,7 +52,7 @@
     "url": "https://www.who.int/emergencies/disease-outbreak-news"
   },
   "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026": {
-    "checked_at_utc": "2026-07-01T04:53:20.357515+00:00",
+    "checked_at_utc": "2026-07-01T15:11:12.396264+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "",
     "sha256": "a289c1ee363e2087580bf1e966724c815ca10bac99a842d5e6e7ee37b190eb5d",
