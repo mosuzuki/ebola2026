@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-05T19:41:32.615099+00:00",
+  "generated_at_utc": "2026-07-06T04:37:58.180244+00:00",
   "update_frequency": "Every 6 hours via GitHub Actions cron: 17 */6 * * *",
   "latest_digest_window": "Items dated within the previous 48 hours; date-only source rows are evaluated by calendar date",
   "data_status": "curated case counts; monitored-source and literature candidates refreshed automatically; human review recommended before operational use",
