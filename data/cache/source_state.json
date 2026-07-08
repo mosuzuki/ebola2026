@@ -1,6 +1,6 @@
 {
   "https://africacdc.org/news/": {
-    "checked_at_utc": "2026-07-08T14:40:21.706271+00:00",
+    "checked_at_utc": "2026-07-08T19:54:53.599614+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "Press releases and media from Africa CDC",
     "sha256": "700fc7f0a6053a2403f4ad3465ac44beb94f21d9b7e0535bdcf11c2238fe1098",
@@ -10,17 +10,17 @@
     "url": "https://africacdc.org/news/"
   },
   "https://cepi.net/news": {
-    "checked_at_utc": "2026-07-08T14:40:22.785965+00:00",
+    "checked_at_utc": "2026-07-08T19:54:54.836234+00:00",
     "content_type": "text/html",
     "description": "Keep up-to-date on the latest announcements and updates from CEPI and our global partners.",
-    "sha256": "2c0e2db2bef3499ff91105c78311039f4dd11886f153d95258a56919c58826df",
-    "snippet": "News Desktop Navigation Loading... Mobile Navigation Loading... Mobile Search Loading... Desktop Search Loading... Discover the latest CEPI news Keep up-to-date on the latest announcements and updates from CEPI and our global partners. Search Latest News Filters Search Blog Bundibugyo and the 100 Days Mission: Preparedness, Readiness and Response Aurélia Nguyen, CEPI’s Deputy CEO, explains how CEPI is supporting the global response to the Bundibugyo outbreak and how that work aligns with the 100 Days Mission. 3 Jul 2026 Read more Arrow 3 Jul 2026 News New experts appointed to CEPI’s Scientific Advisory Committee Read more 1 Jul 2026 Blog The lab scientists banding together to test new outbre",
+    "sha256": "01a3041c640fd2f8760db7d445a5516ab7ec39eb56dc95b2c3f986faf4d8f63c",
+    "snippet": "News Desktop Navigation Loading... Mobile Navigation Loading... Mobile Search Loading... Desktop Search Loading... Discover the latest CEPI news Keep up-to-date on the latest announcements and updates from CEPI and our global partners. Search Latest News Filters Search Blog New models of health-defence collaboration: a shared plan to achieve the 100 Days Mission Find out more about a recent a 100 Days Mission a tabletop exercise convened by CEPI, RAND, and the Brown University at the Global Health Security Conference in Malaysia 8 Jul 2026 Read more Arrow 8 Jul 2026 Blog Bundibugyo and the 100 Days Mission: Preparedness, Readiness and Response Read more 8 Jul 2026 News New experts appointed ",
     "status": "200",
     "title": "News",
     "url": "https://cepi.net/news"
   },
   "https://www.cdc.gov/ebola/situation-summary/index.html": {
-    "checked_at_utc": "2026-07-08T14:40:20.053918+00:00",
+    "checked_at_utc": "2026-07-08T19:54:51.786370+00:00",
     "content_type": "text/html",
     "description": "Learn about the current outbreak of Ebola disease affecting DRC and Uganda.",
     "sha256": "8b2c4750b2fe0c3b92b922ceebabe6a7f7cd5ee1a387663e7d9d24ab7879156b",
@@ -30,7 +30,7 @@
     "url": "https://www.cdc.gov/ebola/situation-summary/index.html"
   },
   "https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda": {
-    "checked_at_utc": "2026-07-08T14:40:19.962080+00:00",
+    "checked_at_utc": "2026-07-08T19:54:51.521989+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "On 17 May 2026, the World Health Organization (WHO) declared the Ebola virus disease outbreak caused by Bundibugyo virus in the Democratic Republic of the Congo (DRC) and Uganda a Public Health Emergency of International Concern.",
     "sha256": "2e41b0010809e0f54ae46ff696455986dcf9c63e296230ba87d20c79db3f333e",
@@ -51,17 +51,17 @@
     "url": "https://www.msf.org/latest"
   },
   "https://www.who.int/emergencies/disease-outbreak-news": {
-    "checked_at_utc": "2026-07-08T14:40:19.489184+00:00",
+    "checked_at_utc": "2026-07-08T19:54:50.536329+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "WHO provides the latest disease outbreak news, offering information on confirmed public health emergencies or events of potential concern.",
-    "sha256": "038afb3b8d91228dde7230576eddc37d430bff1234e31a673292572fe829b359",
-    "snippet": "Disease Outbreak News Skip to main content World Health Organization Global Regions World Health Organization WHO Regional websites When autocomplete results are available use up and down arrows to review and enter to select. Select language Select language English العربية 中文 Français Русский Español Português Home Health Topics All topics A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Resources Fact sheets Facts in pictures Multimedia Podcasts Publications Questions and answers Tools and toolkits Popular Dengue Endometriosis Excessive heat Herpes Mental disorders Mpox Countries All countries A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Regions Africa Americas Europe Eastern Medi",
+    "sha256": "966d80c22997be65834753097d7a6d91bd1e50ff7a9b59b83845098641c5aafe",
+    "snippet": "Disease Outbreak News Skip to main content Global Regions WHO Regional websites Africa Americas South-East Asia Europe Eastern Mediterranean Western Pacific When autocomplete results are available use up and down arrows to review and enter to select. Select language Select language English العربية 中文 Français Русский Español Português Home Health Topics All topics A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Resources Fact sheets Facts in pictures Multimedia Podcasts Publications Questions and answers Tools and toolkits Popular Dengue Endometriosis Excessive heat Herpes Mental disorders Mpox Countries All countries A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Regions Africa Ame",
     "status": "200",
     "title": "Disease Outbreak News",
     "url": "https://www.who.int/emergencies/disease-outbreak-news"
   },
   "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026": {
-    "checked_at_utc": "2026-07-08T14:40:19.215017+00:00",
+    "checked_at_utc": "2026-07-08T19:54:50.208359+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "",
     "sha256": "9f4104de1a7c889837c0fc2688b621962011644453164a17aa72e37ecf70dba2",
