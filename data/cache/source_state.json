@@ -1,6 +1,6 @@
 {
   "https://africacdc.org/news/": {
-    "checked_at_utc": "2026-07-10T09:52:12.130331+00:00",
+    "checked_at_utc": "2026-07-10T14:50:33.979042+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "Press releases and media from Africa CDC",
     "sha256": "700fc7f0a6053a2403f4ad3465ac44beb94f21d9b7e0535bdcf11c2238fe1098",
@@ -10,7 +10,7 @@
     "url": "https://africacdc.org/news/"
   },
   "https://cepi.net/news": {
-    "checked_at_utc": "2026-07-10T09:52:13.965092+00:00",
+    "checked_at_utc": "2026-07-10T14:50:34.954451+00:00",
     "content_type": "text/html",
     "description": "Keep up-to-date on the latest announcements and updates from CEPI and our global partners.",
     "sha256": "5f46bb7846398a72fe4117125cd86ac4118ff28ce342c5ae0a3d254fdf974974",
@@ -20,7 +20,7 @@
     "url": "https://cepi.net/news"
   },
   "https://www.cdc.gov/ebola/situation-summary/index.html": {
-    "checked_at_utc": "2026-07-10T09:52:10.163337+00:00",
+    "checked_at_utc": "2026-07-10T14:50:32.091885+00:00",
     "content_type": "text/html",
     "description": "Learn about the current outbreak of Ebola disease affecting DRC and Uganda.",
     "sha256": "6a3d683d77626ea3b1752a40e360681b3f642a26b737cedf5e9777aebe99fbba",
@@ -30,10 +30,10 @@
     "url": "https://www.cdc.gov/ebola/situation-summary/index.html"
   },
   "https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda": {
-    "checked_at_utc": "2026-07-10T09:52:09.085846+00:00",
+    "checked_at_utc": "2026-07-10T14:50:31.990936+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "On 17 May 2026, the World Health Organization (WHO) declared the Ebola virus disease outbreak caused by Bundibugyo virus in the Democratic Republic of the Congo (DRC) and Uganda a Public Health Emergency of International Concern.",
-    "sha256": "d66e1cb73c93f837f5dbe22c306e46da134d2a8294048fd5c8d11fc21f8e41fa",
+    "sha256": "05e8bd4cc5f5882a6f2118daa5e4e6022e79e4ca4e936d1ccc7b362401f200b4",
     "snippet": "Ebola disease outbreak in the Democratic Republic of the Congo and Uganda Skip to main content Global Navigation Other sites ECDC European Antibiotic Awareness Day (opens in a new window) ESCAIDE - Scientific conference (opens in a new window) Eurosurveillance journal (opens in a new window) EVIP - Vaccination portal (opens in a new window) European Centre for Disease Prevention and Control An agency of the European Union Translate this page Search Main Navigation (desktop) Topics A-Z Infectious disease topics A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Public health topics Spotlight Antimicrobial resistance (AMR) Dengue Ebola disease Hantavirus infection Mpox West Nile virus infecti",
     "status": "200",
     "title": "Ebola disease outbreak in the Democratic Republic of the Congo and Uganda",
@@ -51,7 +51,7 @@
     "url": "https://www.msf.org/latest"
   },
   "https://www.who.int/emergencies/disease-outbreak-news": {
-    "checked_at_utc": "2026-07-10T09:52:08.641636+00:00",
+    "checked_at_utc": "2026-07-10T14:50:31.507858+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "WHO provides the latest disease outbreak news, offering information on confirmed public health emergencies or events of potential concern.",
     "sha256": "966d80c22997be65834753097d7a6d91bd1e50ff7a9b59b83845098641c5aafe",
@@ -61,7 +61,7 @@
     "url": "https://www.who.int/emergencies/disease-outbreak-news"
   },
   "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026": {
-    "checked_at_utc": "2026-07-10T09:52:08.345036+00:00",
+    "checked_at_utc": "2026-07-10T14:50:31.270271+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "",
     "sha256": "9f4104de1a7c889837c0fc2688b621962011644453164a17aa72e37ecf70dba2",
