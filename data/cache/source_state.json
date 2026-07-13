@@ -1,6 +1,6 @@
 {
   "https://africacdc.org/news/": {
-    "checked_at_utc": "2026-07-13T09:46:57.943102+00:00",
+    "checked_at_utc": "2026-07-13T15:10:16.753720+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "Press releases and media from Africa CDC",
     "sha256": "700fc7f0a6053a2403f4ad3465ac44beb94f21d9b7e0535bdcf11c2238fe1098",
@@ -10,17 +10,17 @@
     "url": "https://africacdc.org/news/"
   },
   "https://cepi.net/news": {
-    "checked_at_utc": "2026-07-13T09:46:58.956777+00:00",
+    "checked_at_utc": "2026-07-13T15:10:17.770407+00:00",
     "content_type": "text/html",
     "description": "Keep up-to-date on the latest announcements and updates from CEPI and our global partners.",
-    "sha256": "5f46bb7846398a72fe4117125cd86ac4118ff28ce342c5ae0a3d254fdf974974",
-    "snippet": "News Desktop Navigation Loading... Mobile Navigation Loading... Mobile Search Loading... Desktop Search Loading... Discover the latest CEPI news Keep up-to-date on the latest announcements and updates from CEPI and our global partners. Search Latest News Filters Search Blog Chukwuemeka Oguanuo: My Fellowship at CEPI We caught up with Chukwuemeka Oguanuo—one of the Fellows embedded in CEPI’s Epidemiology and Data Science Department team—to discuss his experience. 9 Jul 2026 Read more Arrow 9 Jul 2026 Blog Bundibugyo and the 100 Days Mission: Preparedness, Readiness and Response Read more 8 Jul 2026 Blog New models of health-defence collaboration: a shared plan to achieve the 100 Days Mission ",
+    "sha256": "2009207c19e0e1d17dd9a54a9e7e5a8c063905fdba91871a714082ad7f5939c6",
+    "snippet": "News Desktop Navigation Loading... Mobile Navigation Loading... Mobile Search Loading... Desktop Search Loading... Discover the latest CEPI news Keep up-to-date on the latest announcements and updates from CEPI and our global partners. Search Latest News Filters Search News CEPI-backed Bundibugyo ebolavirus vaccine trial launched by Oxford Read about the first Bundibugyo ebolavirus vaccine to enter Phase 1 clinical trials. 13 Jul 2026 Read more Arrow 13 Jul 2026 Blog Chukwuemeka Oguanuo: My Fellowship at CEPI Read more 9 Jul 2026 Blog Bundibugyo and the 100 Days Mission: Preparedness, Readiness and Response Read more 8 Jul 2026 Blog New models of health-defence collaboration: a shared plan t",
     "status": "200",
     "title": "News",
     "url": "https://cepi.net/news"
   },
   "https://www.cdc.gov/ebola/situation-summary/index.html": {
-    "checked_at_utc": "2026-07-13T09:46:55.963875+00:00",
+    "checked_at_utc": "2026-07-13T15:10:14.543428+00:00",
     "content_type": "text/html",
     "description": "Learn about the current outbreak of Ebola disease affecting DRC and Uganda.",
     "sha256": "6a3d683d77626ea3b1752a40e360681b3f642a26b737cedf5e9777aebe99fbba",
@@ -30,10 +30,10 @@
     "url": "https://www.cdc.gov/ebola/situation-summary/index.html"
   },
   "https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda": {
-    "checked_at_utc": "2026-07-13T09:46:55.870074+00:00",
+    "checked_at_utc": "2026-07-13T15:10:14.475795+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "On 17 May 2026, the World Health Organization (WHO) declared the Ebola virus disease outbreak caused by Bundibugyo virus in the Democratic Republic of the Congo (DRC) and Uganda a Public Health Emergency of International Concern.",
-    "sha256": "699a4115d1ecba81950555428faf365533d920579849e115c9f5b9e885dab0a4",
+    "sha256": "a5bd76bcb8542fe46e0332dfc1617116e497c5545e6ae426c1328d1362872a7f",
     "snippet": "Ebola disease outbreak in the Democratic Republic of the Congo and Uganda Skip to main content Global Navigation Other sites ECDC European Antibiotic Awareness Day (opens in a new window) ESCAIDE - Scientific conference (opens in a new window) Eurosurveillance journal (opens in a new window) EVIP - Vaccination portal (opens in a new window) European Centre for Disease Prevention and Control An agency of the European Union Translate this page Search Main Navigation (desktop) Topics A-Z Infectious disease topics A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Public health topics Spotlight Antimicrobial resistance (AMR) Chikungunya virus disease Dengue Ebola disease Vibriosis West Nile vir",
     "status": "200",
     "title": "Ebola disease outbreak in the Democratic Republic of the Congo and Uganda",
@@ -51,7 +51,7 @@
     "url": "https://www.msf.org/latest"
   },
   "https://www.who.int/emergencies/disease-outbreak-news": {
-    "checked_at_utc": "2026-07-13T09:46:54.988848+00:00",
+    "checked_at_utc": "2026-07-13T15:10:13.820993+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "WHO provides the latest disease outbreak news, offering information on confirmed public health emergencies or events of potential concern.",
     "sha256": "966d80c22997be65834753097d7a6d91bd1e50ff7a9b59b83845098641c5aafe",
@@ -61,7 +61,7 @@
     "url": "https://www.who.int/emergencies/disease-outbreak-news"
   },
   "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026": {
-    "checked_at_utc": "2026-07-13T09:46:54.790751+00:00",
+    "checked_at_utc": "2026-07-13T15:10:13.725879+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "",
     "sha256": "9f4104de1a7c889837c0fc2688b621962011644453164a17aa72e37ecf70dba2",
