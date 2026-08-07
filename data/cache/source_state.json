@@ -1,6 +1,6 @@
 {
   "https://africacdc.org/news/": {
-    "checked_at_utc": "2026-08-07T03:14:42.649812+00:00",
+    "checked_at_utc": "2026-08-07T07:39:48.446112+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "Press releases and media from Africa CDC",
     "sha256": "a9a803b9771b518ca37cec42bab2f7d88e2a808042d4d5b03c0bb9d236bd06b5",
@@ -10,7 +10,7 @@
     "url": "https://africacdc.org/news/"
   },
   "https://cepi.net/news": {
-    "checked_at_utc": "2026-08-07T03:14:44.751456+00:00",
+    "checked_at_utc": "2026-08-07T07:39:50.466438+00:00",
     "content_type": "text/html",
     "description": "Keep up-to-date on the latest announcements and updates from CEPI and our global partners.",
     "sha256": "21e07f5d45218c6b0d4440bf3edd8304622cbe85e9f6936ea0cf593ee438fd6e",
@@ -20,7 +20,7 @@
     "url": "https://cepi.net/news"
   },
   "https://www.cdc.gov/ebola/situation-summary/index.html": {
-    "checked_at_utc": "2026-08-07T03:14:40.525482+00:00",
+    "checked_at_utc": "2026-08-07T07:39:46.535172+00:00",
     "content_type": "text/html",
     "description": "Learn about the current outbreak of Ebola disease affecting DRC and Uganda.",
     "sha256": "2bf526b6df1d096c945400fd0b73beb6f0fcad9663cb0c966705840d546e909e",
@@ -30,7 +30,7 @@
     "url": "https://www.cdc.gov/ebola/situation-summary/index.html"
   },
   "https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda": {
-    "checked_at_utc": "2026-08-07T03:14:39.926664+00:00",
+    "checked_at_utc": "2026-08-07T07:39:46.454499+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "On 17 May 2026, the World Health Organization (WHO) declared the Ebola virus disease outbreak caused by Bundibugyo virus in the Democratic Republic of the Congo (DRC) and Uganda a Public Health Emergency of International Concern.",
     "sha256": "22e301c7068d310cb8d0ef6aa0965ded5af6069512b8b3e90eb52a02ecb7634d",
@@ -41,7 +41,7 @@
   },
   "https://www.gavi.org/news/media-room": {},
   "https://www.msf.org/latest": {
-    "checked_at_utc": "2026-08-07T03:14:43.631403+00:00",
+    "checked_at_utc": "2026-08-07T07:39:49.574601+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "Discover all our latest news, stories and publications. Use the filter to get to the content you're looking for.",
     "sha256": "4f316782b6375022b3df92e790f3eeecd8535809f5df4d7d40b49aab0b906b8d",
@@ -51,17 +51,17 @@
     "url": "https://www.msf.org/latest"
   },
   "https://www.who.int/emergencies/disease-outbreak-news": {
-    "checked_at_utc": "2026-08-07T03:14:39.375113+00:00",
+    "checked_at_utc": "2026-08-07T07:39:45.204562+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "WHO provides the latest disease outbreak news, offering information on confirmed public health emergencies or events of potential concern.",
-    "sha256": "e3b53a59f765f89eca1df07e89e9cfb7fef7848a064a7bc3da42c81a8cfe227a",
-    "snippet": "Disease Outbreak News Skip to main content World Health Organization Global Regions World Health Organization WHO Regional websites Africa Americas South-East Asia Europe Eastern Mediterranean Western Pacific When autocomplete results are available use up and down arrows to review and enter to select. Select language Select language English العربية 中文 Français Русский Español Português Home Health Topics All topics A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Resources Fact sheets Facts in pictures Multimedia Podcasts Publications Questions and answers Tools and toolkits Popular Dengue Endometriosis Excessive heat Herpes Mental disorders Mpox Countries All countries A B C D E F G H I ",
+    "sha256": "966d80c22997be65834753097d7a6d91bd1e50ff7a9b59b83845098641c5aafe",
+    "snippet": "Disease Outbreak News Skip to main content Global Regions WHO Regional websites Africa Americas South-East Asia Europe Eastern Mediterranean Western Pacific When autocomplete results are available use up and down arrows to review and enter to select. Select language Select language English العربية 中文 Français Русский Español Português Home Health Topics All topics A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Resources Fact sheets Facts in pictures Multimedia Podcasts Publications Questions and answers Tools and toolkits Popular Dengue Endometriosis Excessive heat Herpes Mental disorders Mpox Countries All countries A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Regions Africa Ame",
     "status": "200",
     "title": "Disease Outbreak News",
     "url": "https://www.who.int/emergencies/disease-outbreak-news"
   },
   "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026": {
-    "checked_at_utc": "2026-08-07T03:14:38.924519+00:00",
+    "checked_at_utc": "2026-08-07T07:39:45.005782+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "",
     "sha256": "cde7e9b78c17d0d30a784816f6e25f0d08475c98f57ad3867e98f7e7fcbb2a9f",
