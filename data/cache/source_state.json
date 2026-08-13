@@ -1,6 +1,6 @@
 {
   "https://africacdc.org/news/": {
-    "checked_at_utc": "2026-08-13T13:45:43.066347+00:00",
+    "checked_at_utc": "2026-08-13T19:18:27.216579+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "Press releases and media from Africa CDC",
     "sha256": "a9a803b9771b518ca37cec42bab2f7d88e2a808042d4d5b03c0bb9d236bd06b5",
@@ -10,7 +10,7 @@
     "url": "https://africacdc.org/news/"
   },
   "https://cepi.net/news": {
-    "checked_at_utc": "2026-08-13T13:45:46.144563+00:00",
+    "checked_at_utc": "2026-08-13T19:18:31.251115+00:00",
     "content_type": "text/html",
     "description": "Keep up-to-date on the latest announcements and updates from CEPI and our global partners.",
     "sha256": "56fc9f10b371ab68b96f7ee0a866e20412403b6b101455fee99991c76e8dedd9",
@@ -20,7 +20,7 @@
     "url": "https://cepi.net/news"
   },
   "https://www.cdc.gov/ebola/situation-summary/index.html": {
-    "checked_at_utc": "2026-08-13T13:45:40.732260+00:00",
+    "checked_at_utc": "2026-08-13T19:18:24.943922+00:00",
     "content_type": "text/html",
     "description": "Learn about the current outbreak of Ebola disease affecting DRC and Uganda.",
     "sha256": "cb6eba65f815240356556978d0c98242777e040fe19b41f0eac4031d64163f06",
@@ -30,7 +30,7 @@
     "url": "https://www.cdc.gov/ebola/situation-summary/index.html"
   },
   "https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda": {
-    "checked_at_utc": "2026-08-13T13:45:40.520984+00:00",
+    "checked_at_utc": "2026-08-13T19:18:24.786400+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "On 17 May 2026, the World Health Organization (WHO) declared the Ebola virus disease outbreak caused by Bundibugyo virus in the Democratic Republic of the Congo (DRC) and Uganda a Public Health Emergency of International Concern.",
     "sha256": "ef5c4134cc37cb4b5beac2437ac4c12e9040573ede558de919f092f159f222b7",
@@ -41,17 +41,17 @@
   },
   "https://www.gavi.org/news/media-room": {},
   "https://www.msf.org/latest": {
-    "checked_at_utc": "2026-08-13T13:45:44.833235+00:00",
+    "checked_at_utc": "2026-08-13T19:18:29.940153+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "Discover all our latest news, stories and publications. Use the filter to get to the content you're looking for.",
-    "sha256": "02b66805987ab61b22496c414bbb84d65fef5d9b94156ab83eb30b1b3ec2a6a7",
+    "sha256": "706a14beccc376c2c219ecdb17fbfbe178a0e0ac9682a1a76d76f55262f33719",
     "snippet": "Latest MSF contents Skip to main content Menu Close button English en Arrow icon Choose language English عربي Médecins Sans Frontières Work With MSF MSF websites Close button English en Arrow icon Choose language English عربي X Bluesky butterfly logo About us What We Do Where we work Resources Latest Donate Donate Back to main menu About Us Who We Are Learn about our mission, our charter and principles, and who we are. Learn more Who We Are How we work See what triggers an intervention and how supply and logistics allow our teams to respond quickly. Learn more How we work How we're run Discover our governance and what it means to be an association. Find a quick visual guide to our offices ar",
     "status": "200",
     "title": "Latest MSF contents",
     "url": "https://www.msf.org/latest"
   },
   "https://www.who.int/emergencies/disease-outbreak-news": {
-    "checked_at_utc": "2026-08-13T13:45:39.737662+00:00",
+    "checked_at_utc": "2026-08-13T19:18:24.326980+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "WHO provides the latest disease outbreak news, offering information on confirmed public health emergencies or events of potential concern.",
     "sha256": "966d80c22997be65834753097d7a6d91bd1e50ff7a9b59b83845098641c5aafe",
@@ -61,7 +61,7 @@
     "url": "https://www.who.int/emergencies/disease-outbreak-news"
   },
   "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026": {
-    "checked_at_utc": "2026-08-13T13:45:39.359943+00:00",
+    "checked_at_utc": "2026-08-13T19:18:24.038917+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "",
     "sha256": "66effc3d8d692dfafebfc819303f3ac694044a8d2ea805a729d9b7343c841836",
