@@ -1,6 +1,6 @@
 {
   "https://africacdc.org/news/": {
-    "checked_at_utc": "2026-08-20T07:05:00.436669+00:00",
+    "checked_at_utc": "2026-08-20T13:10:06.689806+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "Press releases and media from Africa CDC",
     "sha256": "a9a803b9771b518ca37cec42bab2f7d88e2a808042d4d5b03c0bb9d236bd06b5",
@@ -10,17 +10,17 @@
     "url": "https://africacdc.org/news/"
   },
   "https://cepi.net/news": {
-    "checked_at_utc": "2026-08-20T07:05:04.931607+00:00",
+    "checked_at_utc": "2026-08-20T13:10:10.980868+00:00",
     "content_type": "text/html",
     "description": "Keep up-to-date on the latest announcements and updates from CEPI and our global partners.",
-    "sha256": "3b52afe0042476deece4d5f072929c2e57475681071f62529ec28de2894fb360",
-    "snippet": "News Desktop Navigation Loading... Mobile Navigation Loading... Mobile Search Loading... Desktop Search Loading... Discover the latest CEPI news Keep up-to-date on the latest announcements and updates from CEPI and our global partners. Search Latest News Filters Search Explainer CEPI 3.0 cross-cutting themes explained: Biosecurity Biosecurity is a cross-cutting theme that underpins all of the CEPI 3.0 priorities. We spoke with CEPI's biosecurity team to unpack what this means. 19 Aug 2026 Read more Arrow 19 Aug 2026 News CEPI Board appoints Ibrahim Abubakar as new Chief Executive Officer Read more 14 Aug 2026 News CEPI’s Principles for Responding to Outbreaks Read more 11 Aug 2026 News Afric",
+    "sha256": "3f7cb5a58385f3377571c35bcee2d5c0b96cd887d5bf6c5f7ec38c7065ee1020",
+    "snippet": "News Desktop Navigation Loading... Mobile Navigation Loading... Mobile Search Loading... Desktop Search Loading... Discover the latest CEPI news Keep up-to-date on the latest announcements and updates from CEPI and our global partners. Search Latest News Filters Search News New studies to test whether existing Ebola vaccines can generate immune responses to Bundibugyo ebolavirus CEPI-backed studies will analyse blood samples from thousands of people who have already been vaccinated against Zaire ebolavirus, with first results expected within months. 20 Aug 2026 Read more Arrow 20 Aug 2026 Explainer CEPI 3.0 cross-cutting themes explained: Biosecurity Read more 19 Aug 2026 News CEPI Board app",
     "status": "200",
     "title": "News",
     "url": "https://cepi.net/news"
   },
   "https://www.cdc.gov/ebola/situation-summary/index.html": {
-    "checked_at_utc": "2026-08-20T07:04:58.158231+00:00",
+    "checked_at_utc": "2026-08-20T13:10:03.954917+00:00",
     "content_type": "text/html",
     "description": "Learn about the current outbreak of Ebola disease affecting DRC and Uganda.",
     "sha256": "0f89c81c612a9baa0d717c9faf0569bde53f4de5e8ed252d1f355eb193bb8df5",
@@ -30,10 +30,10 @@
     "url": "https://www.cdc.gov/ebola/situation-summary/index.html"
   },
   "https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda": {
-    "checked_at_utc": "2026-08-20T07:04:58.083319+00:00",
+    "checked_at_utc": "2026-08-20T13:10:03.711619+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "On 17 May 2026, the World Health Organization (WHO) declared the Ebola virus disease outbreak caused by Bundibugyo virus in the Democratic Republic of the Congo (DRC) and Uganda a Public Health Emergency of International Concern.",
-    "sha256": "7eb98aef980f5da336be066d11850838b3811b9cc470fda02da566f2f93e04e2",
+    "sha256": "c3b5b3f01d0858424243d435dcc2da43e03cf9014aa4d7d55e17a967e2ba065e",
     "snippet": "Ebola disease outbreak in the Democratic Republic of the Congo and Uganda Skip to main content Global Navigation Other sites ECDC European Antibiotic Awareness Day (opens in a new window) ESCAIDE - Scientific conference (opens in a new window) Eurosurveillance journal (opens in a new window) EVIP - Vaccination portal (opens in a new window) European Centre for Disease Prevention and Control An agency of the European Union Translate this page Search Main Navigation (desktop) Topics A-Z Public health topics A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Spotlight Antimicrobial resistance (AMR) Chikungunya virus disease Dengue Ebola disease Vibriosis West Nile virus infection ECDC guide to",
     "status": "200",
     "title": "Ebola disease outbreak in the Democratic Republic of the Congo and Uganda",
@@ -41,7 +41,7 @@
   },
   "https://www.gavi.org/news/media-room": {},
   "https://www.msf.org/latest": {
-    "checked_at_utc": "2026-08-20T07:05:04.188561+00:00",
+    "checked_at_utc": "2026-08-20T13:10:09.396934+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "Discover all our latest news, stories and publications. Use the filter to get to the content you're looking for.",
     "sha256": "2d1f992d7a14700131b0ba8f6c7a70e06f48075debebd7f4f231f25f989f42b4",
@@ -51,7 +51,7 @@
     "url": "https://www.msf.org/latest"
   },
   "https://www.who.int/emergencies/disease-outbreak-news": {
-    "checked_at_utc": "2026-08-20T07:04:57.704681+00:00",
+    "checked_at_utc": "2026-08-20T13:10:02.596420+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "WHO provides the latest disease outbreak news, offering information on confirmed public health emergencies or events of potential concern.",
     "sha256": "966d80c22997be65834753097d7a6d91bd1e50ff7a9b59b83845098641c5aafe",
@@ -61,7 +61,7 @@
     "url": "https://www.who.int/emergencies/disease-outbreak-news"
   },
   "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026": {
-    "checked_at_utc": "2026-08-20T07:04:57.606970+00:00",
+    "checked_at_utc": "2026-08-20T13:10:02.459674+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "",
     "sha256": "cfa873ad1b2b417e57fb77094468a2a51445f2d7e18782107274334e81d77c1c",
