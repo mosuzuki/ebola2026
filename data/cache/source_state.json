@@ -1,6 +1,6 @@
 {
   "https://africacdc.org/news/": {
-    "checked_at_utc": "2026-08-25T07:06:55.454687+00:00",
+    "checked_at_utc": "2026-08-25T13:10:20.413754+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "Press releases and media from Africa CDC",
     "sha256": "a9a803b9771b518ca37cec42bab2f7d88e2a808042d4d5b03c0bb9d236bd06b5",
@@ -10,17 +10,17 @@
     "url": "https://africacdc.org/news/"
   },
   "https://cepi.net/news": {
-    "checked_at_utc": "2026-08-25T07:07:00.845567+00:00",
+    "checked_at_utc": "2026-08-25T13:10:22.872890+00:00",
     "content_type": "text/html",
     "description": "Keep up-to-date on the latest announcements and updates from CEPI and our global partners.",
-    "sha256": "3f7cb5a58385f3377571c35bcee2d5c0b96cd887d5bf6c5f7ec38c7065ee1020",
-    "snippet": "News Desktop Navigation Loading... Mobile Navigation Loading... Mobile Search Loading... Desktop Search Loading... Discover the latest CEPI news Keep up-to-date on the latest announcements and updates from CEPI and our global partners. Search Latest News Filters Search News New studies to test whether existing Ebola vaccines can generate immune responses to Bundibugyo ebolavirus CEPI-backed studies will analyse blood samples from thousands of people who have already been vaccinated against Zaire ebolavirus, with first results expected within months. 20 Aug 2026 Read more Arrow 20 Aug 2026 Explainer CEPI 3.0 cross-cutting themes explained: Biosecurity Read more 19 Aug 2026 News CEPI Board app",
+    "sha256": "9f2594cf2219f94fd38b86593265316d38e17969debe0a69e0baef7e25b0799a",
+    "snippet": "News Desktop Navigation Loading... Mobile Navigation Loading... Mobile Search Loading... Desktop Search Loading... Discover the latest CEPI news Keep up-to-date on the latest announcements and updates from CEPI and our global partners. Search Latest News Filters Search Blog 100 days into the Bundibugyo emergency, unprecedented speed is still not enough The first 100 days of the Bundibugyo outbreak show how far epidemic response has advanced and how far it still has to go. It's painful proof that in a deadly epidemic, even faster than ever is often not fast enough. 25 Aug 2026 Read more Arrow 25 Aug 2026 News New studies to test whether existing Ebola vaccines can generate immune responses to",
     "status": "200",
     "title": "News",
     "url": "https://cepi.net/news"
   },
   "https://www.cdc.gov/ebola/situation-summary/index.html": {
-    "checked_at_utc": "2026-08-25T07:06:53.623937+00:00",
+    "checked_at_utc": "2026-08-25T13:10:18.385709+00:00",
     "content_type": "text/html",
     "description": "Learn about the current outbreak of Ebola disease affecting DRC and Uganda.",
     "sha256": "0f89c81c612a9baa0d717c9faf0569bde53f4de5e8ed252d1f355eb193bb8df5",
@@ -30,7 +30,7 @@
     "url": "https://www.cdc.gov/ebola/situation-summary/index.html"
   },
   "https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda": {
-    "checked_at_utc": "2026-08-25T07:06:52.660987+00:00",
+    "checked_at_utc": "2026-08-25T13:10:18.259138+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "On 17 May 2026, the World Health Organization (WHO) declared the Ebola virus disease outbreak caused by Bundibugyo virus in the Democratic Republic of the Congo (DRC) and Uganda a Public Health Emergency of International Concern.",
     "sha256": "e22e280dccdf68c7101aa4081d809bd44c208e45ac20c81de446ff4547fb6dc1",
@@ -41,7 +41,7 @@
   },
   "https://www.gavi.org/news/media-room": {},
   "https://www.msf.org/latest": {
-    "checked_at_utc": "2026-08-25T07:07:00.287890+00:00",
+    "checked_at_utc": "2026-08-25T13:10:21.569606+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "Discover all our latest news, stories and publications. Use the filter to get to the content you're looking for.",
     "sha256": "289a4c57c780e439d16a177ffe97b3c0ecf69f21e04b1661e93193351e3c4d0f",
@@ -51,7 +51,7 @@
     "url": "https://www.msf.org/latest"
   },
   "https://www.who.int/emergencies/disease-outbreak-news": {
-    "checked_at_utc": "2026-08-25T07:06:51.800706+00:00",
+    "checked_at_utc": "2026-08-25T13:10:17.735940+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "WHO provides the latest disease outbreak news, offering information on confirmed public health emergencies or events of potential concern.",
     "sha256": "966d80c22997be65834753097d7a6d91bd1e50ff7a9b59b83845098641c5aafe",
@@ -61,11 +61,11 @@
     "url": "https://www.who.int/emergencies/disease-outbreak-news"
   },
   "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026": {
-    "checked_at_utc": "2026-08-25T07:06:51.503671+00:00",
+    "checked_at_utc": "2026-08-25T13:10:17.484217+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "",
-    "sha256": "90a60ed11dd97ff00470205bfeada84642546e9fea32da28bc253af67e5e665e",
-    "snippet": "Ebola outbreak - DRC 2026 Skip to main content World Health Organization Global Regions World Health Organization WHO Regional websites When autocomplete results are available use up and down arrows to review and enter to select. Select language Select language English Home Health Topics All topics A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Resources Fact sheets Facts in pictures Multimedia Podcasts Publications Questions and answers Tools and toolkits Popular Dengue Endometriosis Excessive heat Herpes Mental disorders Mpox Countries All countries A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Regions Africa Americas Europe Eastern Mediterranean South-East Asia Western Pacific ",
+    "sha256": "02281845be8f3f5a5286d594cdd80ca982e52e5f1c6e5f78b8006a5d258efcab",
+    "snippet": "Ebola outbreak - DRC 2026 Skip to main content World Health Organization Global Regions World Health Organization WHO Regional websites Africa Americas South-East Asia Europe Eastern Mediterranean Western Pacific When autocomplete results are available use up and down arrows to review and enter to select. Select language Select language English Home Health Topics All topics A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Resources Fact sheets Facts in pictures Multimedia Podcasts Publications Questions and answers Tools and toolkits Popular Dengue Endometriosis Excessive heat Herpes Mental disorders Mpox Countries All countries A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Regions ",
     "status": "200",
     "title": "Ebola outbreak - DRC 2026",
     "url": "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026"
