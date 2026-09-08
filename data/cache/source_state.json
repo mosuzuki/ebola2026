@@ -10,7 +10,7 @@
     "url": "https://africacdc.org/news/"
   },
   "https://cepi.net/news": {
-    "checked_at_utc": "2026-09-08T16:36:50.688624+00:00",
+    "checked_at_utc": "2026-09-08T21:08:12.811817+00:00",
     "content_type": "text/html",
     "description": "Keep up-to-date on the latest announcements and updates from CEPI and our global partners.",
     "sha256": "2b04c2893e37d9804a1ed8edcb96866db334105d278d50dbdf92d07c7d2fb225",
@@ -20,7 +20,7 @@
     "url": "https://cepi.net/news"
   },
   "https://www.cdc.gov/ebola/situation-summary/index.html": {
-    "checked_at_utc": "2026-09-08T16:36:46.080088+00:00",
+    "checked_at_utc": "2026-09-08T21:08:09.571748+00:00",
     "content_type": "text/html",
     "description": "Learn about the current outbreak of Ebola disease affecting DRC and Uganda.",
     "sha256": "77c3531fffdd9f547273caad3a77504f30bee1a3706041cbcbe29014edbbf728",
@@ -30,7 +30,7 @@
     "url": "https://www.cdc.gov/ebola/situation-summary/index.html"
   },
   "https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda": {
-    "checked_at_utc": "2026-09-08T16:36:45.937266+00:00",
+    "checked_at_utc": "2026-09-08T21:08:09.361427+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "Since May 2026, an Ebola virus disease outbreak caused by Bundibugyo virus has been ongoing in the Democratic Republic of the Congo (DRC).",
     "sha256": "1179aa10a268b8d5b25debf39aca3286c1f29ad11013e4a4ed7654bdb3ff0171",
@@ -41,17 +41,17 @@
   },
   "https://www.gavi.org/news/media-room": {},
   "https://www.msf.org/latest": {
-    "checked_at_utc": "2026-09-08T16:36:49.263039+00:00",
+    "checked_at_utc": "2026-09-08T21:08:11.603433+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "Discover all our latest news, stories and publications. Use the filter to get to the content you're looking for.",
-    "sha256": "04b1282ec9f336541f49c87c907b9b4e46c80ca9faf629a7a536eee7147ccd63",
+    "sha256": "3383f1e71952fd2271367e22a202ff775b02649ea861c98ddb5bda16cf3a9d47",
     "snippet": "Latest MSF contents Skip to main content Menu Close button English en Arrow icon Choose language English عربي Médecins Sans Frontières Work With MSF MSF websites Close button English en Arrow icon Choose language English عربي X Bluesky butterfly logo About us What We Do Where we work Resources Latest Donate Donate Back to main menu About Us Who We Are Learn about our mission, our charter and principles, and who we are. Learn more Who We Are How we work See what triggers an intervention and how supply and logistics allow our teams to respond quickly. Learn more How we work How we're run Discover our governance and what it means to be an association. Find a quick visual guide to our offices ar",
     "status": "200",
     "title": "Latest MSF contents",
     "url": "https://www.msf.org/latest"
   },
   "https://www.who.int/emergencies/disease-outbreak-news": {
-    "checked_at_utc": "2026-09-08T16:36:45.366575+00:00",
+    "checked_at_utc": "2026-09-08T21:08:08.327095+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "WHO provides the latest disease outbreak news, offering information on confirmed public health emergencies or events of potential concern.",
     "sha256": "966d80c22997be65834753097d7a6d91bd1e50ff7a9b59b83845098641c5aafe",
@@ -61,7 +61,7 @@
     "url": "https://www.who.int/emergencies/disease-outbreak-news"
   },
   "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026": {
-    "checked_at_utc": "2026-09-08T16:36:45.072549+00:00",
+    "checked_at_utc": "2026-09-08T21:08:08.070574+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "",
     "sha256": "a6384058d02eb43c0c5038075d6e3e9f863384c379d3885d92e0467ade593b88",
