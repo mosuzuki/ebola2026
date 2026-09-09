@@ -1,6 +1,6 @@
 {
   "https://africacdc.org/news/": {
-    "checked_at_utc": "2026-09-09T04:39:39.405880+00:00",
+    "checked_at_utc": "2026-09-09T11:20:16.683521+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "Press releases and media from Africa CDC",
     "sha256": "1754ca40eec28361366c1e29cb2603f429dc77115503bc75f4df6dfd71d428ab",
@@ -10,17 +10,17 @@
     "url": "https://africacdc.org/news/"
   },
   "https://cepi.net/news": {
-    "checked_at_utc": "2026-09-09T04:39:41.623391+00:00",
+    "checked_at_utc": "2026-09-09T11:20:19.056347+00:00",
     "content_type": "text/html",
     "description": "Keep up-to-date on the latest announcements and updates from CEPI and our global partners.",
-    "sha256": "2b04c2893e37d9804a1ed8edcb96866db334105d278d50dbdf92d07c7d2fb225",
-    "snippet": "News Desktop Navigation Loading... Mobile Navigation Loading... Mobile Search Loading... Desktop Search Loading... Discover the latest CEPI news Keep up-to-date on the latest announcements and updates from CEPI and our global partners. Search Latest News Filters Search CEPI Indonesia steps up Southeast Asia’s outbreak preparedness with pandemic simulation exercise Over 120 experts working across the vaccine and epidemic preparedness research ecosystem in Indonesia and the region are taking part in the table-top event in Jakarta. 3 Sept 2026 Read more Arrow 3 Sept 2026 News African Bundibugyo ebolavirus vaccine candidate to be advanced to clinical trials Read more 27 Aug 2026 Blog 100 days in",
+    "sha256": "c28aada030b097cefa927609e2ecde1a13c6fd6fa8add6fc8e142928f798ede4",
+    "snippet": "News Desktop Navigation Loading... Mobile Navigation Loading... Mobile Search Loading... Desktop Search Loading... Discover the latest CEPI news Keep up-to-date on the latest announcements and updates from CEPI and our global partners. Search Latest News Filters Search News India ramps up Disease X preparedness with $8.9 million funding boost for its freezer-free RNA vaccine The funding will advance clinical testing of Immunoscript's thermostable next-generation RNA vaccine platform. 9 Sept 2026 Read more Arrow 9 Sept 2026 CEPI Indonesia steps up Southeast Asia’s outbreak preparedness with pandemic simulation exercise Read more 3 Sept 2026 News African Bundibugyo ebolavirus vaccine candidate",
     "status": "200",
     "title": "News",
     "url": "https://cepi.net/news"
   },
   "https://www.cdc.gov/ebola/situation-summary/index.html": {
-    "checked_at_utc": "2026-09-09T04:39:37.477305+00:00",
+    "checked_at_utc": "2026-09-09T11:20:14.619561+00:00",
     "content_type": "text/html",
     "description": "Learn about the current outbreak of Ebola disease affecting DRC and Uganda.",
     "sha256": "77c3531fffdd9f547273caad3a77504f30bee1a3706041cbcbe29014edbbf728",
@@ -30,7 +30,7 @@
     "url": "https://www.cdc.gov/ebola/situation-summary/index.html"
   },
   "https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda": {
-    "checked_at_utc": "2026-09-09T04:39:37.304749+00:00",
+    "checked_at_utc": "2026-09-09T11:20:14.406259+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "Since May 2026, an Ebola virus disease outbreak caused by Bundibugyo virus has been ongoing in the Democratic Republic of the Congo (DRC).",
     "sha256": "1179aa10a268b8d5b25debf39aca3286c1f29ad11013e4a4ed7654bdb3ff0171",
@@ -41,7 +41,7 @@
   },
   "https://www.gavi.org/news/media-room": {},
   "https://www.msf.org/latest": {
-    "checked_at_utc": "2026-09-09T04:39:40.293428+00:00",
+    "checked_at_utc": "2026-09-09T11:20:17.884893+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "Discover all our latest news, stories and publications. Use the filter to get to the content you're looking for.",
     "sha256": "3383f1e71952fd2271367e22a202ff775b02649ea861c98ddb5bda16cf3a9d47",
@@ -51,7 +51,7 @@
     "url": "https://www.msf.org/latest"
   },
   "https://www.who.int/emergencies/disease-outbreak-news": {
-    "checked_at_utc": "2026-09-09T04:39:36.450766+00:00",
+    "checked_at_utc": "2026-09-09T11:20:13.823158+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "WHO provides the latest disease outbreak news, offering information on confirmed public health emergencies or events of potential concern.",
     "sha256": "966d80c22997be65834753097d7a6d91bd1e50ff7a9b59b83845098641c5aafe",
@@ -61,7 +61,7 @@
     "url": "https://www.who.int/emergencies/disease-outbreak-news"
   },
   "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026": {
-    "checked_at_utc": "2026-09-09T04:39:36.175405+00:00",
+    "checked_at_utc": "2026-09-09T11:20:13.529669+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "",
     "sha256": "a6384058d02eb43c0c5038075d6e3e9f863384c379d3885d92e0467ade593b88",
