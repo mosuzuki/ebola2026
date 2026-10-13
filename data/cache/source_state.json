@@ -1,6 +1,6 @@
 {
   "https://africacdc.org/news/": {
-    "checked_at_utc": "2026-10-13T00:37:40.581311+00:00",
+    "checked_at_utc": "2026-10-13T14:08:40.017275+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "Press releases and media from Africa CDC",
     "sha256": "1754ca40eec28361366c1e29cb2603f429dc77115503bc75f4df6dfd71d428ab",
@@ -10,17 +10,17 @@
     "url": "https://africacdc.org/news/"
   },
   "https://cepi.net/news": {
-    "checked_at_utc": "2026-10-13T00:37:43.019087+00:00",
+    "checked_at_utc": "2026-10-13T14:08:41.883801+00:00",
     "content_type": "text/html",
     "description": "Keep up-to-date on the latest announcements and updates from CEPI and our global partners.",
-    "sha256": "33242e9715dd0888e0b62faaddf66f8dfb1d6b77f22a9e1ced349ac79f2a71be",
-    "snippet": "News Desktop Navigation Loading... Mobile Navigation Loading... Mobile Search Loading... Desktop Search Loading... Discover the latest CEPI news Keep up-to-date on the latest announcements and updates from CEPI and our global partners. Search Latest News Filters Search Impact story How AI and a 'Nanoball' vaccine could fight deadly viruses in Japan and beyond Japanese scientists are exploring whether an AI-designed \"Nanoball\" mRNA vaccine could protect against a deadly tick-borne virus and also help the world respond faster to the next Disease X. 5 Oct 2026 Read more Arrow 5 Oct 2026 News UK rabies vaccine trial could also unlock protection against Disease X Read more 29 Sept 2026 News Ethio",
+    "sha256": "05ff868cd72a110a205c3dee39df20295eb04d91ffa455d7ee3dc2598bd76b4b",
+    "snippet": "News Desktop Navigation Loading... Mobile Navigation Loading... Mobile Search Loading... Desktop Search Loading... Discover the latest CEPI news Keep up-to-date on the latest announcements and updates from CEPI and our global partners. Search Latest News Filters Search Statement Final preparations underway for pivotal Phase 2/3 Bundibugyo vaccine trial Tumaini, a pivotal Phase 2/3 clinical trial, will evaluate vaccine candidates including Ervebo as part of the DRC's outbreak response. 13 Oct 2026 Read more Arrow 13 Oct 2026 Blog Tracking Lassa fever: Where are we up to? Read more 12 Oct 2026 Impact story How AI and a 'Nanoball' vaccine could fight deadly viruses in Japan and beyond Read more",
     "status": "200",
     "title": "News",
     "url": "https://cepi.net/news"
   },
   "https://www.cdc.gov/ebola/situation-summary/index.html": {
-    "checked_at_utc": "2026-10-13T00:37:38.374570+00:00",
+    "checked_at_utc": "2026-10-13T14:08:37.973066+00:00",
     "content_type": "text/html",
     "description": "Learn about the current outbreak of Ebola disease affecting DRC and Uganda.",
     "sha256": "762e8b5bdc980d132a8e93485bcd2be0daf97c77312517b5dee9ebdd732947b3",
@@ -30,18 +30,18 @@
     "url": "https://www.cdc.gov/ebola/situation-summary/index.html"
   },
   "https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda": {
-    "checked_at_utc": "2026-10-13T00:37:38.137084+00:00",
+    "checked_at_utc": "2026-10-13T14:08:37.887237+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "Since May 2026, an Ebola virus disease outbreak caused by Bundibugyo virus has been ongoing in the Democratic Republic of the Congo (DRC).",
-    "sha256": "e6fab42e9600e9699b456bab8fc97dc6ea3c371debc24ffd220c487372a96974",
-    "snippet": "Ebola disease outbreak in the Democratic Republic of the Congo Skip to main content Global Navigation Other sites ECDC European Antibiotic Awareness Day (opens in a new window) ESCAIDE - Scientific conference (opens in a new window) Eurosurveillance journal (opens in a new window) EVIP - Vaccination portal (opens in a new window) European Centre for Disease Prevention and Control An agency of the European Union Translate this page Search Main Navigation (desktop) Topics A-Z Public health topics A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Spotlight Antimicrobial resistance (AMR) Chikungunya virus disease Dengue Ebola disease Vibriosis West Nile virus infection One Health Current threa",
+    "sha256": "33dd154ad8d33ad01f70f8d2a5824a7556d0db6cebcfbded34e5a68683678337",
+    "snippet": "Ebola disease outbreak in the Democratic Republic of the Congo Skip to main content Global Navigation Other sites ECDC European Antibiotic Awareness Day (opens in a new window) ESCAIDE - Scientific conference (opens in a new window) Eurosurveillance journal (opens in a new window) EVIP - Vaccination portal (opens in a new window) European Centre for Disease Prevention and Control An agency of the European Union Translate this page Search Main Navigation (desktop) Topics A-Z Public health topics A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Spotlight Antimicrobial resistance (AMR) Chikungunya virus disease Dengue Ebola disease Seasonal influenza West Nile virus infection One Health Curr",
     "status": "200",
     "title": "Ebola disease outbreak in the Democratic Republic of the Congo",
     "url": "https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda"
   },
   "https://www.gavi.org/news/media-room": {},
   "https://www.msf.org/latest": {
-    "checked_at_utc": "2026-10-13T00:37:41.603011+00:00",
+    "checked_at_utc": "2026-10-13T14:08:40.742988+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "Discover all our latest news, stories and publications. Use the filter to get to the content you're looking for.",
     "sha256": "5146aaedb3835e241f0bd5eaa3e80bf054907671c01187b412fa612c2994aeca",
@@ -51,7 +51,7 @@
     "url": "https://www.msf.org/latest"
   },
   "https://www.who.int/emergencies/disease-outbreak-news": {
-    "checked_at_utc": "2026-10-13T00:37:36.901152+00:00",
+    "checked_at_utc": "2026-10-13T14:08:37.732936+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "WHO provides the latest disease outbreak news, offering information on confirmed public health emergencies or events of potential concern.",
     "sha256": "966d80c22997be65834753097d7a6d91bd1e50ff7a9b59b83845098641c5aafe",
@@ -61,11 +61,11 @@
     "url": "https://www.who.int/emergencies/disease-outbreak-news"
   },
   "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026": {
-    "checked_at_utc": "2026-10-13T00:37:36.432230+00:00",
+    "checked_at_utc": "2026-10-13T14:08:37.538056+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "",
-    "sha256": "6fc4a0b7adf1c0e2bca2bc955812e74f904280dfb9d1a7a30f342a257cc0e774",
-    "snippet": "Ebola outbreak - DRC 2026 Skip to main content Global Regions WHO Regional websites Africa Americas South-East Asia Europe Eastern Mediterranean Western Pacific When autocomplete results are available use up and down arrows to review and enter to select. Select language Select language English Home Health Topics All topics A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Resources Fact sheets Facts in pictures Multimedia Podcasts Publications Questions and answers Tools and toolkits Popular Dengue Endometriosis Excessive heat Herpes Mental disorders Mpox Countries All countries A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Regions Africa Americas Europe Eastern Mediterranean South-E",
+    "sha256": "ffd8f0878ba506de5c8e05a55eb6fd4913b0e053ba99c354cfe0912937c7ff2b",
+    "snippet": "Ebola outbreak - DRC 2026 Skip to main content World Health Organization Global Regions World Health Organization WHO Regional websites Africa Americas South-East Asia Europe Eastern Mediterranean Western Pacific When autocomplete results are available use up and down arrows to review and enter to select. Select language Select language English Home Health Topics All topics A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Resources Fact sheets Facts in pictures Multimedia Podcasts Publications Questions and answers Tools and toolkits Popular Dengue Endometriosis Excessive heat Herpes Mental disorders Mpox Countries All countries A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Regions ",
     "status": "200",
     "title": "Ebola outbreak - DRC 2026",
     "url": "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026"
