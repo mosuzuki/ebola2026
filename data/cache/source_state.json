@@ -1,6 +1,6 @@
 {
   "https://africacdc.org/news/": {
-    "checked_at_utc": "2026-10-22T11:48:50.005803+00:00",
+    "checked_at_utc": "2026-10-22T17:08:19.682888+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "Press releases and media from Africa CDC",
     "sha256": "1754ca40eec28361366c1e29cb2603f429dc77115503bc75f4df6dfd71d428ab",
@@ -10,7 +10,7 @@
     "url": "https://africacdc.org/news/"
   },
   "https://cepi.net/news": {
-    "checked_at_utc": "2026-10-22T11:48:52.830994+00:00",
+    "checked_at_utc": "2026-10-22T17:08:21.774893+00:00",
     "content_type": "text/html",
     "description": "Keep up-to-date on the latest announcements and updates from CEPI and our global partners.",
     "sha256": "f7e4a753edebf22567220d8b562e8265eafb04022dc5b33a005b9e184703621c",
@@ -20,17 +20,17 @@
     "url": "https://cepi.net/news"
   },
   "https://www.cdc.gov/ebola/situation-summary/index.html": {
-    "checked_at_utc": "2026-10-22T11:48:47.789839+00:00",
+    "checked_at_utc": "2026-10-22T17:08:17.705203+00:00",
     "content_type": "text/html",
     "description": "Learn about the current outbreak of Ebola disease affecting DRC and Uganda.",
-    "sha256": "06bb2adc1f07989ee363179a6ab13e24d944bbc37566a0fc1d2b3b8f9c94ac7d",
+    "sha256": "98ac0414df127ff513a55f2884bb946eb9c3edec36396faae2d12ed72c4a6b69",
     "snippet": "Ebola Outbreak: Current Situation | Ebola | CDC Skip directly to site content Skip directly to search An official website of the United States government Here's how you know Official websites use .gov A .gov website belongs to an official government organization in the United States. Secure .gov websites use HTTPS A lock ( ) or https:// means you've safely connected to the .gov website. Share sensitive information only on official, secure websites. Ebola Explore This Topic Search Search Clear Search For Everyone Current Situation About Signs and Symptoms Outbreak History How It Spreads Communication Resources View all Health Care Providers Clinical Guidance Clinical Features Vaccine Product ",
     "status": "200",
     "title": "Ebola Outbreak: Current Situation | Ebola | CDC",
     "url": "https://www.cdc.gov/ebola/situation-summary/index.html"
   },
   "https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda": {
-    "checked_at_utc": "2026-10-22T11:48:47.691915+00:00",
+    "checked_at_utc": "2026-10-22T17:08:17.499975+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "Since May 2026, an Ebola virus disease outbreak caused by Bundibugyo virus has been ongoing in the Democratic Republic of the Congo (DRC).",
     "sha256": "b6397f7d0c9315b6a65654537671d93650764d97352ebafdd6ccf9c2e5fe81f8",
@@ -41,7 +41,7 @@
   },
   "https://www.gavi.org/news/media-room": {},
   "https://www.msf.org/latest": {
-    "checked_at_utc": "2026-10-22T11:48:52.056155+00:00",
+    "checked_at_utc": "2026-10-22T17:08:20.715168+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "Discover all our latest news, stories and publications. Use the filter to get to the content you're looking for.",
     "sha256": "5a26b8c49d5ee791898b6f94ed04d5732135ac2712262e60c37b8da4ce492b34",
@@ -51,7 +51,7 @@
     "url": "https://www.msf.org/latest"
   },
   "https://www.who.int/emergencies/disease-outbreak-news": {
-    "checked_at_utc": "2026-10-22T11:48:46.791762+00:00",
+    "checked_at_utc": "2026-10-22T17:08:17.116581+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "WHO provides the latest disease outbreak news, offering information on confirmed public health emergencies or events of potential concern.",
     "sha256": "966d80c22997be65834753097d7a6d91bd1e50ff7a9b59b83845098641c5aafe",
@@ -61,7 +61,7 @@
     "url": "https://www.who.int/emergencies/disease-outbreak-news"
   },
   "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026": {
-    "checked_at_utc": "2026-10-22T11:48:46.575443+00:00",
+    "checked_at_utc": "2026-10-22T17:08:16.212502+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "",
     "sha256": "ffd8f0878ba506de5c8e05a55eb6fd4913b0e053ba99c354cfe0912937c7ff2b",
