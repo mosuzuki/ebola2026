@@ -1,6 +1,6 @@
 {
   "https://africacdc.org/news/": {
-    "checked_at_utc": "2026-10-26T04:43:47.653382+00:00",
+    "checked_at_utc": "2026-10-26T12:58:14.662306+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "Press releases and media from Africa CDC",
     "sha256": "20cbe6452ef4f58516292c1989cf84fcd88821fafb175ffce1d61200dc48f843",
@@ -10,17 +10,17 @@
     "url": "https://africacdc.org/news/"
   },
   "https://cepi.net/news": {
-    "checked_at_utc": "2026-10-26T04:43:49.334165+00:00",
+    "checked_at_utc": "2026-10-26T12:58:40.931545+00:00",
     "content_type": "text/html",
     "description": "Keep up-to-date on the latest announcements and updates from CEPI and our global partners.",
-    "sha256": "60791248d2f42fa38f5aff07a0a3351d72f49f3e5760ab59be95b85c2359d582",
-    "snippet": "News Desktop Navigation Loading... Mobile Navigation Loading... Mobile Search Loading... Desktop Search Loading... Discover the latest CEPI news Keep up-to-date on the latest announcements and updates from CEPI and our global partners. Search Latest News Filters Search News First participant vaccinated in pivotal Phase 2/3 Bundibugyo vaccine trial in DRC The first participant has been vaccinated in the CEPI-supported Tumaini trial, which will evaluate vaccines against Bundibugyo virus during the ongoing outbreak in the Democratic Republic of the Congo. 23 Oct 2026 Read more Arrow 23 Oct 2026 Blog CEPI and World Bank Group partner to strengthen sustainable vaccine manufacturing in ASEAN Read ",
+    "sha256": "b558b1ef23e3c96bd348594c047d026068fc7e333fa4c4bb217406219490e8ad",
+    "snippet": "News Desktop Navigation Loading... Mobile Navigation Loading... Mobile Search Loading... Desktop Search Loading... Discover the latest CEPI news Keep up-to-date on the latest announcements and updates from CEPI and our global partners. Search Latest News Filters Search News Strengthening Africa’s outbreak-ready evidence generation capabilities CEPI to provide up to US$8.2 million in additional funding to the International Vaccine Institute (IVI) and MRC Unit The Gambia (MRCG) to support the implementation of Africa CDC’s hub-and-spoke clinical trial model in West Africa. 26 Oct 2026 Read more Arrow 26 Oct 2026 News First participant vaccinated in pivotal Phase 2/3 Bundibugyo vaccine trial in",
     "status": "200",
     "title": "News",
     "url": "https://cepi.net/news"
   },
   "https://www.cdc.gov/ebola/situation-summary/index.html": {
-    "checked_at_utc": "2026-10-26T04:43:45.586840+00:00",
+    "checked_at_utc": "2026-10-26T12:58:12.352148+00:00",
     "content_type": "text/html",
     "description": "Learn about the current outbreak of Ebola disease affecting DRC and Uganda.",
     "sha256": "4a2c1f693dcae5a94f7e9eeac445464ce8754416c75449c57eb67eaca2cb5a08",
@@ -30,7 +30,7 @@
     "url": "https://www.cdc.gov/ebola/situation-summary/index.html"
   },
   "https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda": {
-    "checked_at_utc": "2026-10-26T04:43:45.468264+00:00",
+    "checked_at_utc": "2026-10-26T12:58:12.221174+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "Since May 2026, an Ebola virus disease outbreak caused by Bundibugyo virus has been ongoing in the Democratic Republic of the Congo (DRC).",
     "sha256": "4b539c238f1cdbe910594d6a495ff95f9187de594d20e94e18327980fa61755a",
@@ -51,7 +51,7 @@
     "url": "https://www.msf.org/latest"
   },
   "https://www.who.int/emergencies/disease-outbreak-news": {
-    "checked_at_utc": "2026-10-26T04:43:45.000400+00:00",
+    "checked_at_utc": "2026-10-26T12:58:12.037191+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "WHO provides the latest disease outbreak news, offering information on confirmed public health emergencies or events of potential concern.",
     "sha256": "966d80c22997be65834753097d7a6d91bd1e50ff7a9b59b83845098641c5aafe",
@@ -61,7 +61,7 @@
     "url": "https://www.who.int/emergencies/disease-outbreak-news"
   },
   "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026": {
-    "checked_at_utc": "2026-10-26T04:43:44.808859+00:00",
+    "checked_at_utc": "2026-10-26T12:58:11.936694+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "",
     "sha256": "6fc4a0b7adf1c0e2bca2bc955812e74f904280dfb9d1a7a30f342a257cc0e774",
