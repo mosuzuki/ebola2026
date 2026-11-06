@@ -1,6 +1,6 @@
 {
   "https://africacdc.org/news/": {
-    "checked_at_utc": "2026-11-05T19:55:15.683553+00:00",
+    "checked_at_utc": "2026-11-06T06:39:56.410474+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "Press releases and media from Africa CDC",
     "sha256": "1c11b54acce3a145ee63799af8680b0358b3949c0751f2207a7eb7d10e510466",
@@ -10,7 +10,7 @@
     "url": "https://africacdc.org/news/"
   },
   "https://cepi.net/news": {
-    "checked_at_utc": "2026-11-05T19:55:18.430749+00:00",
+    "checked_at_utc": "2026-11-06T06:39:58.741195+00:00",
     "content_type": "text/html",
     "description": "Keep up-to-date on the latest announcements and updates from CEPI and our global partners.",
     "sha256": "f930eda2fdfc7a23dc558452d0629bd9b363b599b08fdf0de628627a43d5aa7b",
@@ -20,7 +20,7 @@
     "url": "https://cepi.net/news"
   },
   "https://www.cdc.gov/ebola/situation-summary/index.html": {
-    "checked_at_utc": "2026-11-05T19:55:13.859161+00:00",
+    "checked_at_utc": "2026-11-06T06:39:54.550013+00:00",
     "content_type": "text/html",
     "description": "Learn about the current outbreak of Ebola disease affecting DRC and Uganda.",
     "sha256": "e71b8a8c96f2199aed8b3b9bbde36067a24e5e50a5a6049076005ccaefc9cd2c",
@@ -30,7 +30,7 @@
     "url": "https://www.cdc.gov/ebola/situation-summary/index.html"
   },
   "https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda": {
-    "checked_at_utc": "2026-11-05T19:55:13.662714+00:00",
+    "checked_at_utc": "2026-11-06T06:39:54.456016+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "Since May 2026, an Ebola virus disease outbreak caused by Bundibugyo virus has been ongoing in the Democratic Republic of the Congo (DRC).",
     "sha256": "df675e470ac2c6fe5cce8a630f06cce03704f4b6d9a633817928b3d967a6307b",
@@ -41,7 +41,7 @@
   },
   "https://www.gavi.org/news/media-room": {},
   "https://www.msf.org/latest": {
-    "checked_at_utc": "2026-11-05T19:55:17.474773+00:00",
+    "checked_at_utc": "2026-11-06T06:39:57.344071+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "Discover all our latest news, stories and publications. Use the filter to get to the content you're looking for.",
     "sha256": "670365b18b2c629b2cf09f42ee9197b852f963f88127a76bab826efc7b4f9a29",
@@ -51,7 +51,7 @@
     "url": "https://www.msf.org/latest"
   },
   "https://www.who.int/emergencies/disease-outbreak-news": {
-    "checked_at_utc": "2026-11-05T19:55:13.204298+00:00",
+    "checked_at_utc": "2026-11-06T06:39:52.964806+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "WHO provides the latest disease outbreak news, offering information on confirmed public health emergencies or events of potential concern.",
     "sha256": "966d80c22997be65834753097d7a6d91bd1e50ff7a9b59b83845098641c5aafe",
@@ -61,7 +61,7 @@
     "url": "https://www.who.int/emergencies/disease-outbreak-news"
   },
   "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026": {
-    "checked_at_utc": "2026-11-05T19:55:12.939168+00:00",
+    "checked_at_utc": "2026-11-06T06:39:52.561953+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "",
     "sha256": "ef7245881f13d407d530fd00a1264224d98a805245e7098e4f8a954e55167f6c",
