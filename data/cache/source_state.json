@@ -1,6 +1,6 @@
 {
   "https://africacdc.org/news/": {
-    "checked_at_utc": "2026-11-20T07:11:29.825643+00:00",
+    "checked_at_utc": "2026-11-20T20:13:20.843469+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "Press releases and media from Africa CDC",
     "sha256": "1c11b54acce3a145ee63799af8680b0358b3949c0751f2207a7eb7d10e510466",
@@ -10,7 +10,7 @@
     "url": "https://africacdc.org/news/"
   },
   "https://cepi.net/news": {
-    "checked_at_utc": "2026-11-20T07:11:32.001318+00:00",
+    "checked_at_utc": "2026-11-20T20:13:22.513058+00:00",
     "content_type": "text/html",
     "description": "Keep up-to-date on the latest announcements and updates from CEPI and our global partners.",
     "sha256": "0bd2af3aeb8d74b89c6857682309d9c4ea68c49f40edec5d61eeff1391913a68",
@@ -20,7 +20,7 @@
     "url": "https://cepi.net/news"
   },
   "https://www.cdc.gov/ebola/situation-summary/index.html": {
-    "checked_at_utc": "2026-11-20T07:11:27.997367+00:00",
+    "checked_at_utc": "2026-11-20T20:13:19.286807+00:00",
     "content_type": "text/html",
     "description": "Learn about the current outbreak of Ebola disease affecting DRC and Uganda.",
     "sha256": "b421d57634e311a6e3a60e8ae915025701357effe5d7878139924e10ebdb6ee5",
@@ -30,7 +30,7 @@
     "url": "https://www.cdc.gov/ebola/situation-summary/index.html"
   },
   "https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda": {
-    "checked_at_utc": "2026-11-20T07:11:27.360109+00:00",
+    "checked_at_utc": "2026-11-20T20:13:19.155190+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "Since May 2026, an Ebola virus disease outbreak caused by Bundibugyo virus has been ongoing in the Democratic Republic of the Congo (DRC).",
     "sha256": "660521b6e77171a7610b0fe00ab95595808c2336d426ff3139a8071463761b02",
@@ -41,17 +41,17 @@
   },
   "https://www.gavi.org/news/media-room": {},
   "https://www.msf.org/latest": {
-    "checked_at_utc": "2026-11-20T07:11:30.879732+00:00",
+    "checked_at_utc": "2026-11-20T20:13:21.583467+00:00",
     "content_type": "text/html; charset=UTF-8",
     "description": "Discover all our latest news, stories and publications. Use the filter to get to the content you're looking for.",
-    "sha256": "edf9ea1a856cdf8491e292e42dd071267da75ed68fbe7c577bf78ac8a6d79f9e",
+    "sha256": "77933ebc8201069111aa298f3e4a0bdf6ba1063c44e735ca43fcd590ced65612",
     "snippet": "Latest MSF contents Skip to main content Menu Close button English en Arrow icon Choose language English عربي Médecins Sans Frontières Work With MSF MSF websites Close button English en Arrow icon Choose language English عربي About us What We Do Where we work Resources Latest Donate Donate Back to main menu About Us Who We Are Learn about our mission, our charter and principles, and who we are. Learn more Who We Are How we work See what triggers an intervention and how supply and logistics allow our teams to respond quickly. Learn more How we work How we're run Discover our governance and what it means to be an association. Find a quick visual guide to our offices around the world. Learn mor",
     "status": "200",
     "title": "Latest MSF contents",
     "url": "https://www.msf.org/latest"
   },
   "https://www.who.int/emergencies/disease-outbreak-news": {
-    "checked_at_utc": "2026-11-20T07:11:26.901259+00:00",
+    "checked_at_utc": "2026-11-20T20:13:18.336941+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "WHO provides the latest disease outbreak news, offering information on confirmed public health emergencies or events of potential concern.",
     "sha256": "77abbce6f0a0aae149d14f443375a2470f88b39bbd12eaf9241d5dfd6d59db71",
@@ -61,7 +61,7 @@
     "url": "https://www.who.int/emergencies/disease-outbreak-news"
   },
   "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026": {
-    "checked_at_utc": "2026-11-20T07:11:26.682175+00:00",
+    "checked_at_utc": "2026-11-20T20:13:18.138163+00:00",
     "content_type": "text/html; charset=utf-8",
     "description": "",
     "sha256": "e8cb11cd62499fbae714633909f188497a0ce8bafe10e372e2f6cf13c4f6a23a",
